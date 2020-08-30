@@ -2,16 +2,12 @@ Amazon Web Services is a subsidiary of Amazon providing on-demand cloud computin
 and APIs to individuals, companies, and governments, on a metered pay-as-you-go basis.
 
 
-A] If you first completed my AWS Certified Cloud Practitioner course
+A] AWS Certified Cloud Practitioner course.
 
-Please do not skip any lectures. I am going into AWS services with a lot more depth. You will nonetheless 
-grasp concepts with a lot more ease and will be able to go faster with the course!
+ AWS services.
 
+B] AWS Certified Developer Associate course.
 
-
-B] If you first completed my AWS Certified Developer Associate course and don't want to re-watch content...
-
-Please watch the following lectures: 
 
 Section 3
 
@@ -57,19 +53,8 @@ Section 7
 
 3rd Party Domains & Route 53
 
-Section 8
 
-all lectures
-
-Then you can skip all the way to CloudFront (Section 12).
-
-
-
-C] If you did not do any course on AWS before...
-
-It is perfectly fine to start with this course if you're new with AWS.
-
-Most learners start with this course on AWS Solutions Architect Associate, with some doing the AWS Certified 
+C] Most learners start with this course on AWS Solutions Architect Associate, with some doing the AWS Certified 
 Cloud Practitioner as a less technical warmup. If you feel overwhelmed by this course, try to watch the AWS 
 Certified Cloud Practitioner course first.
 
@@ -78,11 +63,8 @@ After this course, most learners move on to AWS Certified Developer or AWS Certi
 -------------------------------------------------------------------------------------------------------------------
 
 Slides and Code Download
-Please follow the instructions at https://courses.datacumulus.com/downloads/certified-solutions-architect-pn9 
+Instructions at https://courses.datacumulus.com/downloads/certified-solutions-architect-pn9 
 to download the code and slides.
-
-Happy learning!
-
 
 
 Having problems downloading?
@@ -91,4 +73,4 @@ Try using a different network, such as your home or phone network, it's possible
 blocking the download.
 
 Try using a VPN service such as TunnelBear (https://www.tunnelbear.com/, it's free!) to VPN into another country 
-where you should be able to download the course content
+where you should be able to download the course content.
