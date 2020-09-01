@@ -20,3 +20,9 @@ It is only for users.         Contains users.                 It is for machines
 |                                                                                                |
 |                                                                                                |                                                                                                
 --------------------------------------------------------------------------------------------------
+
+IAM has a global view.
+Permissions are governed by Policies (JASON).
+MFA (Multi Factor Authentication) can se setup.
+IAM has predefined"managed pilicies",
+It's always bets to give the minimal permission to users to do their jobs(least privilage principles). 
