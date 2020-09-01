@@ -10,7 +10,7 @@ Root account should nener br used (and shared).
 
 IAM ia art the center of AWS.
 
-Users                            Group                            Roles
+        Users                      Group                             Roles
 It is only for users.         Contains users.                 It is for machines.
           |                        |                                   |
           |                        |                                   |
