@@ -1,2 +1,11 @@
 IAM Introduction:
 IAM (Identity & Access Management)
+
+Whole AWS Security will be in IAM.
+ 1. Users
+ 2. Groups
+ 3. Roles
+
+Root account should nener br used (and shared).
+
+IAM ia art the center of AWS.
