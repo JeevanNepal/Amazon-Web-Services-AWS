@@ -9,3 +9,14 @@ Whole AWS Security will be in IAM.
 Root account should nener br used (and shared).
 
 IAM ia art the center of AWS.
+
+Users                            Group                            Roles
+It is only for users.         Contains users.                 It is for machines.
+          |                        |                                   |
+          |                        |                                   |
+-------------------------------------------------------------------------------------------------           
+|                         Poloicies (JASON Documents)                                            |
+|                 Defines what each of the above can do and cannot.                              |
+|                                                                                                |
+|                                                                                                |                                                                                                
+--------------------------------------------------------------------------------------------------
