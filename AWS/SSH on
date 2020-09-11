@@ -3,6 +3,7 @@ ssh is one of the most important function. It allows you to control a remote mac
 line.
 
 ssh using windows:
+Putty does not accept hte pem file format so we need to convert it using puttygen.exe software so putty can accept it.
 
 
 
