@@ -3,10 +3,11 @@ ssh is one of the most important function. It allows you to control a remote mac
 line.
 
 ssh using windows:
-Putty does not accept hte pem file format so we need to convert it using puttygen.exe software so putty can accept it.
+Putty does not accept the pem file format so we need to convert it using puttygen.exe software to 
+putty private key (ppk file ) so putty can accepts it.
 
 So to connect to putty everytime you log out of the AWS instance follow the below steps:
 1. Start the ec2 instance.
-2. Open putty and re-enter the IPv4 Public IP key and configure the putty by entering the converted pem key.
+2. Open putty and re-enter the IPv4 Public IP key and configure the putty by entering the ppk file.
 
  
