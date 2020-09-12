@@ -14,6 +14,6 @@ Name tag is a must for any instance.
 EC2 Instance Connect:
 Go to your EC2 instance and click on connect at the top.
 It will show ec2-user, just leave as it is and click on connect button.
-It only works on Amazon Linus 2 only as of now.
+It only works on Amazon Linus 2 AMI only as of now.
 A port 22 has to be mapped to run it or else it does not work.
 
