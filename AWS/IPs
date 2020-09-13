@@ -46,3 +46,9 @@ IPs in AWS EC2:
 When we are doing SSH into the EC2 machine:
 1. We can't use the private IP as we are not in the dame network.
 2. We can only use the public IP.
+
+Launching Apache Server on EC2:
+First swithch to root user: sudo su.
+run: yum update -y, it basically forces machine to get updated.
+run: yum install -y(for yes) httpd.x86_64
+
