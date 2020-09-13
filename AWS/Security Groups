@@ -15,3 +15,7 @@ Thet regulates the following:
 2. Authorised IP ranges - IPv4 & IPv6
 3. Control of inbound networks (from other to the instance)
 4. Control of outbound neteworks (from the instance to others).
+
+
+Security groups can be attached to multiple instances & instance can have multiple security groups too.
+It is always good to maintaine one separate security group for SSH access.
