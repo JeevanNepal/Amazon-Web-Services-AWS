@@ -33,4 +33,14 @@ Overall it's better avoiding using elastic IPs.
         1. They often reflect poor architectural decisions.
         2. Instead, better use a random public Ip and register a DNS name to it.DNS in AWS will be route 53.
         
-The best pattern is to use load balancer rather than the publiuc IPs.        
+The best pattern is to use load balancer rather than the public IPs.  
+
+
+IPs in AWS EC2:
+> By default EC2 comea with private IP for the internal AWS network.
+> A public IP for WWW.
+
+
+When we are doing SSH into the EC2 machine:
+1. We can't use the private IP as we are not in the dame network.
+2. We can only use the public IP.
