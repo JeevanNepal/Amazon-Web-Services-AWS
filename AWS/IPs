@@ -10,6 +10,7 @@ Public vs Private IPs Fundamental Difference:
         1. Public Ip means that machine can be identified on the internet.
         2. Must be unique across the whole web(www).
         3. Can be geo-located easily.
+        4. It changes in AWS whe n the instance is stopped and re-started again.
 
 
 
@@ -18,6 +19,7 @@ Public vs Private IPs Fundamental Difference:
         2. IP muat be unique across private network.
         3. Two companies can have one common IP.
         4. Only a specified IP can be used as private IP.
+        5. It remains the same though the instance is stopped and re-strted again.
 
 
  Elastic IPs:
