@@ -32,3 +32,5 @@ Public vs Private IPs Fundamental Difference:
 Overall it's better avoiding using elastic IPs.
         1. They often reflect poor architectural decisions.
         2. Instead, better use a random public Ip and register a DNS name to it.DNS in AWS will be route 53.
+        
+The best pattern is to use load balancer rather than the publiuc IPs.        
