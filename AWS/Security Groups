@@ -27,14 +27,15 @@ All outbound traffic is authorised by default.
 
 ---------------------------------------------------------------------------------------------------------------
 How to reference security groups from other security groups?
-If the security group is authorised than inspite of the IP address we can give the reference to the port for the 
-instance to connect.
+If the security group is authorised than regardless of the IP address as they have the right security group attached to them
+they are able to communicate straight through to other instances. 
+
 
 Eg: 
-                            Security Group 1 Inbound         access to port123  allowed                                                 Security Group 1       EC2 Instance
+                            Security Group 1 Inbound         access to port123  allowed  as right security group is attached.            Security Group 1       EC2 Instance
                         Authorising security group 1.                                                                                                          IP XXXXXXXXX       
  EC2 instance           Authorising security group 2.
- IP XXXXXXXX                                                 access to port 123 allowed                                                 Security Group 2       EC2 Instance
+ IP XXXXXXXX                                                 access to port 123 allowed as right security group is attached.             Security Group 2       EC2 Instance
                                                                                                                                                                IP XXXXXXXXX
 
                                                              access to port 123 not allowed as it is not authorised security group.              
