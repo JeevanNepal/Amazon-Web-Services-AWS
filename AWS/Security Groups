@@ -19,3 +19,24 @@ Thet regulates the following:
 
 Security groups can be attached to multiple instances & instance can have multiple security groups too.
 It is always good to maintaine one separate security group for SSH access.
+If the application is not accessible (time out) than it's a security group issue.
+If the application gives a "connection refused" error, then it's an application error or it's not launched.
+All inbound traffic are blocked by default.
+All outbound traffic is authorised by default. 
+
+
+---------------------------------------------------------------------------------------------------------------
+How to reference security groups from other security groups?
+If the security group is authorised than inspite of the IP address we can give the reference to the port for the 
+instance to connect.
+
+Eg: 
+                            Security Group 1 Inbound         access to port123  allowed                                                 Security Group 1       EC2 Instance
+                        Authorising security group 1.                                                                                                          IP XXXXXXXXX       
+ EC2 instance           Authorising security group 2.
+ IP XXXXXXXX                                                 access to port 123 allowed                                                 Security Group 2       EC2 Instance
+                                                                                                                                                               IP XXXXXXXXX
+
+                                                             access to port 123 not allowed as it is not authorised security group.              
+                                                                                                                                         Security Group 3      EC2 Instance                  
+                                                                                                                                                                IP XXXXXXXXX
