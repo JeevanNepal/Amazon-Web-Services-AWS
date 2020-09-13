@@ -5,7 +5,7 @@ IPv4 is the most common foemat used online.
 IPv6 is newer and mostly used for Internet of Things(IOT).
 
 
-Public vs Private IPs Fundamentals Differences:
+Public vs Private IPs Fundamental Difference:
     Public IPs:
         1. Public Ip means that machine can be identified on the internet.
         2. Must be unique across the whole web(www).
@@ -18,3 +18,9 @@ Public vs Private IPs Fundamentals Differences:
         2. IP muat be unique across private network.
         3. Two companies can have one common IP.
         4. Only a specified IP can be used as private IP.
+
+
+ Elastic IPs:
+    1. It is an IP of the instance which you can attache to one instance at a time.
+    2. It is alive as long as the instance is running and it is dynamic in nature.
+    3. It is a public IPv4 IP.
