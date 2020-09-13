@@ -1,0 +1,32 @@
+IAM Introduction:
+IAM (Identity & Access Management)
+
+Whole AWS Security will be in IAM.
+ 1. Users
+ 2. Groups
+ 3. Roles
+
+Root account should nener br used (and shared).
+
+IAM ia art the center of AWS.
+
+            Users                                Group                               Roles
+        It is only for users.              Contains users.          It is for machines.(Internal usage within AWS resources).
+              |                                  |                                  |
+              |                                  |                                  |
+-------------------------------------------------------------------------------------------------           
+|                         Poloicies (JSON Documents)                                             |
+|                 Defines what each of the above can do and cannot.                              |
+|                                                                                                |
+|                                                                                                |                                                                                                
+--------------------------------------------------------------------------------------------------
+
+
+
+IAM has a global view.
+Permissions are governed by Policies (JSON).
+MFA (Multi Factor Authentication) can be setup.
+IAM has predefined"managed policies".
+It's always bets to give the minimal permission to users to do their jobs(least privilage principles). 
+
+IAM is a private account and credentials should not be shared at any cost.
