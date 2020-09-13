@@ -28,3 +28,5 @@ Permissions are governed by Policies (JASON).
 MFA (Multi Factor Authentication) can be setup.
 IAM has predefined"managed policies".
 It's always bets to give the minimal permission to users to do their jobs(least privilage principles). 
+
+
