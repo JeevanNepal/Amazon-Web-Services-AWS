@@ -1,5 +1,3 @@
 Security Groups are the fundamentals of the network security in AWS.
 They control how traffic is allowed into and out of EC2 machine.
 Allow, inbound & outbound ports.
-
-J d
