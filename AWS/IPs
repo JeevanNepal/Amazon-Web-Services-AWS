@@ -56,4 +56,3 @@ Launching Apache Server on EC2:
     5. curl localhost:80(curl is to load whatever in this given url)
     6. now to run the html code in browser we need to run the instance IP in http/:IP XXX:80(mapped port).
     7. We have to create a security group in AWS instance by going to security group, inbount and edit tab.
-    8.
