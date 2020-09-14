@@ -57,4 +57,4 @@ Launching Apache Server on EC2:
     6. now to run the html code in browser we need to run the instance IP in http/:IP XXX:80(mapped port).
     7. We have to create a security group in AWS instance by going to security group, inbount and edit tab.
     8. If your page is not oading even after all the steps than, go to action at top and click on networking and choose
-       the right security group you have created for the Apache server.
+       the right security group from "change security groups" you have created for the Apache server.
