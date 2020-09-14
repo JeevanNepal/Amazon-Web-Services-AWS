@@ -48,12 +48,7 @@ When we are doing SSH into the EC2 machine:
 2. We can only use the public IP.
 
 Launching Apache Server on EC2:
-    1. First swithch to root user: sudo su.
-    2. run: yum update -y, it basically forces machine to get updated.
-    3. run: yum install -y(for yes) httpd.x86_64
-    4. run:systemctl start httpd.service & systemctl enable httpd.service
-    5. curl localhost:80(curl is to load whatever in this given url)
-    6. now to run the html code in browser we need to run the instance IP in http/:IP XXX:80(mapped port).
-    
-
+First swithch to root user: sudo su.
+run: yum update -y, it basically forces machine to get updated.
+run: yum install -y(for yes) httpd.x86_64
 
