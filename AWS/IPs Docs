@@ -58,3 +58,8 @@ Launching Apache Server on EC2:
     7. We have to create a security group in AWS instance by going to security group, inbount and edit tab.
     8. If your page is not oading even after all the steps than, go to action at top and click on networking and choose
        the right security group from "change security groups" you have created for the Apache server.
+
+    Now just run: echo "hello World" > /var/www/html/index.html     to make the first content on the browser.
+    Again run: echo "hello World from $(hostname -f)" > /var/www/html/index.html    to display the host machine IP. 
+    This is basically the internal DNS.
+   
