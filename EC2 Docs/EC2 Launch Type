@@ -36,7 +36,10 @@ Spot Instances:
         Image processing
         ..... 
 
-Not good/greate for critical jobs or database.
+        Not good/greate for critical jobs or database.
 
-Great combo: Reserved Instance for baseline + On-Demand or Spot for peaks.
+        Great combo: Reserved Instance for baseline + On-Demand or Spot for peaks.
+
+EC2 Dedicated Hosts:
+    Physical 
 
