@@ -3,7 +3,7 @@ EC2 Instances Launch Types:
     2. Reserved: (MINIMUM 1 Year)
         > Reserved Instances: long workload.
         > Convertable Reserved Instances: long workload with flexible instances.
-        > Scheduled Reserved Instances: Every MOnday 5-7 am for 1 year.
+        > Scheduled Reserved Instances: Every Monday 5-7 am for a year.
     3. Spot Instances: short workload, for cheap, can lose instance(less reliable).
     4. Dedicated Instances: No other cx will share your underlying hardware in AWS.
     5. Dedicated Host: Book an entire physical server, control instances placement. 
@@ -12,3 +12,17 @@ On Demand Instances:
     Pay for what you use(billing per second after one minute).
     Has the highest cost but no upfront payment.
     No long term commitment
+
+EC2 Reserved Instances:
+    Upto 75% discount compared to on demand instance.
+    Pay upfront for what you use for long term commitment.
+    Highly recomended for steady usage application (think database).
+
+Convertable Reserved Instances:
+    Can change the EC2 instance type.
+    Upto 54% discount.
+
+Scheduled Reserved Instances:
+    Launch within time window you reserve.
+    When we required for a fraction of a day/week/month.
+
