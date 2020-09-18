@@ -7,5 +7,7 @@ EC2 User data to automate boot task such as:
     Installing updates.
     Downloading common files from the internet and other various stuffs.
 
-The EC2 User Data Script runs with the root user.    
+The EC2 User Data Script runs with the root user.   
+
+We can setup this while launching an instance.
     
