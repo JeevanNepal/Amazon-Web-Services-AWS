@@ -18,11 +18,25 @@ EC2 Reserved Instances:
     Pay upfront for what you use for long term commitment.
     Highly recomended for steady usage application (think database).
 
-Convertable Reserved Instances:
-    Can change the EC2 instance type.
-    Upto 54% discount.
+    Convertable Reserved Instances:
+        Can change the EC2 instance type.
+        Upto 54% discount.
 
-Scheduled Reserved Instances:
-    Launch within time window you reserve.
-    When we required for a fraction of a day/week/month.
+    Scheduled Reserved Instances:
+        Launch within time window you reserve.
+        When we required for a fraction of a day/week/month.
+
+Spot Instances:
+    Can get upto 90% discount compared to on demand instance.
+    Instance that you can "lose" at any point of time if your max price is less than the current sopt price.
+    It's the most cost efficient instance in AWS.
+    Useful for worl load that are:
+        Batch Jobs
+        Data Alalysis
+        Image processing
+        ..... 
+
+Not good/greate for critical jobs or database.
+
+Great combo: Reserved Instance for baseline + On-Demand or Spot for peaks.
 
