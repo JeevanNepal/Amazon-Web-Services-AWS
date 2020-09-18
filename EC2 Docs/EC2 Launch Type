@@ -49,4 +49,10 @@ EC2 Dedicated Hosts:
 
     Useful for software that have complicate licensing model (BYOL- Bring Your own license).
 
-    
+
+EC2 Dedicated Instances:
+    Instances rinning on hardware that's dedicated to us.
+    may share hardware with other instances in same account.
+    No control over instances placement(can move heardware after start/stop). 
+
+
