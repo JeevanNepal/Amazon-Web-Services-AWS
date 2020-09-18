@@ -1,4 +1,4 @@
-EC2 Instances Launched Types:
+EC2 Instances Launch Types:
     1. On Ddemand Instances: short worklosd, predictable pricing.
     2. Reserved: (MINIMUM 1 Year)
         > Reserved Instances: long workload.
