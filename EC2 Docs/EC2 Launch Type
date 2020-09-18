@@ -41,5 +41,6 @@ Spot Instances:
         Great combo: Reserved Instance for baseline + On-Demand or Spot for peaks.
 
 EC2 Dedicated Hosts:
-    Physical 
+    Physical dedicated to EC2 for our use.
+    Full control of EC2 instance placement.
 
