@@ -1,0 +1,9 @@
+EC2 Instances Launched Types:
+    1. On Ddemand Instances: short worklosd, predictable pricing.
+    2. Reserved: (MINIMUM 1 Year)
+        > Reserved Instances: long workload.
+        > Convertable Reserved Instances: long workload with flexible instances.
+        > Scheduled Reserved Instances: Every MOnday 5-7 am for 1 year.
+    3. Spot Instances: short workload, for cheap, can lose instance(less reliable).
+    4. Dedicated Instances: No other cx will share your underlying hardware in AWS.
+    5. Dedicated Host: Book an entire physical server, control instances placement.   
