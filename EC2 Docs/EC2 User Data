@@ -1,0 +1,9 @@
+EC2 User Data:
+    It is possible to bootstrap our instance using EC2 user data script.
+    Bootstrap mean launching commands when a machine starts.
+    That script is only run once at the instance first start.
+
+EC2 User data to automate boot task such as:
+    Installing updates.
+    Downloading common files from the internet and other various stuffs.
+    
