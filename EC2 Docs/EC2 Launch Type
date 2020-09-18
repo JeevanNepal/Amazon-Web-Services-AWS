@@ -43,4 +43,8 @@ Spot Instances:
 EC2 Dedicated Hosts:
     Physical dedicated to EC2 for our use.
     Full control of EC2 instance placement.
+    Visibility into the underlying sockets/physical core of the heardware. 
+    Allocated for your account for 3 years period reservation.
+    More Expensive
 
+    Useful for software that have complicate licensing model (BYOL- Bring Your own license).
