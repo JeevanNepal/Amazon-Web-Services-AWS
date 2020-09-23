@@ -48,5 +48,10 @@ EC2 Dedicated Hosts:
     More Expensive
 
     Useful for software that have complicate licensing model (BYOL- Bring Your own license).
+ 
+EC2 Dedicated Instances:
+    Instances running on hardware that's dedicated to you.
+    May share hardware wit other instances in the same acount.
+    No control over instance placement (can move hardware after start/stop).
 
     
