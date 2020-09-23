@@ -88,6 +88,10 @@ Spot Fleets:
     
     
 EC2 Instance Types - Main Ones:
-    
+    R: Applications that needs a lot of RAM - memory in caches.
+    C: Applications that needs good CPU  - compute / database.
+    M: Application that are balance (think medium) - general/web app
+    I: Applications that needs good local I/O(instance storage) - database.
+    G:
     
     
