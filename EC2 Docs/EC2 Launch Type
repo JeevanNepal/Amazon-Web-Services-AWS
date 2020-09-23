@@ -68,4 +68,21 @@ EC2 Spot Instances in deep:
         
     Used for batch jobs, data analysis, or workload that are resilient to failure.
     Not great for critical jobs or database.
+    
+    
+Spot Fleets: 
+    Spot fleets = set of spot instances + optional on demand instances.
+    
+    The spot fleet will try to meet the target capacity with price constrains.
+        Define possible launched pools: instance type(m5.large)OS, Avability Zone. 
+        Can have multiple launch loops, so that the fleet can choose.
+        Spot fleets stops launching instances when reaching capacity or max cost.
         
+  Stratigies to allocate Spot Instances.
+    lowest price: from the pool with the lowest price(cost optimization, short workload).
+    diversified: distrobuted accross all pools(great for avability, long workload)
+    capacityOptimized: pool with the optimal capacity for the number of instances.
+    
+    
+    Spot Fleets allows us automatically request Spot instance with lowest price.
+    
