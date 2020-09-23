@@ -54,4 +54,18 @@ EC2 Dedicated Instances:
     May share hardware wit other instances in the same acount.
     No control over instance placement (can move hardware after start/stop).
 
+EC2 Spot Instances in deep:
+    Can get upto 90% discount compared to on demand instance.
     
+    Define max sopt price and get the instance while current spot price < max price.
+        The hourly spot price varies based on offer and capacity.
+        If the current spot price > our max price you can choose to stop or terminate our instances within 2 minutes, we can run the insance later if we have stopped when the spot
+        price < max.
+        
+    Other stratigy: Spot Block.
+        "block" spot instance during a specific period of time frame (1 to 6 hours) without interruption.
+        In rare situation the instances can be reclaimed.
+        
+    Used for batch jobs, data analysis, or workload that are resilient to failure.
+    Not great for critical jobs or database.
+        
