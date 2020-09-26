@@ -32,4 +32,16 @@ It's always bets to give the minimal permission to users to do their jobs(least 
 IAM is a private account and credentials should not be shared at any cost.
 
 
-EC2 
+AMI?
+    As we show, AWS comes with base images such as:
+        Ubuntu
+        Fedora 
+        Redhat
+        Windows
+        ect ....
+
+    These images can be customised at runtime using EC2 user data.
+
+    That's an AMI - an image to use to creat our instances.
+
+    
