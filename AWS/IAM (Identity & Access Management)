@@ -43,5 +43,4 @@ AMI?
     These images can be customised at runtime using EC2 user data.
 
     That's an AMI - an image to use to creat our instances.
-
-    
+    AMIs can be built for linux or windows machines.
