@@ -96,3 +96,16 @@ EC2 Instance Types - Main Ones:
     
     T2/T3 brustable instances(up to a capacity).
     T2/T3 unlimited : unlimited brust.
+
+Brustable Instances(T2/T3):
+    AWS has the consept of brustable instances(T2/T3 machines).
+
+    Brust means that overall, the instance has OK CPU performance.
+    When the machine needs to process something expected (a spike in load for example), it can brust(boost) thr CUP and can be 
+    very good.
+    If the machine brusts, it utilizes brust credits.
+    If all the credit gone CPU becomes bad.
+    If the machine stops brusting credits are accumulated over time.
+    Brustable instances can be amazing to handle the unexpected traffic and getting the insurance that it will be 
+    handled correctly.
+    If your instances constantly runs low on credit you need to move to a difference kind of non-brustable instance.  
