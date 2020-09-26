@@ -30,3 +30,6 @@ IAM has predefined"managed policies".
 It's always bets to give the minimal permission to users to do their jobs(least privilage principles). 
 
 IAM is a private account and credentials should not be shared at any cost.
+
+
+EC2 
