@@ -30,7 +30,6 @@ Spot Instances:
     Can get upto 90% discount compared to on demand instance.
     Instance that you can "lose" at any point of time if your max price is less than the current sopt price.
     It's the most cost efficient instance in AWS.
-    
     Useful for worl load that are:
         Batch Jobs
         Data Alalysis
@@ -49,8 +48,7 @@ EC2 Dedicated Hosts:
     More Expensive
 
     Useful for software that have complicate licensing model (BYOL- Bring Your own license).
-
-
+ 
 EC2 Dedicated Instances:
     Instances running on hardware that's dedicated to you.
     May share hardware wit other instances in the same acount.
@@ -98,8 +96,4 @@ EC2 Instance Types - Main Ones:
     
     T2/T3 brustable instances(up to a capacity).
     T2/T3 unlimited : unlimited brust.
-
-
-
-
-
+    
