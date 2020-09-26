@@ -30,6 +30,7 @@ Spot Instances:
     Can get upto 90% discount compared to on demand instance.
     Instance that you can "lose" at any point of time if your max price is less than the current sopt price.
     It's the most cost efficient instance in AWS.
+    
     Useful for worl load that are:
         Batch Jobs
         Data Alalysis
@@ -51,8 +52,54 @@ EC2 Dedicated Hosts:
 
 
 EC2 Dedicated Instances:
-    Instances rinning on hardware that's dedicated to us.
-    may share hardware with other instances in same account.
-    No control over instances placement(can move heardware after start/stop). 
+    Instances running on hardware that's dedicated to you.
+    May share hardware wit other instances in the same acount.
+    No control over instance placement (can move hardware after start/stop).
+
+EC2 Spot Instances in deep:
+    Can get upto 90% discount compared to on demand instance.
+    
+    Define max sopt price and get the instance while current spot price < max price.
+        The hourly spot price varies based on offer and capacity.
+        If the current spot price > our max price you can choose to stop or terminate our instances within 2 minutes, we can run the insance later if we have stopped when the spot
+        price < max.
+        
+    Other stratigy: Spot Block.
+        "block" spot instance during a specific period of time frame (1 to 6 hours) without interruption.
+        In rare situation the instances can be reclaimed.
+        
+    Used for batch jobs, data analysis, or workload that are resilient to failure.
+    Not great for critical jobs or database.
+    
+    
+Spot Fleets: 
+    Spot fleets = set of spot instances + optional on demand instances.
+    
+    The spot fleet will try to meet the target capacity with price constrains.
+        Define possible launched pools: instance type(m5.large)OS, Avability Zone. 
+        Can have multiple launch loops, so that the fleet can choose.
+        Spot fleets stops launching instances when reaching capacity or max cost.
+        
+  Stratigies to allocate Spot Instances.
+    lowest price: from the pool with the lowest price(cost optimization, short workload).
+    diversified: distrobuted accross all pools(great for avability, long workload)
+    capacityOptimized: pool with the optimal capacity for the number of instances.
+    
+    
+    Spot Fleets allows us automatically request Spot instance with lowest price.
+    
+    
+EC2 Instance Types - Main Ones:
+    R: Applications that needs a lot of RAM - memory in caches.
+    C: Applications that needs good CPU  - compute / database.
+    M: Application that are balance (think medium) - general/web app
+    I: Applications that needs good local I/O(instance storage) - database.
+    G: Applications that needs a GPU - video rendering / machine learning.
+    
+    T2/T3 brustable instances(up to a capacity).
+    T2/T3 unlimited : unlimited brust.
+
+
+
 
 
