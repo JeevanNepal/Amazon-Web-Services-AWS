@@ -44,3 +44,13 @@ AMI?
 
     That's an AMI - an image to use to creat our instances.
     AMIs can be built for linux or windows machines.
+
+EC2 AMIs Hands On:
+    First of all we will install apache:
+        yum update -y: to update all thr packages.
+        yum install httpd: apache server.
+        systemctl start httpd
+        systemctl enable httpd
+
+         echo "Hello World" > /var/www/html/index.html
+         curl localhost:80
