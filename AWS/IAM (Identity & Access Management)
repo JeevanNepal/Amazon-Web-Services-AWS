@@ -51,4 +51,6 @@ EC2 AMIs Hands On:
         yum install httpd: apache server.
         systemctl start httpd
         systemctl enable httpd
-        
+
+         echo "Hello World" > /var/www/html/index.html
+         curl localhost:80
