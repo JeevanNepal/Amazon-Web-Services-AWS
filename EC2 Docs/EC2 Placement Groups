@@ -1,2 +1,8 @@
 Placement Groups:
-    Pl
+    1) Sometimes we want to control oner EC2 instance Placement strategy, that strategy ca nbe defined using placement
+        groups.
+    2) When we create a placement groups, we specify one fo the following strategies for the groups:
+        a) Clustr - Cluster instances into a low-letancy group in a single available Zone.
+        b) Spread - Spread instance across underlying heardware(max 7 instances per group per AZ - critical applications.)
+        c) Partition -  Spread instances across many different partitions (which relay on different set of racks) within an AZ.
+           Scales to 100s of instances per group(which allows to run applications such as hadoop, Kafka, cassandra).
