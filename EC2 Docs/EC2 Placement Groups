@@ -6,3 +6,12 @@ Placement Groups:
         b) Spread - Spread instance across underlying heardware(max 7 instances per group per AZ - critical applications.)
         c) Partition -  Spread instances across many different partitions (which relay on different set of racks) within an AZ.
            Scales to 100s of instances per group(which allows to run applications such as hadoop, Kafka, cassandra).
+        
+A) Cluster Groups: 
+    Pros: Great network(10 gbps bandwidth between instances).
+    Cons: If the rack fails, all the instances fails aat the same time as all racks are in one hardware.
+
+Use Case: 
+    Big data jobs that needed to coomplete fast.
+    Applications that needs extremly low-letancy and high network throughput.
+     
