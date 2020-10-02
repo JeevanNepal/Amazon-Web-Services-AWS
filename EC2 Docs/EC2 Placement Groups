@@ -26,3 +26,14 @@ B) Spread Groups:
 Use Case:
     Applications that needs to maximize high availability.
     Critical applications where each instance must be isolated from failure from each other.
+
+
+C) Partition Groups:
+    Pros: Upto 7 partitions per AZ.
+          Upto 100s of instances.
+          instances in the partition do not share the racks with the instances in the other partitions.
+          A partition failure can affect amny EC2 instances but won't affect other partition.
+          EC2 instance gets access to the partition information as metadata.
+
+
+Use Case: Kafka, Hadoop, Cassandra like applications. 
