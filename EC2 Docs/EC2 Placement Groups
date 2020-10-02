@@ -14,4 +14,15 @@ A) Cluster Groups:
 Use Case: 
     Big data jobs that needed to coomplete fast.
     Applications that needs extremly low-letancy and high network throughput.
-     
+
+
+B) Spread Groups: 
+    Prons: Can spread across available zones.
+           EC2 in are on different physical hardware.
+           If one of the instance fails others will be up and running.
+
+    Cons:  Limited to 7 inst / AZ per placement groups.
+           
+Use Case:
+    Applications that needs to maximize high availability.
+    Critical applications where each instance must be isolated from failure from each other.
