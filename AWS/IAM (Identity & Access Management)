@@ -54,3 +54,8 @@ EC2 AMIs Hands On:
 
          echo "Hello World" > /var/www/html/index.html
          curl localhost:80
+
+Create an image of the esixting instance:
+ 
+
+Cross Account AMI Copy.
