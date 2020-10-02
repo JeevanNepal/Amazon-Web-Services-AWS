@@ -36,4 +36,4 @@ C) Partition Groups:
           EC2 instance gets access to the partition information as metadata.
 
 
-Use Case: Kafka, Hadoop, Cassandra like applications. 
+Use Case: Kafka, Hadoop, Cassandra, HDFS, HBase like applications. 
