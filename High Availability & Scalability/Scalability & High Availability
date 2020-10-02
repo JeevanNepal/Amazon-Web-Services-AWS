@@ -1,0 +1,12 @@
+Scalability & High Availability:
+    Scalability mean that an application/ system can handel greater load by adapting.
+
+There are two kind of scalability:
+    1) Vertical Scalability
+    2) Horizontal Scalability(= elasticity)
+
+Scalability is linked but different to high avabiality.
+
+
+Vertical Scalability:
+    
