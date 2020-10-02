@@ -4,4 +4,4 @@ EC2 for Solution Architects:
     Timeout issue = security group issue.
     Permission on SSH key = run chmod 0400"
     security group can reference other security group instead of Ip ranges.
-    We can customize an EC2 instance on boot using EC2 user data.
+    We can customize an EC2 instance at boot time using EC2 user data.
