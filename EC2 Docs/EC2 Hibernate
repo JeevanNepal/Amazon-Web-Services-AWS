@@ -6,7 +6,16 @@ EC2 Hibernate:
 
 
 Use Cases: 
-     long running procrssing.
+     long running processing.
      saving the RAM state.
      servivces that takes long time to initialize.
-     
+
+EC2 Hibernate - Good to Know: limitations:
+    Supported instances families: C3, C4, C5, M3, M4, M5 & R3, R4, R5.
+    Instance RAM size must be less than 150 GB.
+    Instance size - not supported for bare metal instances.
+    AMI: Amazon linux 2, Linux AMI, Ubuntu & Windows.
+    Root Volume: must be EBS, encrypted, not instance store and large.
+    Available for On-Demand and Reserved instances.
+
+    An instance cannot be hibernated more than 60 days.
