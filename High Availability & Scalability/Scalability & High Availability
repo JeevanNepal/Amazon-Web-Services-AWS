@@ -9,4 +9,9 @@ Scalability is linked but different to high avabiality.
 
 
 Vertical Scalability:
-    
+    It means the increasing the size of the instance.
+    ex: from t2.micro to t2.large
+
+    It is very common for ono distributed systems, such as a database.
+    RDS, ElastiCache are services that can scale vertically.
+    There is usually a limit to how much we can vertically scale(hardware limit).
