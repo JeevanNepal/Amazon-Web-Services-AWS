@@ -1,0 +1,12 @@
+EC2 Hibernate:
+    In the memory (RAM) state is preserved.
+    The instance boot is much faster(the OS is not stopped or restarted).
+    Under the hood: the RAM state is written to a file in the root EBS volume.
+    The root EBS volume must be encrypted.
+
+
+Use Cases: 
+     long running procrssing.
+     saving the RAM state.
+     servivces that takes long time to initialize.
+     
