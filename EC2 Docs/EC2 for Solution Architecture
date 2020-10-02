@@ -1,0 +1,7 @@
+EC2 for Solution Architects:
+    EC2 instance are billed by seconds and t2.micro is a free tier.
+    On Linux, Mac we use ssh and putty on windows.
+    Timeout issue = security group issue.
+    Permission on SSH key = run chmod 0400"
+    security group can reference other security group instead of Ip ranges.
+    We can customize an EC2 instance on boot using EC2 user data.
