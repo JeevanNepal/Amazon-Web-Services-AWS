@@ -37,3 +37,17 @@ C) Partition Groups:
 
 
 Use Case: Kafka, Hadoop, Cassandra, HDFS, HBase like applications. 
+
+
+
+Elastic Network Interface(ENI):
+    They are logical components in VPC that represents a virtual network card.
+    The ENI can have the following attributes:
+        a) Primary private IPv4 or more secondary IPv4.
+        b) One Elastic IP(ipv4) per private ipv4.
+        c) one public ipv4.
+        d) one or more security groups.
+        e) A MAC address. 
+
+We can create ENI independently and attached them on fly(move them) on EC2 instances for failover.
+Bound to specific availability zone(AZ).
