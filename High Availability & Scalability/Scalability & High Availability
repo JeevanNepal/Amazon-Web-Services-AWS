@@ -25,3 +25,8 @@ Horizontal Scalability:
 High Availability:
     It gors hand in hand wih Horizontal scalability but not all the time.
     It means running our application/system in at lease 2 data center(==avabiality Zone), to prevent the loss of data.
+
+
+High Availability & Scalability for EC2:
+    Vertical Scaling = increasing instance size(scale up/down).
+    t2.nano(0.5RAM, 1 vCPU) to u12tbl.metal(12.3 TB RAM,448 vCPU).
