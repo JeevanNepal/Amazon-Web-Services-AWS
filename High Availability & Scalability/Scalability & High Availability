@@ -15,3 +15,13 @@ Vertical Scalability:
     It is very common for ono distributed systems, such as a database.
     RDS, ElastiCache are services that can scale vertically.
     There is usually a limit to how much we can vertically scale(hardware limit).
+
+Horizontal Scalability:
+    It means increasing the number of instances/system for the application.
+    It implies distributed system.
+    This is very common for web application/ mordern application.
+
+
+High Availability:
+    It gors hand in hand wih Horizontal scalability but not all the time.
+    It means running our application/system in at lease 2 data center(==avabiality Zone), to prevent the loss of data.
