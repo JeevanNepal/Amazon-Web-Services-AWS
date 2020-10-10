@@ -13,4 +13,10 @@ Why we should use load balancer?
 
 Why use an EC2 load balancer?
     An ELB(EC2 Load balancer) is a managed load balancer.
-     . AWS gurantees 
+     . AWS gurantees that it will be working.
+     . AWS takes care of upgrade, maintenance and high availability.
+     . AWS provides only few configuration knobs.
+
+It cost less to setup our own load balancer.
+
+It is integrated with many AWS offrings/services.
