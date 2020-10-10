@@ -12,4 +12,5 @@ Why we should use load balancer?
     Seperate public traffic from private traffic.
 
 Why use an EC2 load balancer?
-    
+    An ELB(EC2 Load balancer) is a managed load balancer.
+     . AWS gurantees 
