@@ -20,3 +20,10 @@ Why use an EC2 load balancer?
 It cost less to setup our own load balancer.
 
 It is integrated with many AWS offrings/services.
+
+
+Health Checks:
+    Health checks are crucial to load balancer.
+    They enable load balancer to know if the instances it forwards traffic to are availabil to reply to requests.
+    Health checks is done on a port and route.
+    If the response is not 200% (OK) then the instance is unhealthy.
