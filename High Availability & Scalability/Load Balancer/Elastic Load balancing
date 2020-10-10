@@ -27,3 +27,8 @@ Health Checks:
     They enable load balancer to know if the instances it forwards traffic to are availabil to reply to requests.
     Health checks is done on a port and route.
     If the response is not 200% (OK) then the instance is unhealthy.
+
+                                 Health Checks
+    Classic Load Balancer ---------------------------- EC2 instance
+                                   Port 4567
+                                   route/health
