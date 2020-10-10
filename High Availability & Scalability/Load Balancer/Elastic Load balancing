@@ -3,10 +3,13 @@ What is load balancing?
 
 Why we should use load balancer?
     Spread load across multiple downstream instances.
-    Expose a singlt point of access(DNS) to oue application.
+    Expose a singlt point of access(DNS) to our application.
     Simlessly handles failures of downstream instances.
     Do regular healthcheck to our instances.
     Provides SSL termination (HTTPS) to our websites.
     ENforce stickness with cookies.
     High availability across zones.
     Seperate public traffic from private traffic.
+
+Why use an EC2 load balancer?
+    
