@@ -31,3 +31,6 @@ CLASSIC LOAD BALANCER:
    xxxx.region.elb.amazonaws.com
 
    
+
+                  listener                                 internal
+Client--------------------------------------- CLB -----------------------------------EC2
