@@ -30,7 +30,16 @@ CLASSIC LOAD BALANCER:
    Fixed hostname.
    xxxx.region.elb.amazonaws.com
 
-   
+
 
                   listener                                 internal
 Client--------------------------------------- CLB -----------------------------------EC2
+
+
+Hands On:
+
+1. Go to load balancer at left side of the console.
+2. Click on create load balancer,
+3. For now we will use CLB as we are in classic load balancer.
+4. Give the name there, "myfirstCLB"
+5. 
