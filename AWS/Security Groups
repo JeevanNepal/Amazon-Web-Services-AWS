@@ -3,14 +3,14 @@ They control how traffic is allowed into and out of EC2 machine.
 Allow, inbound & outbound ports.
 
 If we face any time-out issue than it can be a security group issue. 
-We can just have a check on ports and other stuffs insecurity group tab.
+We can just have a check on ports and other stuffs in security group tab.
 
 
 
 Security Group In Deeper:
 In actual security groups in EC2 acts as a firewall.
 
-Thet regulates the following:
+They regulates the following:
 1. Access to ports.
 2. Authorised IP ranges - IPv4 & IPv6
 3. Control of inbound networks (from other to the instance)
