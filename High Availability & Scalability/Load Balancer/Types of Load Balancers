@@ -42,4 +42,19 @@ Hands On:
 2. Click on create load balancer,
 3. For now we will use CLB as we are in classic load balancer.
 4. Give the name there, "myfirstCLB"
-5. 
+5. Assign security groups.
+6. Create a new security group.
+7. Health Checks, 
+
+Advanced Details:
+   Response Timeout 
+   10 seconds
+
+   Interval 
+   30 seconds
+
+   Unhealthy threshold 
+   2
+
+   Healthy threshold 
+   10
