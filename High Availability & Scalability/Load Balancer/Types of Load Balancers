@@ -21,3 +21,7 @@ Load Balancers Important points to remember:
 Monitoring:
    ELB access logs will log all access requests(so we can debug per request).
    CloudWatch Metrics will give us aggregate statistics(ex. connection counts). 
+
+
+CLASSIC LOAD BALANCER:
+----------------------
