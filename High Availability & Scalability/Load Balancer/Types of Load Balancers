@@ -61,3 +61,7 @@ Advanced Details:
 
 Click on add EC2 instances.
    Add the old instance > add tag > review and created and created.
+
+If we run the DNS name in the browser it works as well.
+Name: MyfirstCLB
+DNS name: MyfirstCLB-1115348721.ap-south-1.elb.amazonaws.com (A Record)
