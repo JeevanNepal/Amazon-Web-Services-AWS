@@ -25,6 +25,7 @@ Monitoring:
 
 CLASSIC LOAD BALANCER:
 ----------------------
+   
    Support TCP (Layer 4), HTTP & HTTPS(Layer 7).
    Health checks are either TCP base or HTTP based.
    Fixed hostname.
@@ -64,4 +65,9 @@ Click on add EC2 instances.
 
 If we run the DNS name in the browser it works as well.
 Name: MyfirstCLB
-DNS name: MyfirstCLB-1115348721.ap-south-1.elb.amazonaws.com (A Record)
+DNS name: MyfirstCLB-1115348721.ap-south-1.elb.amazonaws.com 
+
+
+APPLICATION LOAD BALANCER:
+-------------------------
+
