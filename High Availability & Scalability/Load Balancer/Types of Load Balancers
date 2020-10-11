@@ -11,4 +11,13 @@ We can setup internal (private) or external (public) ELBs.
 
 
 Load Balancers Important points to remember:
-   
+   Load balancer can scale but not instantaneously - cantact AWS for a warm-up.
+    Trooubleshooting.
+    4xx errors are client induced errors.
+    5xx error are application errors.
+    Load balancer error 503 means at capacity or no registered target.
+    If the load balancer can't connect to your application then we need to check security groups.
+
+Monitoring:
+   ELB access logs will log all access requests(so we can debug per request).
+   CloudWatch Metrics will give us aggregate statistics(ex. connection counts). 
