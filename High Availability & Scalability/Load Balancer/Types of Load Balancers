@@ -9,3 +9,6 @@ Types of Load Balancers in AWS.
  
 We can setup internal (private) or external (public) ELBs.
 
+
+Load Balancers Important points to remember:
+   
