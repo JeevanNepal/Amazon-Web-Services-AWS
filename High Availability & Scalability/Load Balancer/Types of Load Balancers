@@ -51,10 +51,13 @@ Advanced Details:
    10 seconds
 
    Interval 
-   30 seconds
+   5 seconds
 
    Unhealthy threshold 
    2
 
    Healthy threshold 
-   10
+   5
+
+Click on add EC2 instances.
+   Add the old instance > add tag > review and created and created.
