@@ -86,5 +86,31 @@ Routing tables to different target groups:
 
 ALB are great fit for micro services & container-based application(ex. Docker & Amazon ECS).
 Has a port mapping features to redirect to a dynamic port in ECS.
-In comparison we need multiple classic load balancer per application but for ALB one is enough for multiple application.
+In comparison we need multiple classic load balancer per application but for ALB one is enough for multiple 
+application.
+                     ------------------
+                     |                |
+                     |                |
+      route/usser    |                |           HTTP
+www----------------- |                |-----------------------------> Target group for user application.
+                     |                |
+                     |                |
+                     |                |
+                     | external       |
+                     | Application    |
+                     | Load Balancer  |              |
+                     |                |
+                     |                |
+                     |                |
+                     |                |
+      route/search   |                |             HTTP
+www------------------|                |-----------------------------> Target group for search application.
+                     |                |
+                     |                |
+                     |                |
+                     |                |
+                     ------------------
+
+               
+
 
