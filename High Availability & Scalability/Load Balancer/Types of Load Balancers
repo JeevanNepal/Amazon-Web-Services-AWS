@@ -76,3 +76,7 @@ APPLICATION LOAD BALANCER:
    Load balancing to multiple applications on the same machine (ex. containers).
    Support for HTTP/2 and Websockets.
    Support redirects (from HTTP to HTTPS).
+
+
+Routing tables to different target groups:
+   
