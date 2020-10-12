@@ -91,25 +91,35 @@ application.
                      ------------------
                      |                |
                      |                |
-      route/usser    |                |           HTTP
+      route/user     |                |             HTTP
 www----------------- |                |-----------------------------> Target group for user application.
                      |                |
                      |                |
                      |                |
                      | external       |
                      | Application    |
-                     | Load Balancer  |              |
+                     | Load Balancer  |              
+                     |     (v2)       |
                      |                |
                      |                |
                      |                |
-                     |                |
-      route/search   |                |             HTTP
+      route/search   |                |               HTTP
 www------------------|                |-----------------------------> Target group for search application.
                      |                |
                      |                |
                      |                |
                      |                |
                      ------------------
+
+Application Load Balancer Target Groups:
+   EC2 instances (can be manged by auto scalling group) - HTTP.
+   EC2 tasks ( Managed by EC2 itself) - HTTP.
+   Lamda functions - HTTP request sre translated into a JSON event(base of everything call serverless in AWS).
+   IP Addresses - must be private IP addresses.
+   
+   ALB can route to multiple target groups.
+   ALB health checks are at target group level.
+
 
                
 
