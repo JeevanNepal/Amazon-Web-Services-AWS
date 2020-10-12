@@ -25,7 +25,7 @@ Monitoring:
 
 CLASSIC LOAD BALANCER:
 ----------------------
-   
+
    Support TCP (Layer 4), HTTP & HTTPS(Layer 7).
    Health checks are either TCP base or HTTP based.
    Fixed hostname.
@@ -71,3 +71,8 @@ DNS name: MyfirstCLB-1115348721.ap-south-1.elb.amazonaws.com
 APPLICATION LOAD BALANCER:
 -------------------------
 
+   Application load balancer is layer 7 (HTTP)
+   Load balancing to multiple HTTP applications across machines (target groups).
+   Load balancing to multiple applications on the same machine (ex. containers).
+   Support for HTTP/2 and Websockets.
+   Support redirects (from HTTP to HTTPS).
