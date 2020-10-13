@@ -138,3 +138,10 @@ Good to know about few points on application load balancer:
 Hands On:
    Application load balancer is only for HTTP & HTTPS.
    Similar steps as CLB, but here we shall use the target group.
+
+
+
+NETWORK LOAD BALANCER:
+---------------------
+
+   
