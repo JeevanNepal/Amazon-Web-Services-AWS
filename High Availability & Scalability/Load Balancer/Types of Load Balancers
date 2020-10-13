@@ -126,3 +126,14 @@ Good to know about few points on application load balancer:
    The application server don't see the IP of the client directly.
       . The true IP of the client is inserted in the header x-forwarded-for.
       . We can also get Protocol(x-forwarded-proto) and port(x-forwarded-port).
+
+
+
+                                                                  Load balancer IP(private IP)
+      Client IP ---------------------------------- | ------------------------------------------- EC2 instance
+                                         connection Termination
+
+
+
+Hands On:
+   
