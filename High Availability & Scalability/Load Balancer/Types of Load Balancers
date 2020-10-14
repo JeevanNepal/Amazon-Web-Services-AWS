@@ -143,5 +143,6 @@ Hands On:
 
 NETWORK LOAD BALANCER:
 ---------------------
-
+   Network load balancer (Layer 4) allow to:
+   To forward TCP & UDP to our instance.
    
