@@ -145,4 +145,6 @@ NETWORK LOAD BALANCER:
 ---------------------
    Network load balancer (Layer 4) allow to:
    To forward TCP & UDP to our instance.
+   Handles millions of requests per second.
+   Less latence ~ 100 ms(vs 400ms for ALB).
    
