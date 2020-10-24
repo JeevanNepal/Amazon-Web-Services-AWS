@@ -150,5 +150,7 @@ NETWORK LOAD BALANCER:
    
 NLB has one static IP per AZ, ans supports assigning elastic IP (helpful for whistlisting specific IP).
    NLB are used for extreme performance, TCP or UDP traffic.
-   it is not included in AWS free tier, which means it cost some money for handson.
+   It is not included in AWS free tier, which means it cost some money for handson.
+   
+   
    
