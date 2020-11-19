@@ -6,7 +6,7 @@ Whole AWS Security will be in IAM.
  2. Groups
  3. Roles
 
-Root account should nener br used (and shared).
+Root account should never be used (and shared).
 
 IAM ia art the center of AWS.
 
