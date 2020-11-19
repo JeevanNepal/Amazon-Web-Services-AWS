@@ -8,7 +8,7 @@ Whole AWS Security will be in IAM.
 
 Root account should never be used (and shared).
 
-IAM ia art the center of AWS.
+IAM is in the center of AWS.
 
             Users                                Group                               Roles
         It is only for users.              Contains users.          It is for machines.(Internal usage within AWS resources).
@@ -47,7 +47,7 @@ AMI?
 
 EC2 AMIs Hands On:
     First of all we will install apache:
-        yum update -y: to update all thr packages.
+        yum update -y: to update all the packages.
         yum install httpd: apache server.
         systemctl start httpd
         systemctl enable httpd
