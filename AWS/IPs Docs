@@ -23,7 +23,7 @@ Public vs Private IPs Fundamental Difference:
 
 
  Elastic IPs:
-    1. It is an IP of the instance which you can attache to one instance at a time.
+    1. It is an IP of the instance which you can attach to one instance at a time.
     2. It is alive as long as the instance is running and it is dynamic in nature.
     3. It is a public IPv4 IP.
     4. Only 5 of it is provided but we can ask AWS to increase it but it's a rare case.
@@ -56,7 +56,7 @@ Launching Apache Server on EC2:
     5. curl localhost:80(curl is to load whatever in this given url)
     6. now to run the html code in browser we need to run the instance IP in http/:IP XXX:80(mapped port).
     7. We have to create a security group in AWS instance by going to security group, inbount and edit tab.
-    8. If your page is not oading even after all the steps than, go to action at top and click on networking and choose
+    8. If your page is not loading even after all the steps than, go to action at top and click on networking and choose
        the right security group from "change security groups" you have created for the Apache server.
 
     Now just run: echo "hello World" > /var/www/html/index.html     to make the first content on the browser.
