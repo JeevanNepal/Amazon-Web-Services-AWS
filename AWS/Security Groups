@@ -13,8 +13,8 @@ In actual security groups in EC2 acts as a firewall.
 They regulates the following:
 1. Access to ports.
 2. Authorised IP ranges - IPv4 & IPv6
-3. Control of inbound networks (from other to the instance)
-4. Control of outbound neteworks (from the instance to others).
+3. Control of inbound networks (from others to the instance).
+4. Control of outbound networks (from the instance to others).
 
 
 Security groups can be attached to multiple instances & instance can have multiple security groups too.
