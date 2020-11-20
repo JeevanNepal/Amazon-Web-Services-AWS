@@ -8,7 +8,7 @@ Whole AWS Security will be in IAM.
 
 Root account should never be used (and shared).
 
-IAM is in the center of AWS.
+IAM is the center of AWS.
 
             Users                                Group                               Roles
         It is only for users.              Contains users.          It is for machines.(Internal usage within AWS resources).
