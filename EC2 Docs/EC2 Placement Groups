@@ -1,18 +1,18 @@
 Placement Groups:
-    1) Sometimes we want to control oner EC2 instance Placement strategy, that strategy ca nbe defined using placement
+    1) Sometimes we want to control oner EC2 instance Placement strategy, that strategy can be defined using placement
         groups.
-    2) When we create a placement groups, we specify one fo the following strategies for the groups:
-        a) Clustr - Cluster instances into a low-letancy group in a single available Zone.
-        b) Spread - Spread instance across underlying heardware(max 7 instances per group per AZ - critical applications.)
+    2) When we create a placement groups, we specify one of the following strategies for the groups:
+        a) Cluster - Cluster instances into a low-letancy group in a single available Zone.
+        b) Spread - Spread instance across underlying hardware(max 7 instances per group per AZ - critical applications.)
         c) Partition -  Spread instances across many different partitions (which relay on different set of racks) within an AZ.
            Scales to 100s of instances per group(which allows to run applications such as hadoop, Kafka, cassandra).
         
 A) Cluster Groups: 
     Pros: Great network(10 gbps bandwidth between instances).
-    Cons: If the rack fails, all the instances fails aat the same time as all racks are in one hardware.
+    Cons: If the rack fails, all the instances fails at the same time as all racks are in one hardware.
 
 Use Case: 
-    Big data jobs that needed to coomplete fast.
+    Big data jobs that needed to complete fast.
     Applications that needs extremly low-letancy and high network throughput.
 
 
