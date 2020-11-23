@@ -1,5 +1,5 @@
 EC2 Instances Launch Types:
-    1. On Demand Instances: short worklosd, predictable pricing.
+    1. On Demand Instances: short workload, predictable pricing.
     2. Reserved: (MINIMUM 1 Year)
         > Reserved Instances: long workload.
         > Convertable Reserved Instances: long workload with flexible instances.
