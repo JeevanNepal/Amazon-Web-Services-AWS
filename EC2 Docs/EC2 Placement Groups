@@ -1,5 +1,5 @@
 Placement Groups:
-    1) Sometimes we want to control oner EC2 instance Placement strategy, that strategy can be defined using placement
+    1) Sometimes we want to control over EC2 instance Placement strategy, that strategy can be defined using placement
         groups.
     2) When we create a placement groups, we specify one of the following strategies for the groups:
         a) Cluster - Cluster instances into a low-letancy group in a single available Zone.
@@ -18,7 +18,7 @@ Use Case:
 
 B) Spread Groups: 
     Prons: Can spread across available zones.
-           EC2 in are on different physical hardware.
+           Each EC2 instances are on different physical hardware.
            If one of the instance fails others will be up and running.
 
     Cons:  Limited to 7 inst / AZ per placement groups.
@@ -32,7 +32,7 @@ C) Partition Groups:
     Pros: Upto 7 partitions per AZ.
           Upto 100s of instances.
           instances in the partition do not share the racks with the instances in the other partitions.
-          A partition failure can affect amny EC2 instances but won't affect other partition.
+          A partition failure can affect many EC2 instances but won't affect other partition.
           EC2 instance gets access to the partition information as metadata.
 
 
