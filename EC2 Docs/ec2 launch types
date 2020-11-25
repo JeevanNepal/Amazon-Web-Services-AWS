@@ -28,11 +28,11 @@ EC2 Reserved Instances:
 
 Spot Instances:
     Can get upto 90% discount compared to on demand instance.
-    Instance that you can "lose" at any point of time if your max price is less than the current sopt price.
+    Instance that you can "lose" at any point of time if your max price is less than the current spot price.
     It's the most cost efficient instance in AWS.
-    Useful for worl load that are:
+    Useful for work load that are:
         Batch Jobs
-        Data Alalysis
+        Data Analysis
         Image processing
         ..... 
 
@@ -43,21 +43,21 @@ Spot Instances:
 EC2 Dedicated Hosts:
     Physical dedicated to EC2 for our use.
     Full control of EC2 instance placement.
-    Visibility into the underlying sockets/physical core of the heardware. 
+    Visibility into the underlying sockets/physical core of the hardware. 
     Allocated for your account for 3 years period reservation.
-    More Expensive
+    More Expensive.
 
     Useful for software that have complicate licensing model (BYOL- Bring Your own license).
  
 EC2 Dedicated Instances:
     Instances running on hardware that's dedicated to you.
-    May share hardware wit other instances in the same acount.
+    May share hardware with other instances in the same account.
     No control over instance placement (can move hardware after start/stop).
 
 EC2 Spot Instances in deep:
     Can get upto 90% discount compared to on demand instance.
     
-    Define max sopt price and get the instance while current spot price < max price.
+    Define max spot price and get the instance while current spot price < max price.
         The hourly spot price varies based on offer and capacity.
         If the current spot price > our max price you can choose to stop or terminate our instances within 2 minutes, we can run the insance later if we have stopped when the spot
         price < max.
@@ -78,10 +78,10 @@ Spot Fleets:
         Can have multiple launch loops, so that the fleet can choose.
         Spot fleets stops launching instances when reaching capacity or max cost.
         
-  Stratigies to allocate Spot Instances.
+  Strategies to allocate Spot Instances.
     lowest price: from the pool with the lowest price(cost optimization, short workload).
-    diversified: distrobuted accross all pools(great for avability, long workload)
-    capacityOptimized: pool with the optimal capacity for the number of instances.
+    diversified: distributed accross all pools(great for avability, long workload)
+    capacity Optimized: pool with the optimal capacity for the number of instances.
     
     
     Spot Fleets allows us automatically request Spot instance with lowest price.
@@ -101,18 +101,18 @@ Brustable Instances(T2/T3):
     AWS has the consept of brustable instances(T2/T3 machines).
 
     Brust means that overall, the instance has OK CPU performance.
-    When the machine needs to process something expected (a spike in load for example), it can brust(boost) thr CUP and can be 
+    When the machine needs to process something expected (a spike in load for example), it can brust(boost) the CUP and can be 
     very good.
     If the machine brusts, it utilizes brust credits.
     If all the credit gone CPU becomes bad.
     If the machine stops brusting credits are accumulated over time.
     Brustable instances can be amazing to handle the unexpected traffic and getting the insurance that it will be 
     handled correctly.
-    If your instances constantly runs low on credit you need to move to a difference kind of non-brustable instance.  
+    If your instances constantly runs low on credit you need to move to a different kind of non-brustable instance.  
 
 
-T2/T3 Umlimiteed:
-   It is possible to have umlomited brustable credits.
+T2/T3 Umlimited:
+   It is possible to have umlimited brustable credits.
    Have to pay xtra if we went over credit balance but the preformance is up anyway.
 
    Overall, it is a new offer and have to be cautious as if we do not do helath check of an application than it can 
