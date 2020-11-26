@@ -9,11 +9,11 @@ Scalability is linked but different to high availability.
 
 
 Vertical Scalability:
-    It means the increasing the size of the instance.
+    It means increasing the size of the instance.
     ex: from t2.micro to t2.large
 
     It is very common for distributed systems, such as a database.
-    RDS, ElastiCache are services that can scale vertically.
+    RDS (Relational Database Service), ElastiCache are services that can scale vertically.
     There is usually a limit to how much we can vertically scale(hardware limit).
 
 Horizontal Scalability:
@@ -23,8 +23,8 @@ Horizontal Scalability:
 
 
 High Availability:
-    It goes hand in hand wih Horizontal scalability but not all the time.
-    It means running our application/system in atleast 2 data center(==avabiality Zone), to prevent the loss of data.
+    It goes hand in hand with Horizontal scalability but not all the time.
+    It means running our application/system in atleast 2 data center(==availabiality Zone), to prevent the loss of data.
 
 
 High Availability & Scalability for EC2:
