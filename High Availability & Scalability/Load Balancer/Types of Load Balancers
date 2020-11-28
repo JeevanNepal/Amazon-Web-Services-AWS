@@ -114,7 +114,7 @@ www------------------|                |-----------------------------> Target gro
 Application Load Balancer Target Groups:
    EC2 instances (can be manged by auto scalling group) - HTTP.
    EC2 tasks ( Managed by EC2 itself) - HTTP.
-   Lamda functions - HTTP request sre translated into a JSON event(base of everything call serverless in AWS).
+   Lamda functions - HTTP request are translated into a JSON event(base of everything call serverless in AWS).
    IP Addresses - must be private IP addresses.
    
    ALB can route to multiple target groups.
@@ -125,7 +125,7 @@ Good to know about few points on application load balancer:
    Fixed hostname.
    The application server don't see the IP of the client directly.
       . The true IP of the client is inserted in the header x-forwarded-port.
-      . We can also get Protocol(x-forwarded-prot) and port(x-forwarded-port).
+      . We can also get Protocol(x-forwarded-port) and port(x-forwarded-port).
 
 
 
@@ -146,9 +146,9 @@ NETWORK LOAD BALANCER:
    Network load balancer (Layer 4) allow to:
    To forward TCP & UDP to our instance.
    Handles millions of requests per second.
-   Less latence ~ 100 ms(vs 400ms for ALB).
+   Less latency ~ 100 ms(vs 400ms for ALB).
    
-NLB has one static IP per AZ, ans supports assigning elastic IP (helpful for whistlisting specific IP).
+NLB has one static IP per AZ, and supports assigning elastic IP (helpful for whistlisting specific IP).
    NLB are used for extreme performance, TCP or UDP traffic.
    It is not included in AWS free tier, which means it cost some money for handson.
    
