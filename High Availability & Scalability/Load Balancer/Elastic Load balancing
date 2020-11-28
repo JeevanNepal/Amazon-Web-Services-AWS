@@ -19,7 +19,7 @@ Why use an EC2 load balancer?
 
 It cost less to setup our own load balancer.
 
-It is integrated with many AWS offrings/services.
+It is integrated with many AWS offerings/services.
 
 
 Health Checks:
