@@ -1,11 +1,11 @@
 Types of Load Balancers in AWS.
-   There are three types of losd balancer in AWS.
+   There are three types of load balancers in AWS.
 
     1. Classic load balancer: (v1 - old generation) - 2009, supports - HTTP, HTTPS, TCP.
     2. Application load balancer: (v2 - new generation) - 2016, supports-  HTTP,HTTPS, Websockets.
     3. Network load balancer: (v2 - new generation) - 2017, supports - TCP, TLS (secure TCP) & UDP.
 
- Overall, it is recomemded to use the newer / V2 generation ;load balancers as they provide more features.
+ Overall, it is recomemded to use the newer / V2 generation;load balancers as they provide more features.
  
 We can setup internal (private) or external (public) ELBs.
 
