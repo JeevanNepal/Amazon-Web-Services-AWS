@@ -12,7 +12,7 @@ We can setup internal (private) or external (public) ELBs.
 
 Load Balancers Important points to remember:
    Load balancer can scale but not instantaneously - cantact AWS for a warm-up.
-    Trooubleshooting.
+    Troubleshooting.
     4xx errors are client induced errors.
     5xx error are application errors.
     Load balancer error 503 means at capacity or no registered target.
@@ -61,7 +61,7 @@ Advanced Details:
    5
 
 Click on add EC2 instances.
-   Add the old instance > add tag > review and created and created.
+   Add the old instance > add tag > review and create.
 
 If we run the DNS name in the browser it works as well.
 Name: MyfirstCLB
@@ -124,8 +124,8 @@ Application Load Balancer Target Groups:
 Good to know about few points on application load balancer:
    Fixed hostname.
    The application server don't see the IP of the client directly.
-      . The true IP of the client is inserted in the header x-forwarded-for.
-      . We can also get Protocol(x-forwarded-proto) and port(x-forwarded-port).
+      . The true IP of the client is inserted in the header x-forwarded-port.
+      . We can also get Protocol(x-forwarded-prot) and port(x-forwarded-port).
 
 
 
