@@ -68,9 +68,9 @@ Health Checks:
                        EC2 Instance                     EC2 Instance    
                        
                        
- When the stickness is not active the IP of the instance which is running keeps on changing.
+ When the stickness is not active the IP of the instance which is running keeps on changing as it redirects to another instance in the target groups.
  
- When the stickness is active we can set the instance IP duration accordingly.
+ When the stickness is active we can set the instance IP duration accordingly until the cookie expires which then redirects to another instance in the target group.
  
  
  --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
