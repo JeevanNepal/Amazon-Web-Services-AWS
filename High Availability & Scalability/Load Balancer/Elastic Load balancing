@@ -34,6 +34,10 @@ Health Checks:
                                    route/health
                                    
                                    
+ --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------                                  
+            
+            
+            
  Elastic Load Balancer Stickiness:
     It is pissible to implement stickiness so that the same client is always redirected to the same instance behind a load balancer.
     
@@ -48,11 +52,11 @@ Health Checks:
     
     
                        Client A           Client B           Client C
-                                             |                 /
-                             \\              |                /
-                              \\             |              /
-                               \\            |            /
-                                \\           |          /
+                                             |                 //
+                             \\              |                //
+                              \\             |              //
+                               \\            |            //
+                                \\           |          //
                                  \\    _____________
                                       |Load Balancer|
                                        --------------
@@ -67,3 +71,9 @@ Health Checks:
  When the stickness is not active the IP of the instance which is running keeps on changing.
  
  When the stickness is active we can set the instance IP duration accordingly.
+ 
+ 
+ --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ 
+ 
+ Elasti
