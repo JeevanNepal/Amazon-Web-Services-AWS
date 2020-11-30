@@ -32,3 +32,33 @@ Health Checks:
     Classic Load Balancer ---------------------------- EC2 instance
                                    Port 4567
                                    route/health
+                                   
+                                   
+ Elastic Load Balancer Stickiness:
+    It is pissible to implement stickiness so that the same client is always redirected to the same instance behind a load balancer.
+    
+    This works for Classic and Application load balancer.
+    
+    The "cookie" used for stickiness has an expiration date that we control.
+    
+    Use Case: Make sure that user don't lose his session data.
+    
+    Enabling stickness may bring imbalance to the load over the backend EC2 instances.
+    
+    
+    
+                       Client A           Client B           Client C
+                                             |                 /
+                             \\              |                /
+                              \\             |              /
+                               \\            |            /
+                                \\           |          /
+                                 \\    _____________
+                                      |Load Balancer|
+                                       --------------
+                                      / /             \ \
+                                    / /                \ \
+                                  /  /                  \ \
+                                 / /                     \ \
+                               /  /                       \ \
+                       EC2 Instance                     EC2 Instance                  
