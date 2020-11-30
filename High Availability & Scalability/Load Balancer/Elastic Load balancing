@@ -61,4 +61,9 @@ Health Checks:
                                   /  /                  \ \
                                  / /                     \ \
                                /  /                       \ \
-                       EC2 Instance                     EC2 Instance                  
+                       EC2 Instance                     EC2 Instance    
+                       
+                       
+ When the stickness is not active the IP of the instance which is running keeps on changing.
+ 
+ When the stickness is active we can set the instance IP duration accordingly.
