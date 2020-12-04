@@ -34,8 +34,7 @@ Health Checks:
                                    route/health
                                    
                                    
- --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------                                  
-            
+ -------------------------------------------------------------------------------------------------------------------------------------------------------------------            
             
             
  Elastic Load Balancer Stickiness:
@@ -73,7 +72,7 @@ Health Checks:
  When the stickness is active we can set the instance IP duration accordingly until the cookie expires which then redirects to another instance in the target group.
  
  
- --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ ------------------------------------------------------------------------------------------------------------------------------------------------------------------------
  
  
  Elastic Load Balancer - Cross-Zone Load Balancing:
@@ -98,3 +97,21 @@ Application Load balancer:
  Network Load Balancer:
     In network load balancer, cross-zones is disabled by default.
     Charges are applicable ($) for inter AZ if enabled.
+    
+    
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------    
+
+Elastic Load Balancer - SSL Certificate:
+
+    SSL/TLS - Basics:
+        An SSL certificate allows traffic between your client and your load balancer to be encrypted in transit (in-flight encryption).
+        
+        SSL refers to Secure Sockets Layer, used to encrytp connections.
+        TLS refers to Transport Layer Security which is a neweer version.
+        Nowadays, TLS cerfificated are mainly used but people still refe SSL.
+        
+        Public SSL are issued by certified authorities(CA).
+        Comodo, Symantec,GoDaddy, etc.
+        
+        SSL certificate has an expiration date and must be renewed.
+        
