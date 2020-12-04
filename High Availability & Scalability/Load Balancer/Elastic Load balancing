@@ -131,4 +131,7 @@ Load Balancer - SSL                        ---------------------------          
          
          HTTPS listner:
              We must specify a default certificate.
+             We can add an optional lists of certs t support multiple domains.
+             Client can use SNI (Server Name Indication) to specify the host name they reach.
+             Ability to specify a security policy to support older versions of SSL/TLS(legacy clients).
              
