@@ -143,5 +143,18 @@ SSL - Server Name Indication(SNI):
 
 NOTE: Only works for ALB & NLB(newer generation), cloudfront.
       Does not work for CLB (older generation).
-    
+      
+      
+Elastic Load Balancer - SSL Certificate:
+    Classic Load Balancer(v1)
+        Supports only one SSL certificate.
+        Must use multiple CLB for multiple hostname with multiple SSL certificates.
+        
+    Application Load Balancer (v2):
+        Supports multiple listener with multiple SSL certificates.
+        Uses Server Name Indication(SNI) to make it work.
+        
+      
+    Network Load Balancer(v2).
+        Supports multiple listener with multiple SSL certificates.
     
