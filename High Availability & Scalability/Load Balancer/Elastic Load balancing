@@ -78,3 +78,23 @@ Health Checks:
  
  Elastic Load Balancer - Cross-Zone Load Balancing:
     With Cross Zone Load balancing, each load balancer distributes evenly across all registered instances in all AZ.
+    
+    Otherwise, each load balancer node distributes request evenly across the registered instances in it's availability zone only.
+    
+    
+    
+Classic Load Balancer:
+    In classicl load balancer, cross-zone load balancing is disabled by default.
+    No charges for inter AZ data if enabled.
+    
+    
+    
+Application Load balancer:
+    In application load balancer, cross-zone load balancing is always enabled and can't be disaled.
+    No charges for inter AZ data.
+    
+    
+    
+ Network Load Balancer:
+    In network load balancer, cross-zones is disabled by default.
+    Charges are applicable ($) for inter AZ if enabled.
