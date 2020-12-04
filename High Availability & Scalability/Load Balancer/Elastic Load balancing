@@ -136,4 +136,12 @@ Load Balancer - SSL                        ---------------------------          
              Ability to specify a security policy to support older versions of SSL/TLS(legacy clients).
              
 SSL - Server Name Indication(SNI):
-    SNI sloves the problem of loading multiple SSL certificates onto one web server.
+    SNI sloves the problem of loading multiple SSL certificates onto one web servers (to serve multiple websites).
+    It's a newer protocol and and requires the client to indicate the hostname of the target server in the initial SSL handshake.
+    The server will then find the correct certificate or return the default one.
+    
+
+NOTE: Only works for ALB & NLB(newer generation), cloudfront.
+      Does not work for CLB (older generation).
+    
+    
