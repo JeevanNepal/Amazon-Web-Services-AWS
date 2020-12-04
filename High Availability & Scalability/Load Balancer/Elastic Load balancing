@@ -115,3 +115,12 @@ Elastic Load Balancer - SSL Certificate:
         
         SSL certificate has an expiration date and must be renewed.
         
+                                            
+Load Balancer - SSL                        ---------------------------                         ---------------------
+                      HTTPS encrypted      |                          |                        |                    |
+                      over www             |                          |  HTTP Over Private VPC |                    |                    
+                 ------------------------- |                          |------------------------|                    |
+         Users   ------------------------- |     Load Balancer        |------------------------|    EC2 Instance    |
+                                           |                          |                        |                    |
+                                           |                          |                        |                    |
+                                           ---------------------------                         ----------------------
