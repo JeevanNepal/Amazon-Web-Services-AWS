@@ -124,3 +124,11 @@ Load Balancer - SSL                        ---------------------------          
                                            |                          |                        |                    |
                                            |                          |                        |                    |
                                            ---------------------------                         ----------------------
+                                           
+         The load balancer uses an X.509 certificate (SSL/TLS server certificate).
+         We can manager certificate with ACM(AWS Certified Manager).
+         We can create upload own certificate alternatively.
+         
+         HTTPS listner:
+             We must specify a default certificate.
+             
