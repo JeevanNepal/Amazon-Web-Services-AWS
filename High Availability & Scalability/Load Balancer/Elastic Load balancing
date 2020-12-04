@@ -158,3 +158,9 @@ Elastic Load Balancer - SSL Certificate:
     Network Load Balancer(v2).
         Supports multiple listener with multiple SSL certificates.
         Uses Server Name Indication(SNI) to make it work.
+        
+        
+   
+   
+ Elascti Load Balancer - Connection Draining:
+    
