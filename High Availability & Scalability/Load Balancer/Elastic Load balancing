@@ -51,21 +51,21 @@ Health Checks:
     
     
     
-                       Client A           Client B           Client C
-                                             |                 //
-                             \\              |                //
-                              \\             |              //
-                               \\            |            //
+                          Client A        Client B       Client C
+                              \\             |            //
+                               \\            |           //
                                 \\           |          //
-                                 \\    _____________
+                                 \\          |         //
+                                  \\         |        //
+                                   \\  _____________ //
                                       |Load Balancer|
                                        --------------
-                                      / /             \ \
-                                    / /                \ \
-                                  /  /                  \ \
-                                 / /                     \ \
-                               /  /                       \ \
-                       EC2 Instance                     EC2 Instance    
+                                     //             \\
+                                    //               \\
+                                   //                 \\
+                                  //                   \\
+                                 //                     \\
+                          EC2 Instance              EC2 Instance    
                        
                        
  When the stickness is not active the IP of the instance which is running keeps on changing as it redirects to another instance in the target groups.
