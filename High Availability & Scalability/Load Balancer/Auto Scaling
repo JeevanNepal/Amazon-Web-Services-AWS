@@ -35,6 +35,12 @@ Auto Scaling Group in AWS:
                                      
  Auto Scaling Group with Load Balancer:
  
+ 
+                                                Web Traffic
+                                                     |
+                                                     |
+                                                     |
+ 
                                                  load balancer
                                                |---------------|
                                         
@@ -48,4 +54,18 @@ Auto Scaling Group in AWS:
 |                                                         |                                             |
 |-------------------------------------------------------------------------------------------------------|
                                   AUTO SCALING GROUP WITH LOAD BALANCER
+                                  
+                                  
+                                  
+ASGs Has the following attributes:
+  > A launch configuration
+    . AMI + instance type
+    . EC2 user data
+    . Security groups
+    . SSH key pair 
+    
+   > Min size/max size/ initial capacity
+   > Network  + Subnet information
+   > Load Balancer information.
+   > Scaling Policies.
  
