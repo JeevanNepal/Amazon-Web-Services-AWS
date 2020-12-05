@@ -85,5 +85,11 @@ Auto Scaling Alarms:
 
 
 
-
+Auto Scaling New Rules:
+  > It is now possible to define "better" auto scaling that are directly managed by EC2.
+   . Target average CPU Usage.
+   . Number of request on the EKB per second.
+   . Average Network In.
+   . Average Network Out.
+These rules are easy to set up and make more sense.
 
