@@ -1,1 +1,12 @@
 Auto Scaling Groups (ASG) overview:
+
+  What is an Auto Scaling Groups?
+    > In real life the load on your website and application can change.
+    > In Cloud we can can create and get rid of servers very quickly.
+    
+    
+The Gola of Auto Scaling(ASG) is to:
+  > Scale out(add EC2 instances) to match an increase load.
+  > Scale in (remove EC2 instances) to match a decrease load.
+  > Ensure we have a minimum and a maximum number of machines running.
+  > Automatically register new instances to a load balancer.
