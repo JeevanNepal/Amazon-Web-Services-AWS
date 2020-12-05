@@ -10,3 +10,23 @@ The Gola of Auto Scaling(ASG) is to:
   > Scale in (remove EC2 instances) to match a decrease load.
   > Ensure we have a minimum and a maximum number of machines running.
   > Automatically register new instances to a load balancer.
+
+
+Auto Scaling Group in AWS:
+
+                                       Maximum Size
+|-----------------------------------------------------------------------------------------------------|
+
+        Actual size/desired capacity
+
+|----------------------------------------------------|
+                                                
+
+minimum size
+|--------------|    |--------------|    |------------|     |            Scale out as needed
+
+|-------------------------------------------------------------------------------------------------------|
+|                                                         |                                             |
+|  EC2                EC2                 EC2             |   EC2             Ec2             Ec2       |                                  
+|                                                         |                                             |
+|-------------------------------------------------------------------------------------------------------|
