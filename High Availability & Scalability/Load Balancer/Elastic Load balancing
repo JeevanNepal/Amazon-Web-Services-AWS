@@ -163,4 +163,14 @@ Elastic Load Balancer - SSL Certificate:
    
    
  Elascti Load Balancer - Connection Draining:
-    
+    Featuring Name:
+        CLB: Connection Draining.
+        Target Group: Deregistration Delay (ALB & NLB).
+        
+   Connection draining is the time out to complete "in-flight-request" while the instance is de-registring or unhealthy.
+   Elastic load balancer stops sending new requests to the instance which is de-registring.
+   We can set the connection draining duration between 1-3600 seconds, but 300 is by default.
+   Can be disabled the duration by setting it to 0.
+   Set to a low value if the requests are short.
+        
+ 
