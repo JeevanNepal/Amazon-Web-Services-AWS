@@ -68,4 +68,21 @@ ASGs Has the following attributes:
    > Network  + Subnet information
    > Load Balancer information.
    > Scaling Policies.
- 
+   
+Auto Scaling Alarms:
+  > It is possible to scale an ASG based on cloudwatch alarms.
+  > An alarm monitors such as avg CPU utilization on so on....
+  > Matrices are computed for the overall ASG instances.
+  > Based on the alarms:
+   . We can created scale out policies(increase the number of instances).
+   
+  
+|-------------------------------------------------------------------------------------------------------|                       Alarm
+|                                                         |                                             |                         |
+|  EC2                EC2                 EC2             |   EC2             Ec2             Ec2       | -------------------- -- |                                 
+|                                                         |                                             |      Trigger scaling    |
+|-------------------------------------------------------------------------------------------------------|
+
+
+
+
