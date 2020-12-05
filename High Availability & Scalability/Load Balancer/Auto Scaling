@@ -74,8 +74,8 @@ Auto Scaling Alarms:
   > An alarm monitors such as avg CPU utilization on so on....
   > Matrices are computed for the overall ASG instances.
   > Based on the alarms:
-   . We can created scale out policies(increase the number of instances).
-   
+   . We can created scale-out policies(increase the number of instances).
+   . We can create scale-in ploicies (decrease the number of instances).
   
 |-------------------------------------------------------------------------------------------------------|                       Alarm
 |                                                         |                                             |                         |
