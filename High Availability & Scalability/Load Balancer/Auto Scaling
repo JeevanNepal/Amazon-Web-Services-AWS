@@ -93,3 +93,21 @@ Auto Scaling New Rules:
    . Average Network Out.
 These rules are easy to set up and make more sense.
 
+
+
+Auto Scaling Custom Metric:
+ >  We can auto scale based on custom metric(ex: number of connected users).
+ > Send custom metric from application on EC2 instance to CloudWatch(Put metric API).
+ > Created CloudWatch alarm to rwact to low/high values.
+ > Use the CloudWatch alarm as the scaling policy for ASG.
+ 
+ 
+ 
+ ASG Brain Dump:
+  > Scaling polocy can be on CPU, Network .... and cna even be on custom metric or based on scheduled(if we know our visitor pattern in terms of traffic).
+  > ASGs use launched configurations or Launch Templates(newer).
+  > To update ASG we must provide a new launch configuration/launch templat.
+  > ASG are free, we pay only for the under lying resources.
+  > Having an instancer unser ASG means if they get terminated for whatevr reason, the ASG will automatically create new as a replacement, extra safety.
+  > ASG can terminate an instances marked as umhealthy by an LB(and hence replace them).
+  
