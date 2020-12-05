@@ -172,5 +172,11 @@ Elastic Load Balancer - SSL Certificate:
    We can set the connection draining duration between 1-3600 seconds, but 300 is by default.
    Can be disabled the duration by setting it to 0.
    Set to a low value if the requests are short.
-        
+   
+   
+   
+ ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+   
+ Auto Scaling Groups (ASG) overview:
+    
  
