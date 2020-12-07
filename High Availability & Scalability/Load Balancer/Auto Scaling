@@ -111,3 +111,19 @@ Auto Scaling Custom Metric:
   > Having an instancer unser ASG means if they get terminated for whatevr reason, the ASG will automatically create new as a replacement, extra safety.
   > ASG can terminate an instances marked as umhealthy by an LB(and hence replace them).
   
+  
+  
+  Auto Scaling Groups -Scaling Policies:
+      Target Tracking Scaling:
+          > Most simple and easy to set-up.
+          > EX: I want the average ASG CPU to stat at around 40%.
+   
+      Simple / Step Scaling:
+          > When the CloudWatch alarm is triggered (ex, CPU >70%), then add 2 units.
+          > When the CloudWatch alarm is triggered(ex, CPU<30%), then remove 1 unit.
+      
+      Scheduled Action:
+          > Antisipate a saling base on known usage pattern.
+          > Ex, increase the min capacity from 10 to 5 in friday evening.
+          
+  
