@@ -126,4 +126,9 @@ Auto Scaling Custom Metric:
           > Antisipate a saling base on known usage pattern.
           > Ex, increase the min capacity from 10 to 5 in friday evening.
           
+          
+Auto Scaling Groups: Scaling Cooldowns:
+  A scaling cooldown helps you prevent your Auto Scaling group from launching or terminating additional instances before the effects of previous activities takes effects.
+  In adition to default cooldown for auto scaling group, we can create cooldowns that apply to specific simple scaling policies.
+          
   
