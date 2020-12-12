@@ -134,6 +134,8 @@ Auto Scaling Groups: Scaling Cooldowns:
   > One common use of scaling-specific cooldowns is a scale-in-poliy-------- a policy that terminates a ninstances based on a specific creteria or metric.Because this policy 
     terminates, Amazon EC2 scaling needs less time to determine wheeter to terminate additional instances.
   > IF the default cooldown period is 300 sec, it is to long, we can reduce the costs by applying a scaling-specific cooldown of 180 sec to the scale-in-policy.
-  > If your 
+  > If your application is scaling up and down multiple times each hour a day, modify the Auto scaling groups cooldown timer and CloudWatch alarm that triggers the 
+    scale-in-policy.
+  > 
           
   
