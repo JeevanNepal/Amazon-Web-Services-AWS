@@ -128,7 +128,12 @@ Auto Scaling Custom Metric:
           
           
 Auto Scaling Groups: Scaling Cooldowns:
-  A scaling cooldown helps you prevent your Auto Scaling group from launching or terminating additional instances before the effects of previous activities takes effects.
-  In adition to default cooldown for auto scaling group, we can create cooldowns that apply to specific simple scaling policies.
+  > A scaling cooldown helps you prevent your Auto Scaling group from launching or terminating additional instances before the effects of previous activities takes effects.
+  > In adition to default cooldown for auto scaling group, we can create cooldowns that apply to specific simple scaling policies.
+  > A scaling-specific cooldown period overrides the default cooldown period.
+  > One common use of scaling-specific cooldowns is a scale-in-poliy-------- a policy that terminates a ninstances based on a specific creteria or metric.Because this policy 
+    terminates, Amazon EC2 scaling needs less time to determine wheeter to terminate additional instances.
+  > IF the default cooldown period is 300 sec, it is to long, we can reduce the costs by applying a scaling-specific cooldown of 180 sec to the scale-in-policy.
+  > If your 
           
   
