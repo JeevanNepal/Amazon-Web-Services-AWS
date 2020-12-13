@@ -136,6 +136,28 @@ Auto Scaling Groups: Scaling Cooldowns:
   > IF the default cooldown period is 300 sec, it is to long, we can reduce the costs by applying a scaling-specific cooldown of 180 sec to the scale-in-policy.
   > If your application is scaling up and down multiple times each hour a day, modify the Auto scaling groups cooldown timer and CloudWatch alarm that triggers the 
     scale-in-policy.
+    
+    
+    
+Auto Scaling Group for Solution Architects:
+   > ASG Defalult Termination Policy(simplified Version):
+      . Find the AZ which has the most number of instances.
+      . If there are multiple instances in AZ to choose from, delete the one with the oldest launch configuration.
+      . ASG tries to balance the number of instances across AZ by default.
+   
+   
+   
+   
+          Availability Zone A                            Availability Zone B
+   |---------------------------------------------------------------------------------|
+   |                                                                                 |
+   |         V1     V2                                          V1          V1       |
+   |                           Auto Scaling Group                                    |
+   |                                                                                 |
+   |         V1     V2                                           V1                  |
+   |                                                                                 |
+   |                                                                                 |
+   -----------------------------------------------------------------------------------
   
           
   
