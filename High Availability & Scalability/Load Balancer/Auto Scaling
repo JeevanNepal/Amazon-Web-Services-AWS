@@ -136,6 +136,6 @@ Auto Scaling Groups: Scaling Cooldowns:
   > IF the default cooldown period is 300 sec, it is to long, we can reduce the costs by applying a scaling-specific cooldown of 180 sec to the scale-in-policy.
   > If your application is scaling up and down multiple times each hour a day, modify the Auto scaling groups cooldown timer and CloudWatch alarm that triggers the 
     scale-in-policy.
-  > 
+  
           
   
