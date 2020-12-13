@@ -160,7 +160,17 @@ Auto Scaling Group for Solution Architects:
    -----------------------------------------------------------------------------------
    
    
-
+ASG for Solution Architects Lifecycle Hooks:
+    By default assoon as an instance is launched in an ASG it's in service.
+    We have the ability to perform extra steps before the instances goes in service.    
+    
+    We have the ability to perform some action before the instance is terminated. 
+    
+    Chart:- Auto Scaling ---Scale Out---> (pending state)----> pending wait----> pending processed ----> in service-----> Terminating -----> Terminating Wait
+    ----> Terminating Proceed ------> Terminated.
+    
+    
+    
   
           
   
