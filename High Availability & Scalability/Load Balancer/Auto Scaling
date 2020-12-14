@@ -170,7 +170,9 @@ ASG for Solution Architects Lifecycle Hooks:
     ----> Terminating Proceed ------> Terminated.
     
     
-    
+ASG for Solution Architects, Launch Template vs Launch Configuration:
+    Both of them allow us to define:
+        ID of the Amazon Machine Image(AMI, instance type, a key pair, security groups and other parameters that we use to launch EC2 instances.
   
           
   
