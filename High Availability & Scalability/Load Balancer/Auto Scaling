@@ -173,6 +173,17 @@ ASG for Solution Architects Lifecycle Hooks:
 ASG for Solution Architects, Launch Template vs Launch Configuration:
     Both of them allow us to define:
         ID of the Amazon Machine Image(AMI, instance type, a key pair, security groups and other parameters that we use to launch EC2 instances.
-  
+        
+    Launch Configuration(Legacy):
+        Must be re-created everytime.
+        
+   Launch Template(Newer):
+        Can have multiple versions.
+        Create parameter subsets(partial configuration for re-use and inheritance).
+        Provision both using on-demand and spot instances(or a mix of both).
+        Can use T2 umlimited brust feature.
+        Recomemded by AWS going forward.
+        
+        
           
   
