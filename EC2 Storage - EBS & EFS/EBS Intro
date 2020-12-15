@@ -1,3 +1,12 @@
 What is an EBS (Elastic Block Store)?
     Amazon Elastic Block Store (EBS) is an easy to use, high-performance, block-storage service designed for use with Amazon Elastic Compute 
     Cloud (EC2) for both throughput and transaction intensive workloads at any scale.
+
+What is an EBS volume?
+    An Amazon EBS volume is a durable, block-level storage device that you can attach to your instances while they run.It You can use EBS volumes as primary 
+    storage for data that requires frequent updates, such as the system drive for an instance or storage for a database application.
+    
+    > An EC2 machine looses it's root volume(main drive) when it is manually terminated.
+    > Unexpected termination may happen time to time(AWS would mail us anyway).
+    > Sometimes, you need to way to store instance data somewhere.
+    > It allows your instances to persist data.
