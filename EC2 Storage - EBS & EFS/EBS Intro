@@ -14,5 +14,7 @@ What is an EBS volume?
         . It uses the network to communicate the instance, which means that there might be a bit of latency.
         . It can be detched from an EC2 instance and can be attached to another one quickly.
         
+    > It is locked to an available zone(AZ).
+        . An EBS volume in us-east-1 cannot be attached to us-east-2.
  
     
