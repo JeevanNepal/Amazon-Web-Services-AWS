@@ -10,3 +10,9 @@ What is an EBS volume?
     > Unexpected termination may happen time to time(AWS would mail us anyway).
     > Sometimes, you need to way to store instance data somewhere.
     > It allows your instances to persist data.
+    > It is a network drive (i.e not a physical drive).
+        . It uses the network to communicate the instance, which means that there might be a bit of latency.
+        . It can be detched from an EC2 instance and can be attached to another one quickly.
+        
+ 
+    
