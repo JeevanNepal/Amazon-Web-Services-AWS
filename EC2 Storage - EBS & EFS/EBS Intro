@@ -18,3 +18,7 @@ What is an EBS volume?
         . An EBS volume in us-east-1 cannot be attached to us-east-2.
         . To move a volume across we first to need a snapshot it. 
     
+    > We need to provide a provisioned capacity(size in GBs and IOPs).
+        . we will get billed for all the provisioned capacity, eg: if we provision 1TB and use 1 GB then we will still be billed for 1 TB.
+        . we can increase the capacity of the drive over time.
+
