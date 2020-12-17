@@ -16,5 +16,5 @@ What is an EBS volume?
         
     > It is locked to an available zone(AZ).
         . An EBS volume in us-east-1 cannot be attached to us-east-2.
- 
+        . To move a volume across we first to need a snapshot it. 
     
