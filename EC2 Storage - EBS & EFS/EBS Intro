@@ -22,3 +22,6 @@ What is an EBS volume?
         . we will get billed for all the provisioned capacity, eg: if we provision 1TB and use 1 GB then we will still be billed for 1 TB.
         . we can increase the capacity of the drive over time.
 
+
+EBS Volume Types:
+   > 
