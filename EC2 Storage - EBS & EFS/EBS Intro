@@ -3,12 +3,12 @@ What is an EBS (Elastic Block Store)?
     Cloud (EC2) for both throughput and transaction intensive workloads at any scale.
 
 What is an EBS volume?
-    An Amazon EBS volume is a durable, block-level storage device that you can attach to your instances while they run.It You can use EBS volumes as primary 
+    An Amazon EBS volume is a durable, block-level storage device that you can attach to your instances while they run. You can use EBS volumes as primary 
     storage for data that requires frequent updates, such as the system drive for an instance or storage for a database application.
     
     > An EC2 machine looses it's root volume(main drive) when it is manually terminated.
     > Unexpected termination may happen time to time(AWS would mail us anyway).
-    > Sometimes, you need to way to store instance data somewhere.
+    > Sometimes, you need a way to store instance data somewhere.
     > It allows your instances to persist data.
     > It is a network drive (i.e not a physical drive).
         . It uses the network to communicate the instance, which means that there might be a bit of latency.
@@ -16,7 +16,7 @@ What is an EBS volume?
         
     > It is locked to an available zone(AZ).
         . An EBS volume in us-east-1 cannot be attached to us-east-2.
-        . To move a volume across we first to need a snapshot it. 
+        . To move a volume across we first need a snapshot it. 
     
     > We need to provide a provisioned capacity(size in GBs and IOPs).
         . we will get billed for all the provisioned capacity, eg: if we provision 1TB and use 1 GB then we will still be billed for 1 TB.
@@ -34,6 +34,12 @@ EBS Volume Types:
 
 3. Previous generation — Hard disk drives that can be used for workloads with small datasets where data is accessed infrequently and performance is not of primary importance.
 We recommend that you consider a current generation volume type instead.
+
+
+GP2 (SSD) -  General purpose SSD volume that balances price and performance for a wide variety of workloads.
+IO 1(SSD) -  HIghest performance SSD volume for mission-critical low- latency or high throughput workloads.
+SD1(HDD) - Low cost volume defined for frequently accessed throughpu intensive workloads.
+SC1(HDD) - Lowest cost HDD volume desined for less frequently accessed workloads.
 
 
 
