@@ -24,4 +24,16 @@ What is an EBS volume?
 
 
 EBS Volume Types:
-   > 
+   > Amazon EBS provides the following volume types, which differ in performance characteristics and price, so that you can tailor your storage performance and cost to
+   the needs of your applications.
+   The volumes types fall into these categories:
+
+1.Solid state drives (SSD) — Optimized for transactional workloads involving frequent read/write operations with small I/O size, where the dominant performance attribute is IOPS.
+
+2.Hard disk drives (HDD) — Optimized for large streaming workloads where the dominant performance attribute is throughput.
+
+3. Previous generation — Hard disk drives that can be used for workloads with small datasets where data is accessed infrequently and performance is not of primary importance.
+We recommend that you consider a current generation volume type instead.
+
+
+
