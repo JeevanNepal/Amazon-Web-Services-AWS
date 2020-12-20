@@ -97,7 +97,11 @@ EBS Volume Types Deep Dive:
        . Large database workload such as, mongodb, Cassandra, Microsoft SQL Server, mySql, postgres SQL, oracle.
        . Size differs from 4GB to 16TB.
        . IOPS is provisioned(PIOPS) - Min 100, Max 64000 {Nitro Instance(out of scope now)}, else Max 32000(for all other instances).
-       . The maximum ration of provisioned IOPS to requested volume size (in GB) is 50:1.       
+       . The maximum ration of provisioned IOPS to requested volume size (in GB) is 50:1. (Size (GiB)
+            Size in GB: 10 (Min: 4 GiB, Max: 16384 GiB) 
+            IOPS 600
+            Size in GB: 600 (Min: 100 IOPS, Max: 64000 IOPS) 
+            Maximum ratio of 50:1 is permitted between IOPS and volume size.)      
        
        
        
