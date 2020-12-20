@@ -18,7 +18,9 @@ What is an EBS volume?
         . An EBS volume in us-east-1 cannot be attached to us-east-2.
         . To move a volume across we first need a snapshot it. 
     
-    > We need to provide a provisioned capacity(size in GBs and IOPs).
+    > We need to provide a provisioned capacity(size in GBs and IOPs){(IOPS are a unit of measure representing input/output operations per second. 
+             The operations are measured in KiB, and the underlying drive technology determines the maximum amount of data that a volume type counts as a single I/O.)}.
+    
         . we will get billed for all the provisioned capacity, eg: if we provision 1TB and use 1 GB then we will still be billed for 1 TB.
         . we can increase the capacity of the drive over time.
 
@@ -65,7 +67,8 @@ xvda    202:0    0    8G  0 disk
 xvdf    202:80   0   10G  0 disk
 
 
-Use the file -s command to get information about a device, such as its file system type. If the output shows simply data, as in the following example output, there is no file system on the device and you must create one.
+Use the file -s command to get information about a device, such as its file system type. If the output shows simply data, as in the following example output, 
+there is no file system on the device and you must create one.
 
 [ec2-user ~]$ sudo file -s /dev/xvdf
 /dev/xvdf: data
@@ -76,6 +79,7 @@ https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-using-volumes.html
 
 EBS Volume Types Deep Dive:
      > GP2 (from AWS Docs) use cases:
+     
         . Recomended for most workload.
         . System boot volume.
         . Virtual deskpot.
@@ -86,4 +90,16 @@ EBS Volume Types Deep Dive:
         . Max IOPs is 16000.
         . 3 IOPs / 1GB, means at 5334 GB we are at the max IOPs.
         
-        
+
+    >  IO1(from AWS Docs) use cases:
+    
+       . Used for critical applications that required sustained IOPS performance or more than 16000 IOPS per volume (gp2 limit).
+       . Large database workload such as, mongodb, Cassandra, Microsoft SQL Server, mySql, postgres SQL, oracle.
+       . Size differs from 4GB to 16TB.
+       . IOPS is provisioned(PIOPS) - Min 100, Max 64000 {Nitro Instance(out of scope now)}, else Max 32000(for all other instances).
+       . The maximum ration of provisioned IOPS to requested volume size (in GB) is 50:1.       
+       
+       
+       
+       
+       
