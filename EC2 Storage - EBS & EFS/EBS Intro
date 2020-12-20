@@ -95,7 +95,7 @@ EBS Volume Types Deep Dive:
     
        . Used for critical applications that required sustained IOPS performance or more than 16000 IOPS per volume (gp2 limit).
        . Large database workload such as, mongodb, Cassandra, Microsoft SQL Server, mySql, postgres SQL, oracle.
-       . Size differs from 4GB to 16TB.
+       . Size can range from 4GB to 16TB.
        . IOPS is provisioned(PIOPS) - Min 100, Max 64000 {Nitro Instance(out of scope now)}, else Max 32000(for all other instances).
        . The maximum ration of provisioned IOPS to requested volume size (in GB) is 50:1. (Size (GiB)
             Size in GB: 10 (Min: 4 GiB, Max: 16384 GiB) 
@@ -106,6 +106,11 @@ EBS Volume Types Deep Dive:
        
     > St1 (from AWS Docs) use cases:
       . Streaming workloads requiring consistent,fast throughput at low price.
-      . 
+      . Big data, data warehouse, log processing.
+      . Apache kafka.
+      . Cannot be a boot volume.
+      . Size can range from 500GBi to 16TiB.
+      . Max IOPS is 500.
+      . Max throughput of 500 MiB/s - can brust.
        
        
