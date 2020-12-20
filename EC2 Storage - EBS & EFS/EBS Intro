@@ -41,7 +41,7 @@ We recommend that you consider a current generation volume type instead.
 GP2 (SSD) -  General purpose SSD volume that balances price and performance for a wide variety of workloads.
 IO 1(SSD) -  HIghest performance SSD volume for mission-critical low- latency or high throughput workloads.
 SD1(HDD) - Low cost volume defined for frequently accessed throughput intensive workloads.
-SC1(HDD) - Lowest cost HDD volume desined for less frequently accessed workloads.
+SC1(HDD) - Lowest cost HDD volume designed for less frequently accessed workloads.
 
 EBS volume are characterised in size | Throughput  | IOPs (I/O ops per sec).
 Only GP2 and IO 1 can be used as boot volumes.
@@ -114,3 +114,16 @@ EBS Volume Types Deep Dive:
       . Max throughput of 500 MiB/s - can brust.
        
        
+  > SC1 (from AWS doc) use cases:
+      . Throughput-oriented storage for large volumes of data that is infrequently accessed.
+      . Scenarios where the lowest storage cost is important.
+      . Cannot be boot volume.
+      . Size can range from 500GBi to 16TiB.
+      . Max IOPS is 250.
+      . Max throughput of 250 MiB/s - can brust. 
+     
+     
+     
+     
+     
+     
