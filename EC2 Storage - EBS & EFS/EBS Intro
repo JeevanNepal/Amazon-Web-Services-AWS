@@ -114,7 +114,7 @@ EBS Volume Types Deep Dive:
       . Max throughput of 500 MiB/s - can brust.
        
        
-  > SC1 (from AWS doc) use cases:
+   > SC1 (from AWS doc) use cases:
       . Throughput-oriented storage for large volumes of data that is infrequently accessed.
       . Scenarios where the lowest storage cost is important.
       . Cannot be boot volume.
@@ -124,6 +124,7 @@ EBS Volume Types Deep Dive:
      
      
      
-     
+EBS Snapshots:
+  > 
      
      
