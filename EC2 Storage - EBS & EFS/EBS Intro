@@ -104,6 +104,8 @@ EBS Volume Types Deep Dive:
             Maximum ratio of 50:1 is permitted between IOPS and volume size.)      
        
        
-       
+    > St1 (from AWS Docs) use cases:
+      . Streaming workloads requiring consistent,fast throughput at low price.
+      . 
        
        
