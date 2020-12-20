@@ -74,5 +74,16 @@ Use the file -s command to get information about a device, such as its file syst
 REFER THIS FOR MORE DETAILS:
 https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-using-volumes.html
 
-d
-
+EBS Volume Types Deep Dive:
+     > GP2 (from AWS Docs) use cases:
+        . Recomended for most workload.
+        . System boot volume.
+        . Virtual deskpot.
+        . Low-latency interative apps.
+        . Development and test environments.
+        . Size can range from 1 GBi to 16TBi.
+        . Small gp2 volumes can brust upto IOPs to 3000.
+        . Max IOPs is 16000.
+        . 3 IOPs / 1GB, means at 5334 GB we are at the max IOPs.
+        
+        
