@@ -45,6 +45,34 @@ EBS volume are characterised in size | Throughput  | IOPs (I/O ops per sec).
 Only GP2 and IO 1 can be used as boot volumes.
 
 
+The root device is /dev/nvme0n1. The attached volume is /dev/nvme1n1, which is not yet mounted.
+
+[ec2-user ~]$ lsblk
+NAME          MAJ:MIN RM SIZE RO TYPE MOUNTPOINT
+nvme1n1       259:0    0  10G  0 disk
+nvme0n1       259:1    0   8G  0 disk
+-nvme0n1p1    259:2    0   8G  0 part /
+-nvme0n1p128  259:3    0   1M  0 part
+
+
+
+The following is example output for a T2 instance. The root device is /dev/xvda. The attached volume is /dev/xvdf, which is not yet mounted.
+
+[ec2-user ~]$ lsblk
+NAME    MAJ:MIN RM  SIZE RO TYPE MOUNTPOINT
+xvda    202:0    0    8G  0 disk
+-xvda1  202:1    0    8G  0 part /
+xvdf    202:80   0   10G  0 disk
+
+
+Use the file -s command to get information about a device, such as its file system type. If the output shows simply data, as in the following example output, there is no file system on the device and you must create one.
+
+[ec2-user ~]$ sudo file -s /dev/xvdf
+/dev/xvdf: data
+
+
+REFER THIS FOR MORE DETAILS:
+https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-using-volumes.html
 
 
 
