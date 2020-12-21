@@ -185,21 +185,17 @@ Local EC2 Instance Store:
     > Risk of data loss if hardware fails.
   
   
+EBS Raid Configuration:RAID(Redundant Array of Independent Disks).
+    > EBS Raid options:
+        . RAID 0 (also known as a stripe set or striped volume) splits ("stripes") data evenly across two or more disks, without parity information, redundancy, or fault tolerance.
+          Once the stripe size is defined during the creation of a RAID 0 array, it needs to be maintained at all times.
+        . 
   
   
+  (Redundant Array of Independent Disks Mode 1) A popular disk or solid state drive (SSD) subsystem that increases safety by writing the same data on two drives.Called 
+  "mirroring," RAID 1 does not increase performance. However, if one drive fails, the second drive is used, and the failed drive is manually replaced.
   
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+  Fault tolerance is the property that enables a system to continue operating properly in the event of the failure of some of its components.
   
   
   
