@@ -1,1 +1,122 @@
 WHat is EFS?
+  Amazon Elastic File System is a cloud storage service provided by Amazon Web Services designed to provide scalable, elastic, concurrent with some restrictions, 
+  and encrypted file storage for use with both AWS cloud services and on-premises resources.
+  
+  
+  > Managed NFS(network file system), that can be mounted on EC2.
+  > EFS works with EC2 instances in multiple AZs.
+  > High scalabl, available, exensive (3x gp2), pay per use.
+  
+  
+  
+  
+  
+  EC2 us-east-1                                                 EC2 us-east-2                                                    EC2 us-east-3
+        |                                                            |                                                                 |
+        |                                                            |                                                                 |
+        |                                                            |                                                                 |
+|------------------------------------------------------------------------------------------------------------------------------------------------|
+|                                                               Security Group                                                                   |
+|------------------------------------------------------------------------------------------------------------------------------------------------|
+|                                                                                                                                                |
+|                                                                    EFS                                                                         |
+|                                                                                                                                                |
+|------------------------------------------------------------------------------------------------------------------------------------------------|
+                                                             Network File System
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
