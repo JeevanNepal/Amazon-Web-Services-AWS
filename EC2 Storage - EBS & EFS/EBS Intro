@@ -152,7 +152,12 @@ EBS Volume Migration:
     
     
   
-  
+EBS Operation - Volume Encryption:
+ > Create an EBS snapshot of the volume.
+ > Encrypt the EBS snapshot (using copy).
+ > Create a new EBS volume from the snapshot(the newly created volume also will be encrypted).
+ > Now we can attach the encrypted volume to the original instance.
+ 
   
   
   
