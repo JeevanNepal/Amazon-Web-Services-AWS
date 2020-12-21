@@ -125,6 +125,19 @@ EBS Volume Types Deep Dive:
      
      
 EBS Snapshots:
-  > 
+  > An EBS snapshot is a point-in-time copy of your Amazon EBS volume, which is lazily copied to Amazon Simple Storage Service (Amazon S3). 
+     EBS snapshots are incremental copies of data. 
+     This means that only unique blocks of EBS volume data that have changed since the last EBS snapshot are stored in the next EBS snapshot
+  
+  
+  > Incremental - only backup changed block.
+  > EBS backup use IO and you shouldn't run them while your application is handling a lot of traffic.
+  > Snapshots will be stored in S3(but we can't directly see them).
+  > Not necessary to detech volume tp dp snapshot, but recomended.
+  > Max 100000 snapshots.
+  > Can copy snapshot across AZ.
+  > Can make image (AMI) from snapshot.
+  > EBS volumes restored by snapshot need to be pre-warmed (using fio or command to read the entire volume).
+  > Snapshots can be automated using Amazon data Lifecycle Manager.
      
      
