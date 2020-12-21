@@ -139,5 +139,7 @@ EBS Snapshots:
   > Can make image (AMI) from snapshot.
   > EBS volumes restored by snapshot need to be pre-warmed (using fio or command to read the entire volume).
   > Snapshots can be automated using Amazon data Lifecycle Manager.
-     
+  
+  
+     Do the handson in the console.
      
