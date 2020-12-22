@@ -26,7 +26,14 @@ WHat is EFS?
 
 
 
-
+Use Cases:
+    > content management, web serving, data sharing, wordpress website.
+    > Uses NFSv4.1 protocol, it is an standard way to mount a network drive.
+    > Uses security group to control access to EFS.
+    > Compatable with linux based not windows.
+    > Encryption at rest using KMS.
+    > POSIX file system (~Linux), that has an standard file API.
+    > File system scales automatically, pay per use, no capacity planning.
 
 
 
