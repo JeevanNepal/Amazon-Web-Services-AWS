@@ -37,7 +37,14 @@ Use Cases:
 
 
 
-
+EFS Performance & Storage Classes:
+  EFS Scale:
+    1000s of concurrent NFS clients, 10GB+ /s throughput.
+    Grow to petabyte-scale netwrok file system automatically.
+    
+ Performance mode(set at EFS creation time).
+    General Purpose(default): lantency-sensative use case(web server, CMS, etc...)
+    
 
 
 
