@@ -49,8 +49,14 @@ EFS Performance & Storage Classes:
 Storage Tires (life cycle managment features - move file after N days)
     Standard: for frequently accessed files.
     Infrequent access : cost to retrive files, lower price to store.
-    .
-    
+
+
+
+EBS vs EFS:
+
+    Elastic Block Sotrage: EBS:-
+        EBS Volumes...
+          
 
 
 
