@@ -56,6 +56,18 @@ EBS vs EFS:
 
     Elastic Block Sotrage: EBS:-
         EBS Volumes...
+          Can be attached to only one instance at a time.
+          are locked to particular AZs.
+          gp2 increases if the disk size increases.
+          io1 can increase independently.
+
+To Migrate an EBS volume across AZ:
+   > Take a snapshot.
+   > Restore the snapshot to AZ.
+   > EBS backup use IO and should not be run when he application is handling heavy traffic.
+   
+   
+Root EBS volume of instances get terminated by default when the intance is terminated.
           
 
 
