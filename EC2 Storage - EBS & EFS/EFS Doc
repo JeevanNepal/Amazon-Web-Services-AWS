@@ -78,8 +78,10 @@ EFS:
  It has higher price point than EBS.
  Can leverage EFS-IA for cost saving.
  
-Instance store is an emhemeral drive but  used to get max amount of I/O into an instance.
-  
+Instance store is an ephemeral drive but  used to get max amount of I/O into an instance.
+ 
+ The instance store is ideal for temporary storage, because the data stored in instance store volumes is not persistent through instance stops, terminations, 
+ or hardware failures.
 
           
 
