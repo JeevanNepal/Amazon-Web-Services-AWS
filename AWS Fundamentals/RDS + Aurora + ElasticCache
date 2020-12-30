@@ -23,6 +23,9 @@ a. Auto
 b. Manual
 c. Cross-region Snap
 
+Backups are automatically enablec in RDS.
+& days retension(can be scaled upto 35 days).
+
 Security :
 a. VPC
 b. IAM
@@ -33,3 +36,7 @@ e. Encryption
 HA & Load Sharing :
 a. Multi AZ
 b. Read Replica
+
+
+
+
