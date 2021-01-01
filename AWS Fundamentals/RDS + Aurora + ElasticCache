@@ -50,4 +50,8 @@ RDS Read Replicas for Read Scalability:
                                    
                                    
                                    
-                                   
+> Use up to 5 replicas.
+> Within AZ, cross AZ or cross region.
+> Replication is ASYNC, so reads are eventually consistents.
+> Replicas can be pormoted to their own DB.
+> Application must update the connection strings to leverge the read replicas.
