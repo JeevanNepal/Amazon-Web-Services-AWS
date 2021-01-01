@@ -38,5 +38,16 @@ a. Multi AZ
 b. Read Replica
 
 
-
-
+RDS Read Replicas for Read Scalability:
+    
+                   ------------------------------------------------------------------------------------
+                   |                             Application                                   |
+              reads|                        writes|     |reads                                 |reads
+                   |                              |     |                                      |
+     RDS DB instance Read replica <--------------RDS DB Instance  <-------------------RDS DB instance read replicas
+                                     ASYNC                         ASYNC Replidation
+                                   Replication 
+                                   
+                                   
+                                   
+                                   
