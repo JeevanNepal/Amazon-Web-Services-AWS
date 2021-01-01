@@ -55,3 +55,35 @@ RDS Read Replicas for Read Scalability:
 > Replication is ASYNC, so reads are eventually consistents.
 > Replicas can be pormoted to their own DB.
 > Application must update the connection strings to leverge the read replicas.
+
+
+
+
+RDS Read Replicas Use Cases:
+      
+                               
+                                 Production                                 Reporting 
+                                 Application                                Application
+                                    |                                            |
+                                    | reads                                      | reads
+                                    |                                            |
+                                    |                                            |
+                                    M ------------------------------------------->R
+                             RDS DB Instance         ASYNC Replication        RDS DB Instance read Replica
+                             
+
+> We have a production database that is taking a normal load.
+> We want to run a reporting applicationto run some analytics.
+> We need to create a read replica to run the new workload there.
+> In this way the production application is unaffected.
+
+
+Read Replicas are used for SELECT statement only, not for UPDATE, DELETE or INSERT, which changes the database.
+
+                             
+
+                                    
+                                    
+      
+      
+      
