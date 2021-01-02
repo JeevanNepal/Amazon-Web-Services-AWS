@@ -83,8 +83,35 @@ Read Replicas are used for SELECT statement only, not for UPDATE, DELETE or INSE
                              
 
 RDS Multi AZs - Disaster Recovery: 
-        
-                                    
+    
+    
+                                     Application 
+                                         |     |
+                                   writes|     |reads
+                                         |     |
+                                         |     |
       
-      
+                            One DNS name - auto,atic failover
+                                         
+                 RDS DB <------------------  RDS Master Database 
+                            sync replication
+                            
+                            
+                            
+> SYNC replication.
+> One DNS name - autoatic failover to standby.
+> Increase avalability.
+> Failover in case of loss of AZ, loss of network, instance or storage failure.
+> No manual intervantion in apps, it all automatic.
+> Not used for scaling.
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
       
