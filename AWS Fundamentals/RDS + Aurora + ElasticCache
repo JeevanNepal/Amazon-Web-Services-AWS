@@ -82,7 +82,8 @@ Read Replicas are used for SELECT statement only, not for UPDATE, DELETE or INSE
 
                              
 
-                                    
+RDS Multi AZs - Disaster Recovery: 
+        
                                     
       
       
