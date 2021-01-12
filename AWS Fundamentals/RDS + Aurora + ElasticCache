@@ -110,8 +110,16 @@ RDS Multi AZs - Disaster Recovery:
 Hands On Video Link: https://www.udemy.com/course/aws-certified-solutions-architect-associate-saa-c02/learn/lecture/13528154?start=0#overview                          
                             
                             
-ink for SQL Client:  https://sqlectron.github.io/                            
+Link for SQL Client:  https://sqlectron.github.io/                            
                             
-                            
+ Steps to connect database to client:
+    1. Click on add.
+    2. Name of the databse.
+    3. Databse Type.
+    4. Server address.
+    5. Connectivity & security -> Endpoint and port, copy the endpoint address.
+    6. Give user name which you created and password.
+    7. Test
+    8. Save.
                             
       
