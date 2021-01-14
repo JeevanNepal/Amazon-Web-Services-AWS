@@ -1,4 +1,9 @@
 RDS Security - Encryption:
+
     Data at rest Encryption:
+      Possibility to encrypt the master & red replicas with AWS KMS - AES -256 Encryption.
+      Encryption has to be defined at launch time.
+      If the master is not encrypted, the read replica cannot be encrypted.
+      Transparent data encryption (TDE)available for oracle and SQL.
       
-f
+
