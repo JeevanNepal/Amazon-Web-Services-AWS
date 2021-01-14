@@ -7,3 +7,11 @@ RDS Security - Encryption:
       Transparent data encryption (TDE)available for oracle and SQL.
       
 
+  In Flight Encryption:
+    > SSL certificate to encryption data to RDS flight.
+    > Provide SSL options with trust certificate when connecting to database.
+    
+    To Enforce SSL:
+        > POstgres SQL:  rds.force_ssl = 1 in the AWS RDS Console (Parameter group).
+        > MYSQL:Within the DB.
+            Grant Usage on * To mysqluser.
