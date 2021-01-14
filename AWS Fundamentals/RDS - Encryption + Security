@@ -15,3 +15,15 @@ RDS Security - Encryption:
         > POstgres SQL:  rds.force_ssl = 1 in the AWS RDS Console (Parameter group).
         > MYSQL:Within the DB.
             Grant Usage on * To mysqluser.
+
+RDS Encryptions Operations:
+ > Snapshots of the un-encrypted RDS database are un-encrypted.
+ > Snapshots of the ncrypted RDS database are encrypted.
+ > Can copy a snapshot into an encrypted one.
+ 
+ 
+To encrypt an un-encrypted RDA Database:
+    > Create a snapshot of hte un-encrypted RDS database.
+    > Copyy a snapshot and enable encryption ofr the snapshot.
+    > Restore the database from the encrypted snapshot.
+    > Migrate the application to new database and delete the old database.
