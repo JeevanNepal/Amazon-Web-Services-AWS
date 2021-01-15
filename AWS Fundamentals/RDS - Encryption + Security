@@ -34,6 +34,11 @@ RDS Security - Netrowk & IAM:
         . RDS databse usually deploy within the private subnet, not in public one.
         . RDS security works by leveraging security groups(the same concept as EC2 instances), it controls which IP/security group can communicate with RDS.
         
+        
+        
+RDS Using IAM Authentication:
+    > 
+        
 Access Management:
   > IAM policies helps to control who can manage AWS RDS(through the RDS API).
   > Traditional username & password can be used to login to the database.
