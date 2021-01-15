@@ -27,3 +27,14 @@ To encrypt an un-encrypted RDA Database:
     > Copyy a snapshot and enable encryption ofr the snapshot.
     > Restore the database from the encrypted snapshot.
     > Migrate the application to new database and delete the old database.
+
+
+RDS Security - Netrowk & IAM:
+   > Network Security:- 
+        . RDS databse usually deploy within the private subnet, not in public one.
+        . RDS security works by leveraging security groups(the same concept as EC2 instances), it controls which IP/security group can communicate with RDS.
+        
+Access Management:
+  > IAM policies helps to control who can manage AWS RDS(through the RDS API).
+  > Traditional username & password can be used to login to the database.
+  > IAM base authentication can be used to login to RDS MYSQL & Postgres SQL.
