@@ -47,10 +47,13 @@ Access Management:
  RDS Using IAM Authentication:
     > IAM database authentication works with MYSQL & Postgres SQl.
     > We don't need a password, just an authentication token obtained through RDS API call & IAM.
-    
+    > Auth token lasts for 15 minutes.
     
    BENEFITS:
     > Network in/out must be encrypted using ssl.
     > IAM centrally manage users instead of DB.
     > Can leverage IAM roles and EC2 instance profiles for easy integration.
+  
+  
+  
   
