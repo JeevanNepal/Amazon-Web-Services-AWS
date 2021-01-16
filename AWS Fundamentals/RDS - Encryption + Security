@@ -36,10 +36,14 @@ RDS Security - Netrowk & IAM:
         
         
         
-RDS Using IAM Authentication:
-    > 
+
         
 Access Management:
   > IAM policies helps to control who can manage AWS RDS(through the RDS API).
   > Traditional username & password can be used to login to the database.
   > IAM base authentication can be used to login to RDS MYSQL & Postgres SQL.
+  
+  
+ RDS Using IAM Authentication:
+    >  
+  
