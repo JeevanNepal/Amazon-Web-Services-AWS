@@ -55,5 +55,8 @@ Access Management:
     > Can leverage IAM roles and EC2 instance profiles for easy integration.
   
   
+  RDS Security Summary:
+    > Encryption at Rest:
+        It is only done only when you first create the DB instance.
   
   
