@@ -58,5 +58,18 @@ Access Management:
   RDS Security Summary:
     > Encryption at Rest:
         It is only done only when you first create the DB instance.
-  
+        or, unencrypted DB=> snapshot=> copy of snapshot as encrypted=>create DB from snapshot.
+        
+Your Responsibilities:
+    > Check the ports/IPs/security group indond rules in DB's SG.
+    > In-database user creation and permissions or manage through IAM.
+    > Creating a database with or without public access.
+    > Ensure parameter groups in DB is configured to only allow SSL connection.
+    
+    
+ AWS Responsibilities:
+    > No SSH access
+    > No manula DB patching
+    > No manual OS patching
+    > No way to audit the underlying instance.
   
