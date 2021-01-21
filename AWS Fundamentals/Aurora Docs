@@ -14,3 +14,42 @@ Visit the Amazon RDS Management Console to create your first Aurora database ins
 
 
 
+Amazon aurura is a propietary technilogy from AWS (not an open source).
+
+
+
+Benefits
+High Performance and Scalability
+Get 5X the throughput of standard MySQL and 3X the throughput of standard PostgreSQL. This performance is on par with commercial databases, at 1/10th the cost. 
+You can easily scale your database deployment up and down from smaller to larger instance types as your needs change, or let Aurora Serverless handle scaling 
+automatically for you. 
+To scale read capacity and performance, you can add up to 15 low latency read replicas across three Availability Zones. Amazon Aurora automatically grows storage 
+as needed, up to 128TB per database instance. Learn more: MySQL | PostgreSQL
+
+High Availability and Durability
+Amazon Aurora is designed to offer greater than 99.99% availability, replicating 6 copies of your data across 3 Availability Zones and backing up your data continuously 
+to Amazon S3. It transparently recovers from physical storage failures; instance failover typically takes less than 30 seconds. You can also backtrack within seconds to a
+previous point in time, to recover from user errors. With Global Database, a single Aurora database can span multiple AWS regions to enable fast local reads and quick disaster 
+recovery. Learn more: MySQL | PostgreSQL
+
+Highly Secure
+Amazon Aurora provides multiple levels of security for your database. These include network isolation using Amazon VPC, encryption at rest using keys you create and control 
+through AWS Key Management Service (KMS) and encryption of data in transit using SSL. On an encrypted Amazon Aurora instance, data in the underlying storage is encrypted, as 
+are the automated backups, snapshots, and replicas in the same cluster. Learn more: MySQL | PostgreSQL
+
+MySQL and PostgreSQL Compatible
+The Amazon Aurora database engine is fully compatible with existing MySQL and PostgreSQL open source databases, and adds compatibility for new releases regularly.
+This means you can easily migrate MySQL or PostgreSQL databases to Aurora using standard MySQL or PostgreSQL import/export tools or snapshots. It also means the code, 
+applications, drivers, and tools you already use with your existing databases can be used with Amazon Aurora with little or no change. Learn more: MySQL | PostgreSQL
+
+Fully Managed
+Amazon Aurora is fully managed by Amazon Relational Database Service (RDS). You no longer need to worry about database management tasks such as hardware provisioning,
+software patching, setup, configuration, or backups. Aurora automatically and continuously monitors and backs up your database to Amazon S3, enabling granular 
+point-in-time recovery. You can monitor database performance using Amazon CloudWatch, Enhanced Monitoring, or Performance Insights, an easy-to-use tool that 
+helps you quickly detect performance problems. Learn more: MySQL | PostgreSQL
+
+Migration Support
+MySQL and PostgreSQL compatibility make Amazon Aurora a compelling target for database migrations to the cloud. If you're migrating from MySQL or PostgreSQL, 
+see our migration documentation for a list of tools and options. To migrate from commercial database engines, you can use the AWS Database Migration Service for 
+a secure migration with minimal downtime. Learn more: MySQL | PostgreSQL
+
