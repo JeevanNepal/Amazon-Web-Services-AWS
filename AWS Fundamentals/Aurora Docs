@@ -87,7 +87,18 @@ The following diagram illustrates the relationship between the cluster volume, t
   https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/images/AuroraArch001.png
       
 
-
+Features of Aurora:
+  > Automatic Failover
+  > Backup & Recovery
+  > Isolation & Security
+  > Industry Compliance
+  > Push-button scaling by auto scaling
+  > Automated patching by Zero downtime
+  > Advance Monitoring
+  > Routine Maintenence.
+  > Backtrack: restore data at any point of time without using backups.
+  
+  
 
 
 
