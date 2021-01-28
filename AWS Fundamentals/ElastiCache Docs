@@ -1,8 +1,9 @@
 AWS ElastiCach Overview:
 ------------------------
 
-    . 
-    
+    . The same way RDS is to get managed relational database.
+    . ElastiCache is to get managed Redis or Memcached.
+    . Caches are in-memory with really high in performance & low latency. 
     
     
     
