@@ -136,14 +136,41 @@ Global Aurora:
    
   . Aurora Global Database(Recommended):
     > In primary region(read/write)
+    > Us upto 5 secondary (read only), regions, replications lag is less then 1 second.
+    > Up to 16 read replicas per secondary region.
+    > Helps for decreasing latency.
+    > Promoting another region (for disaster recovery) has an RTO(recovery time objective) of < 1 minute
     
     
-    
+                                                    us-east-1 Primary Region
+                                                    ------------------------
+                                                                              
+                                                                              
+                                                         __________
+                                                         |         | <-------------> Amazon Aurora
+                                                      ---|---------|-----|
+                                                      |  |_________|     |
+                                                      |                  |
+                                                      |------------------|                  
+                                                      Application Read/write
+
+
+                    
+                                                        us-east-1 Secondary Region
+                                                        --------------------------
+                                                        
+                                                         __________
+                                                         |         | <-------------> Amazon Aurora
+                                                      ---|---------|-----|
+                                                      |  |_________|     |
+                                                      |                  |
+                                                      |------------------|                  
+                                                      Application Read Only
 
 
 
-
-
+Hands On Aurora:
+https://www.udemy.com/course/aws-certified-solutions-architect-associate-saa-c02/learn/lecture/13528162#overview
 
 
 
