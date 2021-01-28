@@ -1,7 +1,7 @@
 AWS ElastiCach Overview:
 ------------------------
 
-    .
+    . 
     
     
     
@@ -18,7 +18,12 @@ AWS ElastiCach Overview:
     
     
     
-    REDIS:
-    -----
-    
+REDIS:
+-----
     Redis, which stands for Remote Dictionary Server, is a fast, open-source, in-memory key-value data store for use as a database, cache, message broker, and queue.
+
+
+MEMCACHED:
+---------
+    Memcached is a general-purpose distributed memory-caching system. It is often used to speed up dynamic database-driven websites by caching data and objects in RAM to 
+    reduce the number of times an external data source must be read. Memcached is free and open-source software, licensed under the Revised BSD license.
