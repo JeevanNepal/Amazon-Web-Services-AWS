@@ -130,7 +130,15 @@ Aurora Serverless:
 
 Global Aurora:
 -------------
-  > 
+  . Aurora Cross Region Read Replicas:
+    > Useful for disaster recovery.
+    > Simple to put in place.
+   
+  . Aurora Global Database(Recommended):
+    > In primary region(read/write)
+    
+    
+    
 
 
 
