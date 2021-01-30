@@ -7,8 +7,10 @@ AWS ElastiCach Overview:
     . Helps reduce loads off of database for read intensive work load.
     . Helps make your application state less.
     . Writes scaling using sharding. (SHARDING: Sharding is a database architecture pattern related to horizontal partitioning — the practice of separating one table’s rows 
-    into multiple different tables,known as partitions.)
-    
+       into multiple different tables,known as partitions.)
+    . Read scaling using read replicas.
+    . Multi AZ with failover capability.
+    . AWS takes care of OS maintenance / patching, optmization,setup, configuration, minitoring, failover and recovery.
     
     
     
