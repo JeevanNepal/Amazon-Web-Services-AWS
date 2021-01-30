@@ -25,5 +25,53 @@ MEMCACHED:
     reduce the number of times an external data source must be read. Memcached is free and open-source software, licensed under the Revised BSD license.
 
 
-ElastiCache Solution Architect - DB Cache:
-    > 
+
+
+ElastiCache Solution Architecture - DB Cache:
++++++++++++++++++++++++++++++++++++++++++++++                 
+                 
+                                           
+    |---------------------- |  <-------------->  Cache Hit     |---------------------|
+    |                       |                                  | Amazon ElastiCache  |
+    |                       | --------------> Cache Miss       |                     |
+    |         Application   |                                  |                     |
+    |                       |                                  |                     |
+    |                       |  ----------------------------------------------------------------> Amazon RDS
+    |                       |                                  |                     |
+    |                       |                                  |                     |
+    |                       |  --------------> Write to Cache  |                     |
+    |                       |                                  |                     |
+    |---------------------- |                                  |---------------------|
+    
+    
+ > Application queries ElastiCache, if not  available, get from RDS and store in ElastiCache.
+ > Helps relieve load in RDS.
+ > Cache must have an invalidation strategy to make sure only the most recent data is used on there.
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
