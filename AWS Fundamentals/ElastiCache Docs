@@ -4,8 +4,10 @@ AWS ElastiCach Overview:
     . The same way RDS is to get managed relational database.
     . ElastiCache is to get managed Redis or Memcached.
     . Caches are in-memory with really high in performance & low latency. 
-    
-    
+    . Helps reduce loads off of database for read intensive work load.
+    . Helps make your application state less.
+    . Writes scaling using sharding. (SHARDING: Sharding is a database architecture pattern related to horizontal partitioning — the practice of separating one table’s rows 
+    into multiple different tables,known as partitions.)
     
     
     
