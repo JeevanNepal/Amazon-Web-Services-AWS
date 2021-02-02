@@ -1,4 +1,4 @@
-AWS ElastiCach Overview:
+AWS ElastiCache Overview:
 ------------------------
 
     . The same way RDS is to get managed relational database.
@@ -50,12 +50,18 @@ ElastiCache Solution Architecture - DB Cache:
     
     
     
+ 
+ElastiCache Solution Architecture - User Session:
++++++++++++++++++++++++++++++++++++++++++++++++++
+
+    > Users logs into any of the applications.
+    > The application writes the session data into ElastiCache.
+    > The user hits another instance of our application.
+    > The instance retrives the data and the user is already logged in.
     
+                                  
     
-    
-    
-    
-    
+                                            
     
     
     
