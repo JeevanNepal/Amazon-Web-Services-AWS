@@ -23,7 +23,18 @@ MEMCACHED:
 ---------
     Memcached is a general-purpose distributed memory-caching system. It is often used to speed up dynamic database-driven websites by caching data and objects in RAM to 
     reduce the number of times an external data source must be read. Memcached is free and open-source software, licensed under the Revised BSD license.
-
+    
+    
+ REDIS vs MEMCACHED:
+ ++++++++++++++++++
+ 
+                        REDIS                                            |                     Memcached.
+   1. Multi-AZ with failover.                                            |             1. Multi-node for partitioning of data (sharding).
+   2. Read replicas to scale reads and have high availability.           |             2. Non-persistance.
+   3. Data durabilty using AOF(Append Only Files) persistance.           |             3. No backou and restore. 
+   4. Backup and restore.                                                |             4. Multi-threaded architecture.
+                                                                         |
+                                                                         
 
 
 
@@ -61,7 +72,7 @@ ElastiCache Solution Architecture - User Session:
     
                                   
     
-                                            
+                                      
     
     
     
