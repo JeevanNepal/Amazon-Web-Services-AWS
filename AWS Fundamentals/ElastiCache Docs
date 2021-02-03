@@ -74,7 +74,21 @@ ElastiCache Solution Architecture - User Session:
     
                                       
  
-    
+ElastiCache - Cache Security:
++++++++++++++++++++++++++++++
+
+    > All caches in elasticache:
+        . Support SSL in flight encryption.
+        . Do not support IAM authentication.
+        
+        
+    > Redis AUTH(authentication).
+        . You cna set a password / token when we create a redis cluster.
+        . This is extra level of security for our cache(on top of security group).
+        
+        
+    > Memcached:
+        . Supports SASL-base authentication(advanced).
     
     
     
