@@ -93,12 +93,34 @@ ElastiCache - Cache Security:
     
     
     
+ ElastiCache for Solution Architects:
+ ++++++++++++++++++++++++++++++++++++
+                                           
+                                           
+                                           
+    |---------------------- |  <-------------->  Cache Hit---->|---------------------|
+    |                       |                                  | Amazon ElastiCache  |
+    |                       |                                  |                     |
+    |         Application   |                                  |                     |
+    |                       |  -------------- Cache Miss------>|                     |
+    |                       |  ----------------------------------------------------------------> Amazon RDS
+    |                       |       Read from DB               |                     |
+    |                       |                                  |                     |
+    |                       |  ----------> Write to Cache----->|                     |
+    |                       |                                  |                     |
+    |---------------------- |                                  |---------------------|
     
     
-    
-    
-    
-    
+                                 Lazy Loading Illustrated
+                                 
+                                 
+     > Patterns for ElastiCache:
+        . Lazy Loading: All the read data is cached, data can become stale in cache.
+        . Write Through: Add or update data in the cache when written to DB (not stlae data).
+        . Session Sotre: Store temporary daat in cache (using TTL features).
+  
+  
+
     
     
     
