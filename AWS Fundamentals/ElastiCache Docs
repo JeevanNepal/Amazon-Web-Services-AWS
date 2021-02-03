@@ -80,6 +80,7 @@ ElastiCache - Cache Security:
     > All caches in elasticache:
         . Support SSL in flight encryption.
         . Do not support IAM authentication.
+        . IAM policies on elasticahce are only used for AWS API -level security.
         
         
     > Redis AUTH(authentication).
