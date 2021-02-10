@@ -3,4 +3,11 @@ AWS Route 53 - Overview:
 
   Amazon route 53 is a highly available and scalable doain name system(DNS) web service.
   
+  Route 53 is a managed DNS(domain name system).
+  DNS is a collection of rules and records which helps client understand how to reach a srver through it's domain name.
   
+  In, AWS most common records are:
+    . A: Host name to IPv4.
+    . AAAA: host name IPv6
+    . CNAME: hostname to hostname.
+    . Alias: hostname to AWS resources.
