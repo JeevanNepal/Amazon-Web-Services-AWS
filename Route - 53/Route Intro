@@ -7,7 +7,21 @@ AWS Route 53 - Overview:
   DNS is a collection of rules and records which helps client understand how to reach a srver through it's domain name.
   
   In, AWS most common records are:
-    . A: Host name to IPv4.
-    . AAAA: host name IPv6
+    . A: hostname to IPv4.
+    . AAAA: hostname IPv6
     . CNAME: hostname to hostname.
     . Alias: hostname to AWS resources.
+    
+    
+  Route 53 can use:
+   . public domain name we own(or buy).
+   . private domain name that cna be resolved by our instances in our VPCs.
+   
+   
+Route 53 has advanced features such as:
+ . Load balancing(through DNS - also called as client balancing).
+ . Health checks(although limited...)
+ . Routing policy: simple, geolocation, failover, latency, weighted, multi value.
+ 
+ 
+ We have to pay $0.5 per month per hosted zone.
