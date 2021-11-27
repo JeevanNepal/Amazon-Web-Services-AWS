@@ -3,3 +3,9 @@ How to choose an AWS region?
 2. Proximity to customers: Reduce latency.
 3. Available Services within a region: New services and new features are not abailable in all regions.
 4. Pricing: Pricing varies from region to region.
+
+AWS Global Services: 
+1. IAM(Identity and Access Managemant).
+2. Route 53.
+3. CloudFront(Content Delivery Network).
+4. WAF(Web Application Firewall).
