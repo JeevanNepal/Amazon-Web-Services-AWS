@@ -1,1 +1,5 @@
 How to choose an AWS region?
+1. Compliance with data governance and legan requirnemt: data never leaves a region youe explicit permissions.
+2. Proximity to customers: Reduce latency.
+3. Available Services within a region: New services and new features are not abailable in all regions.
+4. Pricing: Pricing varies from region to region.
