@@ -1,1 +1,4 @@
 AWS Demo Project to deploy an end to end website:
+
+1. Create a database(db).
+2. Create a storage which is S3.
