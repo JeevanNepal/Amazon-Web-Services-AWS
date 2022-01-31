@@ -4,4 +4,4 @@ AWS Demo Project to deploy an end to end website:
 2. Create a storage which is S3.
 3. Create a server EC2 (instance).
 
-Need to install mysql and connect to RDS db.
+Need to install mysql and connect to db.
