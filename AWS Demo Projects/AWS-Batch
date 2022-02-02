@@ -1,2 +1,10 @@
 Demo AWS Batch:
-AWS batch srvice allows us to submit our application work load in aws in the form of job..
+AWS batch srvice allows us to submit our application work load in aws in the form of job.
+
+#Prerequisits:
+
+EC2:
+Docker Image:An image to rape up our cod/application as an image so that it can run in any env like windowns/linux.
+Docker Container:
+
+Need to create a batch jon in aws.
