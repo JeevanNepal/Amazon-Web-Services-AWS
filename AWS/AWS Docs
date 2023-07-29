@@ -17,7 +17,14 @@ Services of AWS: IAAS (Infrastructure as a Service).
 
 
 
-
+TYpes of EC2 Instances: General Purpose
+                        Compute Optimized
+                        Memory Optimized
+                        Accelerated Computing
+                        Storage Optimized
+                        HPC Optimized
+                        Instance Features
+                        Measuring Instance Performance
 
 
 Section 3
