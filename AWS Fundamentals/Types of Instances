@@ -32,3 +32,12 @@ Important: Features which can come in exam.
 
 8.Measuring instance performance.
 Important: Features which can come in exam.
+
+
+Sub-types of instances:
+1. On-demand instances.
+2. Spot instances.
+3. Reserved instances.
+4. Scheduled instance 
+5. Dedicated instance &
+6. Host instance.
