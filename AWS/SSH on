@@ -81,7 +81,7 @@ This is probably because you have stopped your EC2 instance and then started it 
 
 
 How to find meta-data on linux.
-Use the command curl http://169.254.169.254/latest/meta-data/
+Use the command curl http://169.254.169.254/latest/meta-data/ after login to consolw/server
 
 
  
