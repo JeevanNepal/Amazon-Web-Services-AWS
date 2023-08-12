@@ -114,3 +114,11 @@ Amazon VPC NAT gateway
 Amazon WorkSpaces
 
 Elastic Load Balancing
+
+
+----------------------------------------------------------------------------------------------------
+Once the VPC is ceated, we cannot change it's CIDR (Classless Inter-Domain Routing) block range.
+If we need different CIDR size create new.
+Different subnets within a VPC cannot overlap.We  an however expand VPC CIDR by adding new/extra iP addess ranges (except Govcloud and AWS China).
+Maximun 5 vpcs can be created and 200 subnet in one VPC.
+
