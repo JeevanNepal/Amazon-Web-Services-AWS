@@ -119,12 +119,19 @@ Elastic Load Balancing
 ----------------------------------------------------------------------------------------------------
 Once the VPC is ceated, we cannot change it's CIDR (Classless Inter-Domain Routing) block range.
 If we need different CIDR size create new.
-Different subnets within a VPC cannot overlap.We  an however expand VPC CIDR by adding new/extra iP addess ranges (except Govcloud and AWS China).
-Maximun 5 vpcs can be created in 1 reason and 200 subnet in one VPC.
+Different subnets within a VPC cannot overlap.We  can however expand VPC CIDR by adding new/extra iP addess ranges (except Govcloud and AWS China).
+Maximun 5 vpcs can be created in 1 reason and 200 subnet in one VPC and 200 routing table.
+
+We can allocate maximum 5 elastic IP in one account. By default, all AWS accounts are limited to five (5) Elastic IP addresses per Region, 
+because public (IPv4) internet addresses are a scarce public resource.
 
 Steps to create VPC:
 Create a VPC
 Create a subnet
 internet getway
 route table 
+
+
+
+Subnet is availability zone specific and VPC is region specific.
 
