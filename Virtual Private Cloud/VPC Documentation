@@ -155,4 +155,4 @@ Network Interface: It’s a connection between private and public networks. Netw
 VPC Endpoints: It allows VPC to make a connection with other services of AWS without using the internet. They are of two types, Interference endpoints, and  Gateway endpoints. They are scaled, redundant, and highly available VPC components.
 IP addressing: With the IP Addressing, you can assign your VPCs and subnets, the IPv4 addresses and IPv6 addresses. 
 
-![VPC how-it-works](https://github.com/JeevanNepal/Amazon-Web-Services-AWS/assets/40068014/0b7f23c3-055c-43d4-91a5-925615d40bee)
+
