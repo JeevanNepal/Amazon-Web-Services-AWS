@@ -2,3 +2,14 @@ Default VPC and Custom VPC:
 
 
 Default VPC: 
+It's created in each region when the account is created.
+Has default CIDR, Security Group, NACL(Network Access Control List) and route table settings.
+Has an internet getway by default.
+
+
+
+Custom VPC:
+Owner can decide the CIDR.
+Has default CIDR, Security Group, NACL(Network Access Control List) and route table settings.
+Does not have internet getway by default, one has to create it if needed.
+
