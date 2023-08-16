@@ -20,3 +20,12 @@ A private subnet is a subnet that is associated with a route table that doesn't 
 
 When we create a vpc we must specify on IPv4 CIDR block for the VPC. The allowed block size for private subnet is between /16 to /28 netmask.
 
+
+A subnet first 4 and last 1 network id are reserved and cannot be used, for example as below.
+
+10.0.0.0 - Reserved for network address.
+10.0.0.1 - Reserved by AWS for the VPC route.
+10.0.0.2 - Reserved by AWS for the IP address for DNS server.
+10.0.0.3 - Reserved for future use.
+10.0.0.255 - Reserved for broadcasr address.
+
