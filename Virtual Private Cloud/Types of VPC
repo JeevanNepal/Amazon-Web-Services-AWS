@@ -13,3 +13,10 @@ Owner can decide the CIDR.
 Has default CIDR, Security Group, NACL(Network Access Control List) and route table settings.
 Does not have internet getway by default, one has to create it if needed.
 
+
+
+A public subnet is a subnet that is associated with a route table that has a route to an Internet gateway. This connects the VPC to the Internet and to other AWS services. 
+A private subnet is a subnet that is associated with a route table that doesn't have a route to an internet gateway.
+
+When we create a vpc we must specify on IPv4 CIDR block for the VPC. The allowed block size for private subnet is between /16 to /28 netmask.
+
