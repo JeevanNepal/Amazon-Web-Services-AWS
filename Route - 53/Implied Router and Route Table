@@ -5,4 +5,5 @@ We can have upto 200 route table per VPC. We can have pto 50 routes entries per 
 Each subnet must be associated with only one route table at any given time.
 If you do not specify a subnet to route thable association, the subnet will be associated with the default VPC route table.
 We can also edit the main route table if it's needed, but we cannot delete main route table.
-However you can make a custom route table manually, it becomes the mail route table and the former route table can be deleted as it's no longer a main route table.Route
+However you can make a custom route table manually, it becomes the main route table and the former route table can be deleted as it's no longer a main route table route,
+You can associate multiple subnet with the same route table.
