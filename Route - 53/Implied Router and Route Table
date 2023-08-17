@@ -26,3 +26,16 @@ an internet gateway enables you to connect to an EC2 instance in AWS using your 
 
 An internet gateway provides a target in your VPC route tables for internet-routable traffic. For communication using IPv4, the internet gateway also performs network address translation (NAT). For communication using IPv6, 
 NAT is not needed because IPv6 addresses are public. For more information, see IP addresses and NAT.
+
+
+
+
+
+
+
+
+Internat getway is a vitrual router that connects VPC to the internet.
+Default VPC is already attached with internet getway.
+If we create new custom VPC we need to attach the netgetway to connect to the internet.
+We need to make sure the subnet's route table points to the internet getway,
+It performs NAT between our private and public IPv4 addresses.
