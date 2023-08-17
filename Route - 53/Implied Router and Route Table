@@ -11,7 +11,7 @@ You can associate multiple subnet with the same route table.
 
 
 
-
+Default VPC has the internet getway (NAT) connected by default and custom VPC we need to connect the NAT getway.
 
 
 
