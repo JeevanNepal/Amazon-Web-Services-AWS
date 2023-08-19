@@ -41,3 +41,16 @@ Eg:
                                                              access to port 123 not allowed as it is not authorised security group.              
                                                                                                                                          Security Group 3      EC2 Instance                  
                                                                                                                                                                 IP XXXXXXXXX
+
+
+
+
+
+========================================================================================
+
+Difference Between Securoty Group and NACL (Network Access Control List):
+Security:                                                                           NACL:
+1. Operates at instance level.                                  |              1.  Operates at subnet level.
+2. Supports allows rules only.                                  |              2. It permits allow as well as deny rules.
+3. Sateful, return traffic is automatically allowed.            |              3. Stateless, return traffic must be explicitely allowed by rules.
+4. Applies to an instance only.                                 |              4. Applies to all the instances in subnet.
