@@ -143,7 +143,8 @@ NAT Getway is created in public subnet but used for private subnet.
 
 Components of Amazon VPC:
 Subnet: A subnet in VPC is something a range of IP addresses. It is a section of a VPC that can contain resources such as Amazon EC2 services and shares a common address component. Public Subnet where resources are exposed to the internet through Internet Gateway and Private Subnet where resources are not exposed to the outside world.
-Route Table: They are the set of rules used to decide where the network traffic has to be managed. It specifies the destination i.e IP address and target. The target can be Internet gateway, NAT gateway, Virtual private gateway, etc. With the use of route tables, users can determine where the network traffic will be directed from your subnet or gateway.
+Route Table: They are the set of rules used to decide where the network traffic has to be managed. It specifies the destination i.e IP address and target. The target can be Internet gateway, NAT gateway, Virtual private gateway, etc.
+With the use of route tables, users can determine where the network traffic will be directed from your subnet or gateway.
 Virtual Private Gateway: It is the VPN(Virtual Private Network) hub on the Amazon side of the VPN connection to have a secure transaction. Users can attach it to the VPC from which they want to create the VPN connection.
 NAT Gateway: Network Address Translation (NAT) Gateway is used when higher bandwidth, availability with lesser management effort is required. It updates the routing table of the private subnet such that it sends the traffic to the NAT gateway. It supports only UDP, TCP, and ICMP protocols.
 VPC Peering: A VPC peering connection allows you to route traffic between two Virtual Private Clouds using IPv4 or IPv6 private addresses. Users can create a VPC peering connection between their own VPC with a VPC in another AWS account. This connection helps you to smoothly transfer the data.
@@ -156,3 +157,15 @@ VPC Endpoints: It allows VPC to make a connection with other services of AWS wit
 IP addressing: With the IP Addressing, you can assign your VPCs and subnets, the IPv4 addresses and IPv6 addresses. 
 
 
+
+
+
+
+
+What is VPC peering?
+A virtual private cloud (VPC) is a virtual network dedicated to your AWS account. It is logically isolated from other virtual networks in the AWS Cloud. You can launch AWS resources, such as Amazon EC2 instances, into your VPC.
+A VPC peering connection is a networking connection between two VPCs that enables you to route traffic between them using private IPv4 addresses or IPv6 addresses. 
+Instances in either VPC can communicate with each other as if they are within the same network. You can create a VPC peering connection between your own VPCs, or with a VPC in another AWS account. 
+The VPCs can be in different Regions (also known as an inter-Region VPC peering connection).
+
+        
