@@ -22,3 +22,11 @@ Default VPC is already attached with internet getway.
 If we create new custom VPC we need to attach the netgetway to connect to the internet.
 We need to make sure the subnet's route table points to the internet getway,
 It performs NAT between our private and public IPv4 addresses.
+
+
+
+
+
+IMPORTANT:
+Under NAT instance we can used elastic IP as well as Public IP but in NAT Getways we can only use elastic IP.
+
