@@ -1,7 +1,7 @@
 AWS Route 53 - Overview:
 ++++++++++++++++++++++++
 
-  Amazon route 53 is a highly available and scalable doain name system(DNS) web service.
+  Amazon route 53 is a highly available and scalable domain name system(DNS) web service.
   
   Route 53 is a managed DNS(domain name system).
   DNS is a collection of rules and records which helps client understand how to reach a srver through it's domain name.
