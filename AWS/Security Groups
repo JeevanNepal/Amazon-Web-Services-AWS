@@ -48,7 +48,7 @@ Eg:
 
 ========================================================================================
 
-Difference Between Securoty Group and NACL (Network Access Control List):
+Difference Between Security Group and NACL (Network Access Control List):
 Security Group:                                                                           NACL:
 1. Operates at instance level.                                  |              1.  Operates at subnet level.
 2. Supports allows rules only.                                  |              2. It permits allow as well as deny rules.
