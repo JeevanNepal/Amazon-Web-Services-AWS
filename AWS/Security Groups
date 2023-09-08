@@ -49,8 +49,17 @@ Eg:
 ========================================================================================
 
 Difference Between Security Group and NACL (Network Access Control List):
-Security Group:                                                                           NACL:
-1. Operates at instance level.                                  |              1.  Operates at subnet level.
-2. Supports allows rules only.                                  |              2. It permits allow as well as deny rules.
-3. Sateful, return traffic is automatically allowed.            |              3. Stateless, return traffic must be explicitely allowed by rules.
-4. Applies to an instance only.                                 |              4. Applies to all the instances in subnet.
+Security Group:                                                                 Network Access Control List  (NACL):
+==============                                                                  ====================================
+1. Operates at instance level.                                  |                Operates at subnet level.
+2. Supports allows rules only.                                  |                It permits allow as well as deny rules.
+3. Sateful, return traffic is automatically allowed.            |                Stateless, return traffic must be explicitely allowed by rules.
+4. Applies to an instance only.                                 |                Applies to all the instances in subnet.
+In security group, we operate at instance level.	              |                 In network ACL, we operate sub net level.
+It support only allow rules.	                                  |                 It support allow rules and deny rules.
+It is stateful, when we create an inbound or an outbound rule.	|                 It is stateless, it return traffic must be allowed explicitly.
+We cannot block specific IP address using SGs.	                |                 We can block specific IP Address using NACL.
+All rules are evaluated before deciding to permit trffic.	      |                 Rules are processed in number order when deciding whether allow traffic.
+It start with instance launch configuration.	                                   In which we assigned to subnet for all instance.
+It applies when someone specifies security group                                 They do not depend on user it automatically apply all instances with subnet.
+when launching the instance and it associates with security group.	
