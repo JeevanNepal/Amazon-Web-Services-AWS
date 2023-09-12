@@ -200,8 +200,16 @@ EBS Raid Configuration:RAID(Redundant Array of Independent Disks).
   
   
   
-  
-  
+ Block Storage                                                                                                                  Vs                         Object storage: 
+ Block storage is suitsble for transactional databases, random read/write loads and structured database storage.                                           Object storage stores the files as a whole and does not devide them.
+ 
+Block storage divides the data to be sotred in evenly sized blocks(data chunks) for instance,                                                              In object storage, an object is, the file or data itself.
+ a file can be split into every sized blocks brfore it is stored.                                                                                          It's metadata.Obejct global unique ID.
+
+Data blocks stored in block storage would not contain metadata(data created, data modified, content type, etc.)                                            The object global unique ID, is a unique identifier for the objectand it must be unoque such that it can be retrieved disregarding where it's physical storage location is.
+
+Block storage only keeps the address (index), where the data blocks are stored, it does not care what is in that block.                                    Example of object storage solution, dropbox, AWS, S3, facebook.
+Just how to retrieve it when required.
   
   
   
