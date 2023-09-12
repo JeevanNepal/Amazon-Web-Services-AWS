@@ -79,7 +79,8 @@ For Versioned buckets,
 Transitioning period for the current object is calculated for the object creation date
 Transitioning period for a non-current object is calculated for the date when the object became a noncurrent versioned object
 S3 uses the number of days since its successor was created as the number of days an object is noncurrent.
-S3 calculates the time by adding the number of days specified in the rule to the object creation time and rounding the resulting time to the next day midnight UTC for e.g. if an object was created at 15/1/2016 10:30 AM UTC and you specify 3 days in a transition rule, which results in 18/1/2016 10:30 AM UTC and rounded of to next day midnight time 19/1/2016 00:00 UTC.
+S3 calculates the time by adding the number of days specified in the rule to the object creation time and rounding the resulting time to the next day midnight UTC for e.g. if an object was created at 15/1/2016 10:30 AM UTC and you specify 3 days in a transition rule, 
+which results in 18/1/2016 10:30 AM UTC and rounded of to next day midnight time 19/1/2016 00:00 UTC.
 
 Lifecycle configuration on MFA-enabled buckets is not supported.
 1000 lifecycle rules can be configured per bucket
@@ -96,7 +97,8 @@ Minimum 30 days – Objects must be stored for at least 30 days in the current s
 GLACIER -> (90 days) -> Permanent Deletion OR GLACIER Deep Archive -> (180 days) -> Permanent Deletion
 Deleting data that is archived to Glacier is free if the objects deleted are archived for three months or longer.
 S3 charges a prorated early deletion fee if the object is deleted or overwritten within three months of archiving it.
-Archival of objects to Glacier by using object lifecycle management is performed asynchronously and there may be a delay between the transition date in the lifecycle configuration rule and the date of the physical transition. However, AWS charges Glacier prices based on the transition date specified in the rule
+Archival of objects to Glacier by using object lifecycle management is performed asynchronously and there may be a delay between the transition date in the lifecycle configuration rule and the date of the physical transition. However, 
+AWS charges Glacier prices based on the transition date specified in the rule
 For a versioning-enabled bucket
 Transition and Expiration actions apply to current versions.
 NoncurrentVersionTransition and NoncurrentVersionExpiration actions apply to noncurrent versions and work similarly to the non-versioned objects except the time period is from the time the objects became noncurrent
@@ -127,10 +129,185 @@ Requester Pays buckets or DevPay buckets do not allow access through the website
 
 ======================================
 S3 Versioning
+S3 Versioning helps to keep multiple variants of an object in the same bucket and can be used to preserve, retrieve, and restore every version of every object stored in the S3 bucket.
+S3 Object Versioning can be used to protect from unintended overwrites and accidental deletions
+As Versioning maintains multiple copies of the same objects as a whole and charges accrue for multiple versions for e.g. for a 1GB file with 5 copies with minor differences would consume 5GB of S3 storage space and you would be charged for the same.
+Buckets can be in one of the three states
+Unversioned (the default)
+Versioning-enabled
+Versioning-suspended
+S3 Object Versioning is not enabled by default and has to be explicitly enabled for each bucket.
+Versioning once enabled, cannot be disabled and can only be suspended
+Versioning enabled on a bucket applies to all the objects within the bucket
+Permissions are set at the version level. Each version has its own object owner; an AWS account that creates the object version is the owner. So, you can set different permissions for different versions of the same object.
+Irrespective of the Versioning, each object in the bucket has a version.
+For Non Versioned bucket, the version ID for each object is null
+For Versioned buckets, a unique version ID is assigned to each object
+With Versioning, version ID forms a key element to define the uniqueness of an object within a bucket along with the bucket name and object key
 
+
+Object Retrieval
+For Non Versioned bucket
+An Object retrieval always returns the only object available.
+For Versioned bucket
+An object retrieval returns the Current latest object.
+Non-Current objects can be retrieved by specifying the version ID.
+
+Object Addition
+For Non Versioned bucket
+If an object with the same key is uploaded again it overwrites the object
+For Versioned bucket
+If an object with the same key is uploaded, the newly uploaded object becomes the current version and the previous object becomes the non-current version.
+A non-current versioned object can be retrieved and restored hence protecting against accidental overwrites
+
+Object Deletion
+For Non Versioned bucket
+An object is permanently deleted and cannot be recovered
+For the Versioned bucket,
+All versions remain in the bucket and Amazon inserts a delete marker which becomes the Current version
+A non-current versioned object can be retrieved and restored hence protecting against accidental overwrites
+If an Object with a specific version ID is deleted, a permanent deletion happens and the object cannot be recovered
+Delete marker
+Delete Marker object does not have any data or ACL associated with it, just the key and the version ID
+An object retrieval on a bucket with a delete marker as the Current version would return a 404
+Only a DELETE operation is allowed on the Delete Marker object
+If the Delete marker object is deleted by specifying its version ID, the previous non-current version object becomes the current version object
+If a DELETE request is fired on an object with Delete Marker as the current version, the Delete marker object is not deleted but a Delete Marker is added again
+S3 Versioning - Delete Operation
+
+Restoring Previous Versions
+Copy a previous version of the object into the same bucket. The copied object becomes the current version of that object and all object versions are preserved – Recommended as it keeps all the versions.
+Permanently delete the current version of the object. When you delete the current object version, you, in effect, turn the previous version into the current version of that object.
+
+Versioning Suspended Bucket
+Versioning can be suspended to stop accruing new versions of the same object in a bucket.
+Existing objects in the bucket do not change and only future requests behavior changes.
+An object with version ID null is added for each new object addition.
+For each object addition with the same key name, the object with the version ID null is overwritten.
+An object retrieval request will always return the current version of the object.
+A DELETE request on the bucket would permanently delete the version ID null object and inserts a Delete Marker
+A DELETE request does not delete anything if the bucket does not have an object with version ID null
+A DELETE request can still be fired with a specific version ID for any previous object with version IDs stored
+MFA Delete
+Additional security can be enabled by configuring a bucket to enable MFA (Multi-Factor Authentication) for the deletion of objects.
+MFA Delete enabled, requires additional authentication for operations
+Changing the versioning state of the bucket
+Permanently deleting an object version
+MFA Delete can be enabled on a bucket to ensure that data in the bucket cannot be accidentally deleted
+While the bucket owner, the AWS account that created the bucket (root account), and all authorized IAM users can enable versioning, but only the bucket owner (root account) can enable MFA Delete.
+MFA Delete however does not prevent deletion or allow restoration.
+MFA Delete cannot be enabled using the AWS Management Console. You must use the AWS Command Line Interface (AWS CLI) or the API.
 ======================================
 Policy & Access Control List (ACL)
+By default, all S3 buckets, objects, and related subresources are private.
+Only the Resource owner, the AWS account (not the user) that creates the resource, can access the resource.
+Resource owner can be
+AWS account that creates the bucket or object owns those resources
+If an IAM user creates the bucket or object, the AWS account of the IAM user owns the resource
+If the bucket owner grants cross-account permissions to other AWS account users to upload objects to the buckets, the objects are owned by the AWS account of the user who uploaded the object and not the bucket owner except for the following conditions
+Bucket owner can deny access to the object, as it is still the bucket owner who pays for the object
+Bucket owner can delete or apply archival rules to the object and perform restoration
+User is the AWS Account or the IAM user who access the resource
+Bucket owner is the AWS account that created a bucket
+Object owner is the AWS account that uploads the object to a bucket, not owned by the account
+S3 permissions are classified into
+Resource based policies and
+User policies
+User Policies
+User policies use IAM with S3 to control the type of access a user or group of users has to specific parts of an S3 bucket the AWS account owns
+User policy is always attached to a User, Group, or a Role
+Anonymous permissions cannot be granted
+If an AWS account that owns a bucket wants to grant permission to users in its account, it can use either a bucket policy or a user policy
 
+Resource-Based policies
+Bucket policies and access control lists (ACLs) are resource-based because they are attached to the  S3 resources
+Screen Shot 2016-03-28 at 5.57.36 PM
+
+Bucket Policies
+Bucket policy can be used to grant cross-account access to other AWS accounts or IAM users in other accounts for the bucket and objects in it.
+Bucket policies provide centralized, access control to buckets and objects based on a variety of conditions, including S3 operations, requesters, resources, and aspects of the request (e.g. IP address)
+If an AWS account that owns a bucket wants to grant permission to users in its account, it can use either a bucket policy or a user policy
+Permissions attached to a bucket apply to all of the objects in that bucket created and owned by the bucket owner
+Policies can either add or deny permissions across all (or a subset) of objects within a bucket
+Only the bucket owner is allowed to associate a policy with a bucket
+Bucket policies can cater to multiple use cases
+Granting permissions to multiple accounts with added conditions
+Granting read-only permission to an anonymous user
+Limiting access to specific IP addresses
+Restricting access to a specific HTTP referer
+Restricting access to a specific HTTP header for e.g. to enforce encryption
+Granting permission to a CloudFront OAI
+Adding a bucket policy to require MFA
+Granting cross-account permissions to upload objects while ensuring the bucket owner has full control
+Granting permissions for S3 inventory and Amazon S3 analytics
+Granting permissions for S3 Storage Lens
+Access Control Lists (ACLs)
+Each bucket and object has an ACL associated with it.
+An ACL is a list of grants identifying grantee and permission granted
+ACLs are used to grant basic read/write permissions on resources to other AWS accounts.
+ACL supports limited permissions set and
+cannot grant conditional permissions, nor can you explicitly deny permissions
+cannot be used to grant permissions for bucket subresources
+Permission can be granted to an AWS account by the email address or the canonical user ID (is just an obfuscated Account Id). If an email address is provided, S3 will still find the canonical user ID for the user and add it to the ACL.
+
+It is Recommended to use Canonical user ID as email address would not be supported
+Bucket ACL
+Only recommended use case for the bucket ACL is to grant write permission to the S3 Log Delivery group to write access log objects to the bucket
+Bucket ACL will help grant write permission on the bucket to the Log Delivery group if access log delivery is needed to the bucket
+Only way you can grant necessary permissions to the Log Delivery group is via a bucket ACL
+Object ACL
+Object ACLs control only Object-level Permissions
+Object ACL is the only way to manage permission to an object in the bucket not owned by the bucket owner i.e. If the bucket owner allows cross-account object uploads and if the object owner is different from the bucket owner, 
+the only way for the object owner to grant permissions on the object is through Object ACL
+If the Bucket and Object is owned by the same AWS account, Bucket policy can be used to manage the permissions
+If the Object and User is owned by the same AWS account, User policy can be used to manage the permissions
+S3 Request Authorization
+When S3 receives a request, it must evaluate all the user policies, bucket policies, and ACLs to determine whether to authorize or deny the request.
+
+S3 evaluates the policies in 3 context
+User context is basically the context in which S3 evaluates the User policy that the parent AWS account (context authority) attaches to the user
+Bucket context is the context in which S3 evaluates the access policies owned by the bucket owner (context authority) to check if the bucket owner has not explicitly denied access to the resource
+Object context is the context where S3 evaluates policies owned by the Object owner (context authority)
+Analogy
+Consider 3 Parents (AWS Account) A, B and C with Child (IAM User) AA, BA and CA respectively
+Parent A owns a Toy box (Bucket) with Toy AAA and also allows toys (Objects) to be dropped and picked up
+Parent A can grant permission (User Policy OR Bucket policy OR both) to his Child AA to access the Toy box and the toys
+Parent A can grant permissions (Bucket policy) to Parent B (different AWS account) to drop toys into the toys box. Parent B can grant permissions (User policy) to his Child BA to drop Toy BAA
+Parent B can grant permissions (Object ACL) to Parent A to access Toy BAA
+Parent A can grant permissions (Bucket Policy) to Parent C to pick up the Toy AAA who in turn can grant permission (User Policy) to his Child CA to access the toy
+Parent A can grant permission (through IAM Role) to Parent C to pick up the Toy BAA who in turn can grant permission (User Policy) to his Child CA to access the toy
+
+Bucket Operation Authorization
+
+If the requester is an IAM user, the user must have permission (User Policy) from the parent AWS account to which it belongs
+Amazon S3 evaluates a subset of policies owned by the parent account. This subset of policies includes the user policy that the parent account attaches to the user.
+If the parent also owns the resource in the request (in this case, the bucket), Amazon S3 also evaluates the corresponding resource policies (bucket policy and bucket ACL) at the same time.
+Requester must also have permissions (Bucket Policy or ACL) from the bucket owner to perform a specific bucket operation.
+Amazon S3 evaluates a subset of policies owned by the AWS account that owns the bucket. The bucket owner can grant permission by using a bucket policy or bucket ACL.
+Note that, if the AWS account that owns the bucket is also the parent account of an IAM user, then it can configure bucket permissions in a user policy or bucket policy or both
+Object Operation Authorization
+Screen Shot 2016-03-28 at 6.39.54 AM
+
+If the requester is an IAM user, the user must have permission (User Policy) from the parent AWS account to which it belongs.
+Amazon S3 evaluates a subset of policies owned by the parent account. This subset of policies includes the user policy that the parent attaches to the user.
+If the parent also owns the resource in the request (bucket, object), Amazon S3 evaluates the corresponding resource policies (bucket policy, bucket ACL, and object ACL) at the same time.
+
+If the parent AWS account owns the resource (bucket or object), it can grant resource permissions to its IAM user by using either the user policy or the resource policy.
+S3 evaluates policies owned by the AWS account that owns the bucket.
+If the AWS account that owns the object in the request is not the same as the bucket owner, in the bucket context Amazon S3 checks the policies if the bucket owner has explicitly denied access to the object.
+If there is an explicit deny set on the object, Amazon S3 does not authorize the request.
+Requester must have permissions from the object owner (Object ACL) to perform a specific object operation.
+Amazon S3 evaluates the object ACL.
+If bucket and object owners are the same, access to the object can be granted in the bucket policy, which is evaluated in the bucket context.
+If the owners are different, the object owners must use an object ACL to grant permissions.
+If the AWS account that owns the object is also the parent account to which the IAM user belongs, it can configure object permissions in a user policy, which is evaluated in the user context.
+Permission Delegation
+
+If an AWS account owns a resource, it can grant those permissions to another AWS account.
+That account can then delegate those permissions, or a subset of them, to users in the account. This is referred to as permission delegation.
+
+But an account that receives permissions from another account cannot delegate permission cross-account to another AWS account.
+If the Bucket owner wants to grant permission to the Object which does not belong to it to another AWS account it cannot do it through cross-account permissions and need to define an IAM role which can be assumed by the AWS account to gain access
 
 CORS (Cross Origin Resource Sharing)
 All browsers implement the Same-Origin policy, for security reasons, where the web page from a domain can only request resources from the same domain.
