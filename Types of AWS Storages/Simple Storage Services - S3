@@ -29,3 +29,180 @@ maximum of 5 TB. The largest object that can be uploaded in a single PUT is 5 GB
 
 Amazon S3 Buckets
 You can create up to 100 buckets in each of your AWS cloud accounts, with no limit on the number of objects you can store in a bucket.
+
+
+
+
+==================================================================================================================================================
+
+AWS S3 Subresources
+JANUARY 29, 2023 ~ LAST UPDATED ON : JUNE 8, 2023 ~ JAYENDRAPATIL
+Table of Contents  hide 
+AWS S3 Subresources
+S3 Object Lifecycle
+Static Website Hosting
+S3 Versioning
+Policy & Access Control List (ACL)
+CORS (Cross Origin Resource Sharing)
+S3 Access Logs
+Tagging
+Location
+Event Notifications
+Cross-Region Replication & Same-Region Replication
+S3 Inventory
+Requester Pays
+Torrent
+Object ACL
+
+
+AWS S3 Subresources
+S3 Subresources provides support to store, and manage the bucket configuration information.
+S3 subresources only exist in the context of a specific bucket or object
+S3 subresources are associated with buckets and objects.
+S3 Subresources are subordinates to objects; i.e. they do not exist on their own, they are always associated with some other entity, such as an object or a bucket.
+S3 supports various options to configure a bucket for e.g., the bucket can be configured for website hosting, configuration added to manage the lifecycle of objects in the bucket, and to log all access to the bucket.
+S3 Object Lifecycle
+Refer blog post @ S3 Object Lifecycle Management
+
+
+Static Website Hosting
+S3 can be used for Static Website hosting with Client-side scripts.
+S3 does not support server-side scripting.
+S3, in conjunction with Route 53, supports hosting a website at the root domain which can point to the S3 website endpoint
+S3 website endpoints do not support HTTPS or access points
+For S3 website hosting the content should be made publicly readable which can be provided using a bucket policy or an ACL on an object.
+Users can configure the index, and error document as well as configure the conditional routing of an object name
+Bucket policy applies only to objects owned by the bucket owner. If the bucket contains objects not owned by the bucket owner, then public READ permission on those objects should be granted using the object ACL.
+Requester Pays buckets or DevPay buckets do not allow access through the website endpoint. Any request to such a bucket will receive a 403 -Access Denied response
+
+
+S3 Versioning
+Refer blog post @ S3 Object Versioning
+
+Policy & Access Control List (ACL)
+Refer blog post @ S3 Permissions
+
+CORS (Cross Origin Resource Sharing)
+All browsers implement the Same-Origin policy, for security reasons, where the web page from a domain can only request resources from the same domain.
+CORS allows client web applications loaded in one domain access to the restricted resources to be requested from another domain.
+With CORS support, S3 allows cross-origin access to S3 resources
+CORS configuration rules identify the origins allowed to access the bucket, the operations (HTTP methods) that would be supported for each origin, and other operation-specific information.
+S3 Access Logs
+S3 Access Logs enable tracking access requests to an S3 bucket.
+S3 Access logs are disabled by default.
+Each access log record provides details about a single access request, such as the requester, bucket name, request time, request action, response status, and error code, etc.
+Access log information can be useful in security and access audits and also help learn about the customer base and understand the S3 bill.
+S3 periodically collects access log records, consolidates the records in log files, and then uploads log files to a target bucket as log objects.
+Logging can be enabled on multiple source buckets with the same target bucket which will have access logs for all those source buckets, but each log object will report access log records for a specific source bucket.
+Source and target buckets should be in the same region.
+Source and target buckets should be different to avoid an infinite loop of logs issue.
+Target bucket can be encrypted using SSS-S3 default encryption. However, Default encryption with AWS KMS keys (SSE-KMS) is not supported.
+
+S3 Object Lock cannot be enabled on the target bucket.
+ S3 uses a special log delivery account to write server access logs.
+AWS recommends updating the bucket policy on the target bucket to grant access to the logging service principal (logging.s3.amazonaws.com) for access log delivery.
+Access for access log delivery can also be granted to the S3 log delivery group through the bucket ACL. Granting access to the S3 log delivery group using your bucket ACL is not recommended.
+Access log records are delivered on a best-effort basis. The completeness and timeliness of server logging is not guaranteed i.e. log record for a particular request might be delivered long after the request was actually processed, or it might not be delivered at all.
+S3 Access Logs can be analyzed using data analysis tools or Athena.
+Tagging
+S3 provides the tagging subresource to store and manage tags on a bucket
+Cost allocation tags can be added to the bucket to categorize and track AWS costs.
+AWS can generate a cost allocation report with usage and costs aggregated by the tags applied to the buckets.
+Location
+AWS region needs to be specified during bucket creation and it cannot be changed.
+S3 stores this information in the location subresource and provides an API for retrieving this information
+Event Notifications
+S3 notification feature enables notifications to be triggered when certain events happen in the bucket.
+Notifications are enabled at the Bucket level
+Notifications can be configured to be filtered by the prefix and suffix of the key name of objects. However, filtering rules cannot be defined with overlapping prefixes, overlapping suffixes, or prefix and suffix overlapping
+S3 can publish the following events
+New Object created events
+Can be enabled for PUT, POST, or COPY operations
+You will not receive event notifications from failed operations
+Object Removal events
+Can public delete events for object deletion, version object deletion or insertion of delete marker
+You will not receive event notifications from automatic deletes from lifecycle policies or from failed operations.
+Restore object events
+restoration of objects archived to the S3 Glacier storage classes
+Reduced Redundancy Storage (RRS) object lost events
+Can be used to reproduce/recreate the Object
+Replication events
+for replication configurations that have S3 replication metrics or S3 Replication Time Control (S3 RTC) enabled
+S3 can publish events to the following destination
+SNS topic
+SQS queue
+AWS Lambda
+For S3 to be able to publish events to the destination, the S3 principal should be granted the necessary permissions
+S3 event notifications are designed to be delivered at least once. Typically, event notifications are delivered in seconds but can sometimes take a minute or longer.
+Cross-Region Replication & Same-Region Replication
+S3 Replication enables automatic, asynchronous copying of objects across S3 buckets in the same or different AWS regions.
+S3 Cross-Region Replication – CRR is used to copy objects across S3 buckets in different AWS Regions.
+S3 Same-Region Replication – SRR is used to copy objects across S3 buckets in the same AWS Regions.
+
+S3 Replication helps to
+Replicate objects while retaining metadata
+Replicate objects into different storage classes
+Maintain object copies under different ownership
+Keep objects stored over multiple AWS Regions
+Replicate objects within 15 minutes
+S3 can replicate all or a subset of objects with specific key name prefixes
+S3 encrypts all data in transit across AWS regions using SSL
+Object replicas in the destination bucket are exact replicas of the objects in the source bucket with the same key names and the same metadata.
+Objects may be replicated to a single destination bucket or multiple destination buckets.
+Cross-Region Replication can be useful for the following scenarios:-
+Compliance requirement to have data backed up across regions
+Minimize latency to allow users across geography to access objects
+Operational reasons compute clusters in two different regions that analyze the same set of objects
+Same-Region Replication can be useful for the following scenarios:-
+Aggregate logs into a single bucket
+Configure live replication between production and test accounts
+Abide by data sovereignty laws to store multiple copies
+Replication Requirements
+source and destination buckets must be versioning-enabled
+for CRR, the source and destination buckets must be in different AWS regions.
+S3 must have permission to replicate objects from that source bucket to the destination bucket on your behalf.
+If the source bucket owner also owns the object, the bucket owner has full permission to replicate the object. If not, the source bucket owner must have permission for the S3 actions s3:GetObjectVersion and s3:GetObjectVersionACL to read the object and object ACL
+
+Setting up cross-region replication in a cross-account scenario (where the source and destination buckets are owned by different AWS accounts), the source bucket owner must have permission to replicate objects in the destination bucket.
+if the source bucket has S3 Object Lock enabled, the destination buckets must also have S3 Object Lock enabled.
+destination buckets cannot be configured as Requester Pays buckets
+Replicated & Not Replicated
+Only new objects created after you add a replication configuration are replicated. S3 does NOT retroactively replicate objects that existed before you added replication configuration.
+Objects encrypted using customer provided keys (SSE-C), objects encrypted at rest under an S3 managed key (SSE-S3) or a KMS key stored in AWS Key Management Service (SSE-KMS).
+S3 replicates only objects in the source bucket for which the bucket owner has permission to read objects and read ACLs
+Any object ACL updates are replicated, although there can be some delay before S3 can bring the two in sync. This applies only to objects created after you add a replication configuration to the bucket.
+S3 does NOT replicate objects in the source bucket for which the bucket owner does not have permission.
+Updates to bucket-level S3 subresources are NOT replicated, allowing different bucket configurations on the source and destination buckets
+Only customer actions are replicated & actions performed by lifecycle configuration are NOT replicated
+Replication chaining is NOT allowed, Objects in the source bucket that are replicas, created by another replication, are NOT replicated.
+
+S3 does NOT replicate the delete marker by default. However, you can add delete marker replication to non-tag-based rules to override it.
+S3 does NOT replicate deletion by object version ID. This protects data from malicious deletions.
+S3 Inventory
+S3 Inventory helps manage the storage and can be used to audit and report on the replication and encryption status of the objects for business, compliance, and regulatory needs.
+S3 inventory provides a scheduled alternative to the S3 synchronous List API operation.
+S3 inventory provides CSV, ORC, or Apache Parquet output files that list the objects and their corresponding metadata on a daily or weekly basis for an S3 bucket or a shared prefix.
+Requester Pays
+By default, buckets are owned by the AWS account that created it (the bucket owner) and the AWS account pays for storage costs, downloads, and data transfer charges associated with the bucket.
+Using Requester Pays subresource:-
+Bucket owner specifies that the requester requesting the download will be charged for the download
+However, the bucket owner still pays the storage costs
+Enabling Requester Pays on a bucket
+disables anonymous access to that bucket
+does not support BitTorrent
+does not support SOAP requests
+cannot be enabled for end-user logging bucket
+Torrent
+Default distribution mechanism for S3 data is via client/server download
+Bucket owner bears the cost of Storage as well as the request and transfer charges which can increase linearly for a popular object
+S3 also supports the BitTorrent protocol
+BitTorrent is an open-source Internet distribution protocol
+BitTorrent addresses this problem by recruiting the very clients that are downloading the object as distributors themselves
+S3 bandwidth rates are inexpensive, but BitTorrent allows developers to further save on bandwidth costs for a popular piece of data by letting users download from Amazon and other users simultaneously
+Benefit for a publisher is that for large, popular files the amount of data actually supplied by S3 can be substantially lower than what it would have been serving the same clients via client/server download
+Any object in S3 that is publicly available and can be read anonymously can be downloaded via BitTorrent
+Torrent file can be retrieved for any publicly available object by simply adding a “?torrent” query string parameter at the end of the REST GET request for the object
+Generating the .torrent for an object takes time proportional to the size of that object, so its recommended to make a first torrent request yourself to generate the file so that subsequent requests are faster
+Torrent is enabled only for objects that are less than 5 GB in size.
+Torrent subresource can only be retrieved, and cannot be created, updated, or deleted
+Object ACL
