@@ -36,8 +36,8 @@ You can create up to 100 buckets in each of your AWS cloud accounts, with no lim
 ==================================================================================================================================================
 
 AWS S3 Subresources
-JANUARY 29, 2023 ~ LAST UPDATED ON : JUNE 8, 2023 ~ JAYENDRAPATIL
-Table of Contents  hide 
+
+Table of Contents:
 AWS S3 Subresources
 S3 Object Lifecycle
 Static Website Hosting
@@ -61,10 +61,60 @@ S3 subresources only exist in the context of a specific bucket or object
 S3 subresources are associated with buckets and objects.
 S3 Subresources are subordinates to objects; i.e. they do not exist on their own, they are always associated with some other entity, such as an object or a bucket.
 S3 supports various options to configure a bucket for e.g., the bucket can be configured for website hosting, configuration added to manage the lifecycle of objects in the bucket, and to log all access to the bucket.
-S3 Object Lifecycle
-Refer blog post @ S3 Object Lifecycle Management
+
+======================================
+S3 Object Lifecycle:
+S3 Object lifecycle can be managed by using a lifecycle configuration, which defines how S3 manages objects during their lifetime.
+Lifecycle configuration enables simplification of object lifecycle management, for e.g. moving of less frequently access objects, backup or archival of data for several years, or permanent deletion of objects,
+S3 controls all transitions automatically
+Lifecycle Management rules applied to a bucket are applicable to all the existing objects in the bucket as well as the ones that will be added anew
+S3 Object lifecycle management allows 2 types of behavior
+Transition in which the storage class for the objects changes
+Expiration where the objects expire and are permanently deleted
+Lifecycle Management can be configured with Versioning, which allows storage of one current object version and zero or more non-current object versions
+Object’s lifecycle management applies to both Non Versioning and Versioning enabled buckets
+For Non Versioned buckets
+Transitioning period is considered from the object’s creation date
+For Versioned buckets,
+Transitioning period for the current object is calculated for the object creation date
+Transitioning period for a non-current object is calculated for the date when the object became a noncurrent versioned object
+S3 uses the number of days since its successor was created as the number of days an object is noncurrent.
+S3 calculates the time by adding the number of days specified in the rule to the object creation time and rounding the resulting time to the next day midnight UTC for e.g. if an object was created at 15/1/2016 10:30 AM UTC and you specify 3 days in a transition rule, which results in 18/1/2016 10:30 AM UTC and rounded of to next day midnight time 19/1/2016 00:00 UTC.
+
+Lifecycle configuration on MFA-enabled buckets is not supported.
+1000 lifecycle rules can be configured per bucket
 
 
+S3 Object Lifecycle Management Rules
+S3 Lifecycle Management
+
+Lifecycle Transitions Constraints
+STANDARD -> (128 KB & 30 days) -> STANDARD-IA or One Zone-IA or S3 Intelligent-Tiering
+Larger Objects – Only objects with a size more than 128 KB can be transitioned, as cost benefits for transitioning to STANDARD-IA or One Zone-IA can be realized only for larger objects
+Smaller Objects < 128 KB – S3 does not transition objects that are smaller than 128 KB
+Minimum 30 days – Objects must be stored for at least 30 days in the current storage class before being transitioned to the STANDARD-IA or One Zone-IA, as younger objects are accessed more frequently or deleted sooner than is suitable for STANDARD-IA or One Zone-IA
+GLACIER -> (90 days) -> Permanent Deletion OR GLACIER Deep Archive -> (180 days) -> Permanent Deletion
+Deleting data that is archived to Glacier is free if the objects deleted are archived for three months or longer.
+S3 charges a prorated early deletion fee if the object is deleted or overwritten within three months of archiving it.
+Archival of objects to Glacier by using object lifecycle management is performed asynchronously and there may be a delay between the transition date in the lifecycle configuration rule and the date of the physical transition. However, AWS charges Glacier prices based on the transition date specified in the rule
+For a versioning-enabled bucket
+Transition and Expiration actions apply to current versions.
+NoncurrentVersionTransition and NoncurrentVersionExpiration actions apply to noncurrent versions and work similarly to the non-versioned objects except the time period is from the time the objects became noncurrent
+Expiration Rules
+For Non Versioned bucket
+Object is permanently deleted
+For Versioned bucket
+Expiration is applicable to the Current object only and does not impact any of the non-current objects
+
+S3 will insert a Delete Marker object with a unique id and the previous current object becomes a non-current version
+S3 will not take any action if the Current object is a Delete Marker
+If the bucket has a single object which is the Delete Marker (referred to as expired object delete marker), S3 removes the Delete Marker
+For Versioned Suspended bucket
+S3 will insert a Delete Marker object with version ID null and overwrite any object with version ID null
+When an object reaches the end of its lifetime, S3 queues it for removal and removes it asynchronously. There may be a delay between the expiration date and the date at which S3 removes an object. Charged for storage time associated with an object that has expired are not incurred.
+Cost is incurred if objects are expired in STANDARD-IA before 30 days, GLACIER before 90 days, and GLACIER_DEEP_ARCHIVE before 180 days.
+
+======================================
 Static Website Hosting
 S3 can be used for Static Website hosting with Client-side scripts.
 S3 does not support server-side scripting.
@@ -75,18 +125,20 @@ Users can configure the index, and error document as well as configure the condi
 Bucket policy applies only to objects owned by the bucket owner. If the bucket contains objects not owned by the bucket owner, then public READ permission on those objects should be granted using the object ACL.
 Requester Pays buckets or DevPay buckets do not allow access through the website endpoint. Any request to such a bucket will receive a 403 -Access Denied response
 
-
+======================================
 S3 Versioning
-Refer blog post @ S3 Object Versioning
 
+======================================
 Policy & Access Control List (ACL)
-Refer blog post @ S3 Permissions
+
 
 CORS (Cross Origin Resource Sharing)
 All browsers implement the Same-Origin policy, for security reasons, where the web page from a domain can only request resources from the same domain.
 CORS allows client web applications loaded in one domain access to the restricted resources to be requested from another domain.
 With CORS support, S3 allows cross-origin access to S3 resources
 CORS configuration rules identify the origins allowed to access the bucket, the operations (HTTP methods) that would be supported for each origin, and other operation-specific information.
+
+======================================
 S3 Access Logs
 S3 Access Logs enable tracking access requests to an S3 bucket.
 S3 Access logs are disabled by default.
@@ -104,13 +156,22 @@ AWS recommends updating the bucket policy on the target bucket to grant access t
 Access for access log delivery can also be granted to the S3 log delivery group through the bucket ACL. Granting access to the S3 log delivery group using your bucket ACL is not recommended.
 Access log records are delivered on a best-effort basis. The completeness and timeliness of server logging is not guaranteed i.e. log record for a particular request might be delivered long after the request was actually processed, or it might not be delivered at all.
 S3 Access Logs can be analyzed using data analysis tools or Athena.
+
+
+=====================================
 Tagging
 S3 provides the tagging subresource to store and manage tags on a bucket
 Cost allocation tags can be added to the bucket to categorize and track AWS costs.
 AWS can generate a cost allocation report with usage and costs aggregated by the tags applied to the buckets.
+
+
+====================================
 Location
 AWS region needs to be specified during bucket creation and it cannot be changed.
 S3 stores this information in the location subresource and provides an API for retrieving this information
+
+
+====================================
 Event Notifications
 S3 notification feature enables notifications to be triggered when certain events happen in the bucket.
 Notifications are enabled at the Bucket level
@@ -126,6 +187,9 @@ Restore object events
 restoration of objects archived to the S3 Glacier storage classes
 Reduced Redundancy Storage (RRS) object lost events
 Can be used to reproduce/recreate the Object
+
+
+=====================================
 Replication events
 for replication configurations that have S3 replication metrics or S3 Replication Time Control (S3 RTC) enabled
 S3 can publish events to the following destination
@@ -178,10 +242,18 @@ Replication chaining is NOT allowed, Objects in the source bucket that are repli
 
 S3 does NOT replicate the delete marker by default. However, you can add delete marker replication to non-tag-based rules to override it.
 S3 does NOT replicate deletion by object version ID. This protects data from malicious deletions.
+
+
+
+===============================
 S3 Inventory
 S3 Inventory helps manage the storage and can be used to audit and report on the replication and encryption status of the objects for business, compliance, and regulatory needs.
 S3 inventory provides a scheduled alternative to the S3 synchronous List API operation.
 S3 inventory provides CSV, ORC, or Apache Parquet output files that list the objects and their corresponding metadata on a daily or weekly basis for an S3 bucket or a shared prefix.
+
+
+
+================================
 Requester Pays
 By default, buckets are owned by the AWS account that created it (the bucket owner) and the AWS account pays for storage costs, downloads, and data transfer charges associated with the bucket.
 Using Requester Pays subresource:-
@@ -192,6 +264,9 @@ disables anonymous access to that bucket
 does not support BitTorrent
 does not support SOAP requests
 cannot be enabled for end-user logging bucket
+
+
+================================
 Torrent
 Default distribution mechanism for S3 data is via client/server download
 Bucket owner bears the cost of Storage as well as the request and transfer charges which can increase linearly for a popular object
@@ -205,4 +280,7 @@ Torrent file can be retrieved for any publicly available object by simply adding
 Generating the .torrent for an object takes time proportional to the size of that object, so its recommended to make a first torrent request yourself to generate the file so that subsequent requests are faster
 Torrent is enabled only for objects that are less than 5 GB in size.
 Torrent subresource can only be retrieved, and cannot be created, updated, or deleted
+
+
+
 Object ACL
