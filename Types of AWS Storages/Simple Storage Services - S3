@@ -113,7 +113,8 @@ S3 will not take any action if the Current object is a Delete Marker
 If the bucket has a single object which is the Delete Marker (referred to as expired object delete marker), S3 removes the Delete Marker
 For Versioned Suspended bucket
 S3 will insert a Delete Marker object with version ID null and overwrite any object with version ID null
-When an object reaches the end of its lifetime, S3 queues it for removal and removes it asynchronously. There may be a delay between the expiration date and the date at which S3 removes an object. Charged for storage time associated with an object that has expired are not incurred.
+When an object reaches the end of its lifetime, S3 queues it for removal and removes it asynchronously. There may be a delay between the expiration date and the date at which S3 removes an object.
+Charged for storage time associated with an object that has expired are not incurred.
 Cost is incurred if objects are expired in STANDARD-IA before 30 days, GLACIER before 90 days, and GLACIER_DEEP_ARCHIVE before 180 days.
 
 ======================================
@@ -331,7 +332,8 @@ S3 Object Lock cannot be enabled on the target bucket.
  S3 uses a special log delivery account to write server access logs.
 AWS recommends updating the bucket policy on the target bucket to grant access to the logging service principal (logging.s3.amazonaws.com) for access log delivery.
 Access for access log delivery can also be granted to the S3 log delivery group through the bucket ACL. Granting access to the S3 log delivery group using your bucket ACL is not recommended.
-Access log records are delivered on a best-effort basis. The completeness and timeliness of server logging is not guaranteed i.e. log record for a particular request might be delivered long after the request was actually processed, or it might not be delivered at all.
+Access log records are delivered on a best-effort basis. The completeness and timeliness of server logging is not guaranteed i.e. log record for a particular request might be delivered long after the request was actually processed, 
+or it might not be delivered at all.
 S3 Access Logs can be analyzed using data analysis tools or Athena.
 
 
