@@ -463,3 +463,31 @@ Torrent subresource can only be retrieved, and cannot be created, updated, or de
 
 
 Object ACL
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+========================================================================================================================================================================
+S3 Multipart Upload:
+==================
+It  is used to upload an object in parts.
+Parts are uploaded independently and in parallel in any order.
+It is recommended for objecys sezes of 100 MG or larger.
+You must use it for objects larger than 5 GB.
+Thus is done through S3 multipart upload API.
+
