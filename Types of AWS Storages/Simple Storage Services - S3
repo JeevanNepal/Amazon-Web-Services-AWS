@@ -180,6 +180,7 @@ Restoring Previous Versions
 Copy a previous version of the object into the same bucket. The copied object becomes the current version of that object and all object versions are preserved – Recommended as it keeps all the versions.
 Permanently delete the current version of the object. When you delete the current object version, you, in effect, turn the previous version into the current version of that object.
 
+
 Versioning Suspended Bucket
 Versioning can be suspended to stop accruing new versions of the same object in a bucket.
 Existing objects in the bucket do not change and only future requests behavior changes.
@@ -198,7 +199,7 @@ MFA Delete can be enabled on a bucket to ensure that data in the bucket cannot b
 While the bucket owner, the AWS account that created the bucket (root account), and all authorized IAM users can enable versioning, but only the bucket owner (root account) can enable MFA Delete.
 MFA Delete however does not prevent deletion or allow restoration.
 MFA Delete cannot be enabled using the AWS Management Console. You must use the AWS Command Line Interface (AWS CLI) or the API.
-======================================
+===============================================================================================================================================================================================================================
 Policy & Access Control List (ACL)
 By default, all S3 buckets, objects, and related subresources are private.
 Only the Resource owner, the AWS account (not the user) that creates the resource, can access the resource.
@@ -502,8 +503,8 @@ Thus is done through S3 multipart upload API.
 
 
 
-
-
+TYPES OF S3 STORAGES:
+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-===============================---------------------------------------------------------====================================
 
 
 Amazon S3 Storage Classes:
