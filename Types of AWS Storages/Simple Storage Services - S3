@@ -792,3 +792,9 @@ C:\Users\jeeva\Desktop\Testing>aws s3 sync . s3://jeem2244
 and if the items are deleted we can retrive them from cloud using the command: aws s3 sync s3://jeem2244 .
 
 
+
+Versioning in S3:
+It has 3 features:
+enable
+suspend
+unversioned
