@@ -799,4 +799,14 @@ enable
 suspend
 unversioned
 
-If the files gets deleted we can have then retrived from the show versioning oprion and delete them from the deleted folder to retrieve the files and objects
+If the files gets deleted we can have then retrived from the show versioning oprion and delete them from the deleted folder to retrieve the files and objects.
+
+
+
+
+
+
+
+
+Cross Region Replication:
+=========================================================
