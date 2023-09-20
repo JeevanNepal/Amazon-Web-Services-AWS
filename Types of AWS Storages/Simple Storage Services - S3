@@ -745,3 +745,19 @@ Lifecycle transitions	Yes	Yes	Yes	Yes	Yes	Yes	Yes
 
 ***** S3 Glacier Deep Archive requires 40 KB of additional metadata for each archived objects. This includes 32 KB of metadata charged at the S3 Glacier Deep Archive rate required to identify and retrieve your data. And, an additional 8 KB data charged at the S3 Standard rate which is required to maintain the user-defined name and metadata for objects archived to S3 Glacier Deep Archive.
 
+
+
+
+
+
+
+
+
+Steps to make S3 objects Public in AWS console:
+1. Create a bucket. 
+2. Upload an object in the bucket. 
+3. Make sure the block public access settings for this account if off. 
+4 Maker sure block public access (bucket setting) is also turned off. 
+5. Make the object public by making the Access control list enable in the bucket permission section.
+6 Under permission tab, edit access control list and make everyone(public access) read ticked.
+
