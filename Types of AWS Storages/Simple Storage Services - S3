@@ -766,25 +766,16 @@ Steps to make S3 objects Public in AWS console:
 How to access S3 bucket through CLI:
 =======================================================================================================================================================================
 C:\Users\jeeva>aws configure
-AWS Access Key ID [****************AM6B]: 
-AWS Secret Access Key [****************HC4I]: 
+AWS Access Key ID  
+AWS Secret Access Key  
 Default region name [ap-south-1]:
 Default output format [None]:
 
 C:\Users\jeeva>aws s3 ls
 2023-09-20 13:29:47 jeem22
 
-C:\Users\jeeva>aws s3 mb s3://jeem22
-make_bucket failed: s3://jeem22 An error occurred (BucketAlreadyOwnedByYou) when calling the CreateBucket operation: Your previous request to create the named bucket succeeded and you already own it.
-
 C:\Users\jeeva>aws s3 mb s3://jeem22342352
 make_bucket: jeem22342352
-
-C:\Users\jeeva>aws s3 rb s3://jeem22342352
-remove_bucket failed: s3://jeem22342352 Could not connect to the endpoint URL: "https://jeem22342352.s3.ap-south-1.amazonaws.com/"
-
-C:\Users\jeeva>aws s3 rb s3://jeem22342352
-remove_bucket failed: s3://jeem22342352 Could not connect to the endpoint URL: "https://jeem22342352.s3.ap-south-1.amazonaws.com/"
 
 C:\Users\jeeva>aws s3 rb s3://jeem22342352
 remove_bucket: jeem22342352
@@ -797,8 +788,7 @@ C:\Users\jeeva>cd desktop
 C:\Users\jeeva\Desktop>cd Testing
 
 C:\Users\jeeva\Desktop\Testing>aws s3 sync . s3://jeem2244
-upload: .\BPCC132 ENG 22-23.pdf to s3://jeem2244/BPCC132 ENG 22-23.pdf
-upload: .\BPSC 132 (E) 2022-23.pdf to s3://jeem2244/BPSC 132 (E) 2022-23.pdf
-upload: .\BPSC 131 (E) 2022-23.pdf to s3://jeem2244/BPSC 131 (E) 2022-23.pdf
-upload: .\ITIL Issue - Copy.jpg to s3://jeem2244/ITIL Issue - Copy.jpg
+
+and if the items are deleted we can retrive them from cloud using the command: aws s3 sync s3://jeem2244 .
+
 
