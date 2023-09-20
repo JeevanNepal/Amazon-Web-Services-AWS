@@ -766,8 +766,8 @@ Steps to make S3 objects Public in AWS console:
 How to access S3 bucket through CLI:
 =======================================================================================================================================================================
 C:\Users\jeeva>aws configure
-AWS Access Key ID [****************AM6B]: AKIAYIJDRMPSUZHUZCHP
-AWS Secret Access Key [****************HC4I]: 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
+AWS Access Key ID [****************AM6B]: 
+AWS Secret Access Key [****************HC4I]: 
 Default region name [ap-south-1]:
 Default output format [None]:
 
