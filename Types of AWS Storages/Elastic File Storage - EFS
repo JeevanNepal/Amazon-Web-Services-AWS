@@ -6,6 +6,8 @@ WHat is EFS?
   > Managed NFS(network file system), that can be mounted on EC2.
   > EFS works with EC2 instances in multiple AZs.
   > High scalabl, available, exensive (3x gp2), pay per use.
+
+EFS is only used for linux.
   
   
   
