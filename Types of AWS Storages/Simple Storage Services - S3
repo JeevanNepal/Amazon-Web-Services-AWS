@@ -804,4 +804,4 @@ If the files gets deleted we can have then retrived from the show versioning opr
 
 
 Cross Region Replication:
-2 s3 buckets in different region-> and got to one of the soucce bucket and in the management tab create the replication.
+2 s3 buckets in different region-> and got to one of the source bucket and in the management tab create the replication.
