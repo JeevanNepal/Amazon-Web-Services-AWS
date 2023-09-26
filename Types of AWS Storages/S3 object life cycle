@@ -1,0 +1,1 @@
+An S3 Lifecycle configuration is a set of rules that define actions that Amazon S3 applies to a group of objects. There are two types of actions: Transition actions – These actions define when objects transition to another storage class.
