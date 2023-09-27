@@ -88,8 +88,15 @@ Instance store is an ephemeral drive but  used to get max amount of I/O into an 
 
 Steps To Create EFS:
 ===================
-FIrst created SG group. And add the inboinf rule for ssh with anywhere traffic allowed.
-Second create another SG and add NFS inbound rule with anywhere traffic allowed.
+First created SG group. And add the inbund rule for ssh with anywhere traffic allowed.
+Second create another SG and add NFS inbound rule with anywhere traffic allowed with first security group crersted attached in the second SG.
+
+Connect to server by loading the key pair with puttygen and connect to server with putty server.
+change to sudo user - sudo su -
+install package: sudo yum install -y amazon-efs-utils
+makdir /efs
+mount the efs file on EC2 instance: sudo mount -t efs -o tls file systed ID:/ efs(efs is a directory)
+check if the file is mounted ot not: df -h
 
 
 
