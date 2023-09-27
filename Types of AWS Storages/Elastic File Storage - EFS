@@ -85,4 +85,12 @@ Instance store is an ephemeral drive but  used to get max amount of I/O into an 
  The instance store is ideal for temporary storage, because the data stored in instance store volumes is not persistent through instance stops, terminations, 
  or hardware failures.
 
+
+Steps To Create EFS:
+===================
+FIrst created SG group. And add the inboinf rule for ssh with anywhere traffic allowed.
+Second create another SG and add NFS inbound rule with anywhere traffic allowed.
+
+
+
           
