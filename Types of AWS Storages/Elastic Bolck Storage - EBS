@@ -152,6 +152,12 @@ EBS Volume Exam point of View:
 8. We can take a snapshot of a non-root EBS volume while the voulme is in use running EC2 instance.
 9. This means we can still access it while the snapshot is being processed.
 10. However the snapshot will only include data that is already written to our voulme.
+11. The snapshot is created immediately but it may stay in pending state until the full snapshot is conpleted. This may take few hours specially for the first time 
+snapshot of a volume.
+12. Durung the period when the snapshot status is pending we can still access the volume (non-root drive). but I/O might be slower because of the snapshot activity.
+13. While is pending state an in-progress state snapshot eill not include data from ongoing reads and writes to the volume.
+14. To take complete snapshot of our non-root EBS, we need to stop or unmount the volume.
+15. To create a snapshot for a root EBS volume, we must stop/detach the instance first then take the snapshot.
   
 
      
