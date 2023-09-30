@@ -157,7 +157,7 @@ snapshot of a volume.
 12. Durung the period when the snapshot status is pending we can still access the volume (non-root drive). but I/O might be slower because of the snapshot activity.
 13. While is pending state an in-progress state snapshot eill not include data from ongoing reads and writes to the volume.
 14. To take complete snapshot of our non-root EBS, we need to stop or unmount the volume.
-15. To create a snapshot for a root EBS volume, we must stop/detach the instance first then take the snapshot.
+15. To create a snapshot for a root EBS volume, we must stop/detach the volume from the instance first then take the snapshot.
   
 
      
@@ -216,7 +216,7 @@ EBS Raid Configuration:RAID(Redundant Array of Independent Disks).
   Fault tolerance is the property that enables a system to continue operating properly in the event of the failure of some of its components.
   
   
-  
+======================================================================================================================================================================================================================================================================================================================================  
   
  Block Storage                                                                                                                  Vs                         Object storage: 
  Block storage is suitsble for transactional databases, random read/write loads and structured database storage.                                           Object storage stores the files as a whole and does not devide them.
@@ -228,99 +228,4 @@ Data blocks stored in block storage would not contain metadata(data created, dat
 
 Block storage only keeps the address (index), where the data blocks are stored, it does not care what is in that block.                                    Example of object storage solution, dropbox, AWS, S3, facebook.
 Just how to retrieve it when required.
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
   
