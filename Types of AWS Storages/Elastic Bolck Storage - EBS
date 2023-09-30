@@ -149,7 +149,9 @@ EBS Volume Exam point of View:
 5. Any AZ in regioncan use snapshot to create EBS volume.
 6. To migrate an EBS from once AZ to another, create a snapshot (region specific) and create an EBS volume from the snapshot in the intended AZ.
 7. We can create a snapshot to an EBS volume of the same or larger size than the original volume size from which the snapshot was initially created.
-
+8. We can take a snapshot of a non-root EBS volume while the voulme is in use running EC2 instance.
+9. This means we can still access it while the snapshot is being processed.
+10. However the snapshot will only include data that is already written to our voulme.
   
 
      
