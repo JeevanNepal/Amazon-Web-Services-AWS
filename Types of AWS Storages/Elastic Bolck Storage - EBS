@@ -139,14 +139,24 @@ EBS Snapshots:
   > Can make image (AMI) from snapshot.
   > EBS volumes restored by snapshot need to be pre-warmed (using fio or command to read the entire volume).
   > Snapshots can be automated using Amazon data Lifecycle Manager.
+
+EBS Volume Exam point of View:
+===============================
+1. Per AWS account, upto 5K EBS columes can be created.
+2. Per accountm upto 10k EBS snapshot can be created.
+3. EBS sapacshots are stored in S3 hovwver we cannot access them directly. We ca only access them through Ec2 APIs.
+4. EBS volumes are AZ specific, snapshot are region specific.
+5. Any AZ in regioncan use snapshot to create EBS volume.
+6. To migrate an EBS from once AZ to another, create a snapshot (region specific) and create an EBS volume from the snapshot in the intended AZ.
+7. We can create a snapshot to an EBS volume of the same or larger size than the original volume size from which the snapshot was initially created.
+
   
-  
-     Do the handson in the console.
+
      
 EBS Volume Migration:
   > EBS volumes are locked to specific AZ.
   > To migrate it to diferent AZ or region.
-    . We need hte snapshot of the EBS volume.
+    . We need the snapshot of the EBS volume.
     . (optional)copy fo the volume to different region.
     . Create a volume from the snapshot in the AZ of our choice.
     
