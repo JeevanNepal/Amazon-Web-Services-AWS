@@ -143,8 +143,8 @@ EBS Snapshots:
 EBS Volume Exam point of View:
 ===============================
 1. Per AWS account, upto 5K EBS columes can be created.
-2. Per accountm upto 10k EBS snapshot can be created.
-3. EBS sapacshots are stored in S3 hovwver we cannot access them directly. We ca only access them through Ec2 APIs.
+2. Per account upto 10k EBS snapshot can be created.
+3. EBS sapacshots are stored in S3 however we cannot access them directly. We ca only access them through Ec2 APIs.
 4. EBS volumes are AZ specific, snapshot are region specific.
 5. Any AZ in regioncan use snapshot to create EBS volume.
 6. To migrate an EBS from once AZ to another, create a snapshot (region specific) and create an EBS volume from the snapshot in the intended AZ.
@@ -158,6 +158,7 @@ snapshot of a volume.
 13. While is pending state an in-progress state snapshot eill not include data from ongoing reads and writes to the volume.
 14. To take complete snapshot of our non-root EBS, we need to stop or unmount the volume.
 15. To create a snapshot for a root EBS volume, we must stop/detach the volume from the instance first then take the snapshot.
+16. EBS volume is network attached storage.
   
 
      
