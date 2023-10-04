@@ -325,3 +325,14 @@ Create an AMI form the EC2 instance.
 Copy the AMI and choose encryption while copying.
 This results it an encrypted AMI that is private.
 Use the encryption AMI to launch new EC2 instances which will have there EBS root volume encrypted.
+
+How to share EBS Snapshot:
+=========================
+To encrypt a volume or a snapshot, we need an encryption key, these keys are called customeer master key (CMK) and are managed by AWS key managemrnt service(KMS).
+
+When encrypting the first EBS volume, AWS KMS creates a default CMK key.
+
+This key is used for your first volume encryption, encryption of snapshot created from this volumes and subsequent volumes created from these snapshots.
+
+After that each newly encrypted volume ud encrypted whia a unuue seperate AES-256 bit encryption key. This key is used toencrypt the volume, its snapshot and any volumes created
+of it's snapshot.
