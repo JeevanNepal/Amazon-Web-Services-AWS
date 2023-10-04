@@ -159,6 +159,7 @@ snapshot of a volume.
 14. To take complete snapshot of our non-root EBS, we need to stop or unmount the volume.
 15. To create a snapshot for a root EBS volume, we must stop/detach the volume from the instance first then take the snapshot.
 16. EBS volume is network attached storage.
+17. If the EBS is attached to instance storage, than when the instance status is changed to stop, paused ot terminate the data will be lost.
   
 
      
