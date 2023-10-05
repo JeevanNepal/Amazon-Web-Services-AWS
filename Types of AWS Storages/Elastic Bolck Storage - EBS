@@ -351,5 +351,16 @@ We cannot change the encryption key used to encrypt on existing encrypted snapsh
 
 If we want to chnage the key, we need to create a copy of snapshot and specify during the copy process that you want to re-encrypt the copy with a different  key.
 
-This comes in ahndy when we have to snapshot that was encrypted usng your default CMS key and we want to change the key in order to be ab;e to share the snapshot with other 
+This comes in handy when we have to snapshot that was encrypted usng your default CMS key and we want to change the key in order to be ab;e to share the snapshot with other 
 account.
+
+By default, only the account owner can create volumes form the account snapshot.
+
+You can share your unencrypted snapshot with the AWS community by making them public.
+
+Also you can share your unencrypted snapshot with a selected AWS account by making them private then selecting the AWS account to share with.
+
+We can not make encrypted snapshot public.
+
+
+
