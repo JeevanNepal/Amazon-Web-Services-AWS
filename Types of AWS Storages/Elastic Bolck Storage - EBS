@@ -241,14 +241,16 @@ INCREMENTAL SNAPSHOT:
 How snapshots work
 The first snapshot that you create from a volume is always a full snapshot. It includes all of the data blocks written to the volume at the time of creating the snapshot. Subsequent snapshots of the same volume are incremental snapshots. They include only changed and new data blocks written to the volume since the last snapshot was created
 
-The size of a full snapshot is determined by the size of the data being backed up, not the size of the source volume. Similarly, the storage costs associated with a full snapshot is determined by the size of the snapshot, not the size of the source volume. For example, you create the first snapshot of a 200 GiB Amazon EBS volume that contains only 50 GiB of data. This results in a full snapshot that is 50 GiB in size, and you are billed for 50 GiB snapshot storage.
+The size of a full snapshot is determined by the size of the data being backed up, not the size of the source volume. Similarly, the storage costs associated with a full snapshot is determined by the size of the snapshot, not the size of the source volume. For example, you create the first snapshot of a 200 GiB Amazon EBS volume that contains only 50 GiB of data. This results in a full snapshot that is 50 GiB in size, and you are billed for 
+50 GiB snapshot storage.
 
 Similarly, the size and storage costs of an incremental snapshot are determined by the size of any data that was written to the volume since the previous snapshot was created. Continuing this example, if you create a second snapshot of the 200 GiB volume after changing 20 GiB of data and adding 10 GiB of data, the incremental snapshot is 30 GiB in size. You are then billed for that additional 30 GiB snapshot storage.
 
 For more information about snapshot pricing, see Amazon EBS pricing.
 
 Important
-When you archive an incremental snapshot, it is converted to a full snapshot that includes all of the blocks written to the volume at the time that the snapshot was created. It is then moved to the Amazon EBS Snapshots Archive tier. Snapshots in the archive tier are billed at a different rate from snapshots in the standard tier. For more information, see Pricing and billing.
+When you archive an incremental snapshot, it is converted to a full snapshot that includes all of the blocks written to the volume at the time that the snapshot was created. It is then moved to the Amazon EBS Snapshots Archive tier. Snapshots in the archive tier are billed at a different rate from snapshots in the standard tier. For more information, 
+see Pricing and billing.
 
 The following sections show how an EBS snapshot captures the state of a volume at a point in time, and how subsequent snapshots of a changing volume create a history of those changes.
 
@@ -283,7 +285,9 @@ Snap B is taken from Vol 2. For Snap B, only the 4 GiB of data that was added af
 Snap B is an incremental snapshot of Snap A, even though it was created from a different volume.
 
 Important
-The diagram assumes that you own Vol 1 and Snap A, and that Vol 2 is encrypted with the same KMS key as Vol 1. If Vol 1 was owned by another AWS account and that account took Snap A and shared it with you, then Snap B would be a full snapshot. Or, if Vol 2 was encrypted with a different KMS key than Vol 1, then Snap B would be a full snapshot.
+The diagram assumes that you own Vol 1 and Snap A, and that Vol 2 is encrypted with the same KMS key as Vol 1. If Vol 1 was owned by another AWS account and that account took Snap A and shared it with you, then Snap B would be a full snapshot. Or, 
+if Vol 2 was encrypted with a different KMS key than Vol 1, 
+then Snap B would be a full snapshot.
 
 
         Snapshots capturing an initial volume state and two subsequent states after data has
@@ -294,8 +298,10 @@ For more information about how data is managed when you delete a snapshot, see D
 Copy and share snapshots
 You can share a snapshot across AWS accounts by modifying its access permissions. You can make copies of your own snapshots as well as snapshots that have been shared with you. For more information, see Share an Amazon EBS snapshot.
 
-A snapshot is constrained to the AWS Region where it was created. After you create a snapshot of an EBS volume, you can use it to create new volumes in the same Region. For more information, see Create a volume from a snapshot. You can also copy snapshots across Regions, making it possible to use multiple Regions for geographical expansion, data center migration, and disaster recovery. You can copy any accessible snapshot that has a completed status. For more information, see Copy an Amazon EBS snapshot.
+A snapshot is constrained to the AWS Region where it was created. After you create a snapshot of an EBS volume, you can use it to create new volumes in the same Region. For more information, see Create a volume from a snapshot. You can also copy snapshots across Regions, 
+making it possible to use multiple Regions for geographical expansion, data center migration, and disaster recovery. You can copy any accessible snapshot that has a completed status. For more information, see Copy an Amazon EBS snapshot.
 
+========================================================================
 Encryption support for snapshots
 EBS snapshots fully support EBS encryption.
 
@@ -317,24 +323,24 @@ The first snapshot you take of a reencrypted volume, which has a different CMK c
 
 Root EBS Volume Encryption:
 ===========================
-THere is no direct way to change the encryption state of a volume.
+There is no direct way to change the encryption state of a volume.
 There is an indirect workaround to this.
 Launch the instance with the EBS volume required.
 Do whatever patching or install applications.
-Create an AMI form the EC2 instance.
+Create an AMI from the EC2 instance.
 Copy the AMI and choose encryption while copying.
 This results it an encrypted AMI that is private.
 Use the encryption AMI to launch new EC2 instances which will have there EBS root volume encrypted.
 
 How to share EBS Snapshot:
 =========================
-To encrypt a volume or a snapshot, we need an encryption key, these keys are called customeer master key (CMK) and are managed by AWS key managemrnt service(KMS).
+To encrypt a volume or a snapshot, we need an encryption key, these keys are called customer master key (CMK) and are managed by AWS key managemrnt service(KMS).
 
 When encrypting the first EBS volume, AWS KMS creates a default CMK key.
 
 This key is used for your first volume encryption, encryption of snapshot created from this volumes and subsequent volumes created from these snapshots.
 
-After that each newly encrypted volume ud encrypted whia a unuue seperate AES-256 bit encryption key. This key is used toencrypt the volume, its snapshot and any volumes created
+After that each newly encrypted volume is encrypted with a uniqie seperate AES-256 bit encryption key. This key is used toencrypt the volume, its snapshot and any volumes created
 of it's snapshot.
 
 
