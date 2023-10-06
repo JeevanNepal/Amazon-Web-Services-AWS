@@ -362,5 +362,5 @@ Also you can share your unencrypted snapshot with a selected AWS account by maki
 
 We can not make encrypted snapshot public.
 
-
+We can have upto 5 snapshot copy request running in a single destination per account.
 
