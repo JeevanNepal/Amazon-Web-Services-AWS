@@ -364,3 +364,8 @@ We can not make encrypted snapshot public.
 
 We can have upto 5 snapshot copy request running in a single destination per account.
 
+We can share our encrypted snapshot with specific AWS account, make sure that we use non-default CMK key.
+
+Configure cross permission in order to give the account with which we want to share the snapshot, access to the custom CMS key used to encrypt the snapshot.
+
+WIthout this the other account will not be able to copy the snapshot, nor will be bale to create create volume of the snapshot.
