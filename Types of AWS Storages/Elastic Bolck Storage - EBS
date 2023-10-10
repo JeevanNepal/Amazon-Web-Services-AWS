@@ -377,3 +377,15 @@ For the account with whom an encrypted snapshot is shared, they must first creat
 We cna only make a copy of the snapshot when it has been fullly saved to S3 and not during the snapshot's pending status.
 
 Amazon S3 server side encryption (SSE) protect the data in-transit while copying.
+
+
+
+=====================================================================================================================================================================
+How to attach root volume with another EC2 instance?
+
+Attach the volume to the new instance by following these steps:
+Create a snapshot of the root volume.
+Register a new AMI using the snapshot.
+Launch a new instance from the new AMI.
+Detach the remaining Amazon EBS volumes from the old instance.
+Reattach the Amazon EBS volumes to the new instance.
