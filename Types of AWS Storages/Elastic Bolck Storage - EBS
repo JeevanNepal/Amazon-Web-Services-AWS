@@ -368,4 +368,12 @@ We can share our encrypted snapshot with specific AWS account, make sure that we
 
 Configure cross permission in order to give the account with which we want to share the snapshot, access to the custom CMS key used to encrypt the snapshot.
 
-WIthout this the other account will not be able to copy the snapshot, nor will be bale to create create volume of the snapshot.
+Without this the other account will not be able to copy the snapshot, nor will be bale to create create volume of the snapshot.
+
+AWS will not allow us to share snapshot encrypted using our default CMK key.
+
+For the account with whom an encrypted snapshot is shared, they must first create their own copies if the snapshot, then they use that copy to restore/create EBS vollume.
+
+We cna only make a copy of the snapshot when it has been fullly saved to S3 and not during the snapshot's pending status.
+
+Amazon S3 server side encryption (SSE) protect the data in-transit while copying.
