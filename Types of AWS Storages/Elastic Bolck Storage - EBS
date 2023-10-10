@@ -384,7 +384,10 @@ Amazon S3 server side encryption (SSE) protect the data in-transit while copying
 How to attach root volume with another EC2 instance?
 
 Attach the volume to the new instance by following these steps:
-Create a snapshot of the root volume.
+Create an EC2 instance.
+Connect to RDP and keep the password and root volume device name.
+In RPD account create few folders for testing purpose.
+Create a snapshot of the root volume/instance. It is recomeneded to stop an instance while taking snapshot of the root volume.
 Register a new AMI using the snapshot.
 Launch a new instance from the new AMI.
 Detach the remaining Amazon EBS volumes from the old instance.
