@@ -57,7 +57,7 @@ Auto Scaling Group in AWS:
                                   
                                   
                                   
-ASGs Has the following attributes:
+ASGs has the following attributes:
   > A launch configuration
     . AMI + instance type
     . EC2 user data
@@ -188,7 +188,16 @@ ASG for Solution Architects, Launch Template vs Launch Configuration:
 
 =======================================================================================================================================================================
  Auto Scaling:
+It is uaed for fault tolerance and high availability.
 
+Auto Scaling Components:
+Launch Configuration: Instance type, AMI, key pair, security group.
+
+Auto scaling Group:
+Group name, group size, VPC, subnet, health check period (default 300sec - 5 mins).
+
+Scaling Plociy:
+Metric type, target value.
 
 
 
