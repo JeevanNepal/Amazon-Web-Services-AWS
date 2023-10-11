@@ -183,7 +183,17 @@ ASG for Solution Architects, Launch Template vs Launch Configuration:
         Provision both using on-demand and spot instances(or a mix of both).
         Can use T2 umlimited brust feature.
         Recomemded by AWS going forward.
-        
+
+
+
+=======================================================================================================================================================================
+ Auto Scaling:
+
+
+
+
+
+
         
           
   
