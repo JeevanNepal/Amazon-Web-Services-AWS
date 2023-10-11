@@ -388,7 +388,10 @@ Create an EC2 instance.
 Connect to RDP and keep the password and root volume device name.
 In RPD account create few folders for testing purpose.
 Create a snapshot of the root volume/instance. It is recomeneded to stop an instance while taking snapshot of the root volume.
-Register a new AMI using the snapshot.
-Launch a new instance from the new AMI.
+Terminate the server.
+Register a new AMI/ ceate a volume using the snapshot.
+The size of the snapshot volume should be eual to or greater than the size of original volume.
+Launch a new instance from the new AMI/ create a new instance and detach the volume from the ec2 to reattach the snap volume.
 Detach the remaining Amazon EBS volumes from the old instance.
 Reattach the Amazon EBS volumes to the new instance.
+RDP the server and see if it connects with the same old instance password.
