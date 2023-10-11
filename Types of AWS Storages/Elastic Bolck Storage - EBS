@@ -395,3 +395,5 @@ Launch a new instance from the new AMI/ create a new instance and detach the vol
 Detach the remaining Amazon EBS volumes from the old instance.
 Reattach the Amazon EBS volumes to the new instance.
 RDP the server and see if it connects with the same old instance password.
+
+NOTE: AZ should be same for the volume and the newly created instance as the EBS volume is only associated to same AZ EC2 instance.
