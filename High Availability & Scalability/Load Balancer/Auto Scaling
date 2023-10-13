@@ -188,7 +188,18 @@ ASG for Solution Architects, Launch Template vs Launch Configuration:
 
 =======================================================================================================================================================================
  Auto Scaling:
-It is uaed for fault tolerance and high availability.
+
+Exam Point of View:
+It is used for fault tolerance and high availability.
+If AS finds that the number of EC2 instances launched by ASG into subject AZs is not balanced(EC2 instances are not equally dustributed), AS do rebalancing activity by itself.
+Auto scling always tries to balance the instances distributions across AZs.
+While rebalancing, ASG launches new EC2 instances where there are less EC2 at present and then terminates the instances from the AZ that had more instances.
+
+What causes Imbalance of EC2?
+If we add or remove some subnets/AZ rom autoscaling group.
+If we manually request for EC2 termination from our ASG.
+
+
 
 Auto Scaling Components:
 Launch Configuration: Instance type, AMI, key pair, security group.
