@@ -208,6 +208,9 @@ If the existing EC2 instance under the autoscaling group plus the one to be need
 EC2 instance would not be added.
 We can manually remobe the ec2 instance from autoscaling groupusingASW console or CLI.
 Than the detached ec2 can be attached to another ASG.
+We can attach one or more elastic load balancer to  our autoscaling group.
+The elastic load balancer must be in the same region as the autoscaling group.
+Instances and the ELB must be in the same VPC.
 
 
 
