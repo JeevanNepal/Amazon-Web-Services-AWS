@@ -135,7 +135,8 @@ Auto Scaling Groups: Scaling Cooldowns:
     terminates, Amazon EC2 scaling needs less time to determine wheeter to terminate additional instances.
   > IF the default cooldown period is 300 sec, it is to long, we can reduce the costs by applying a scaling-specific cooldown of 180 sec to the scale-in-policy.
   > If your application is scaling up and down multiple times each hour a day, modify the Auto scaling groups cooldown timer and CloudWatch alarm that triggers the 
-    scale-in-policy.
+    scale-in-policy
+  
     
     
     
@@ -222,7 +223,11 @@ Auto scaling Group:
 Group name, group size, VPC, subnet, health check period (default 300sec - 5 mins).
 
 Scaling Plociy:
-Metric type, target value.
+
+Types of auto scaling:
+1. Manual Scaling
+2. Dynamic - Step or simple scaling, target tracking scaling
+3. Predictive scaling ploicy - Scheduled scaling.
 
 
 
