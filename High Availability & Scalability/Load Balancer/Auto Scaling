@@ -231,7 +231,9 @@ Types of auto scaling:
 3. Predictive scaling ploicy - Scheduled scaling.
 
 
-
+Note
+If you are detaching instances that are in the Standby state, exercise caution. 
+Attempting to detach instances after putting them into the Standby state may cause other instances to terminate unexpectedly.
 
 
         
