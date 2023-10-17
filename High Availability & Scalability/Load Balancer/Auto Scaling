@@ -196,8 +196,16 @@ Auto scling always tries to balance the instances distributions across AZs.
 While rebalancing, ASG launches new EC2 instances where there are less EC2 at present and then terminates the instances from the AZ that had more instances.
 
 What causes Imbalance of EC2?
-If we add or remove some subnets/AZ rom autoscaling group.
+If we add or remove some subnets/AZ from autoscaling group.
 If we manually request for EC2 termination from our ASG.
+An AZ that did not have enough EC2 capacity now has enough capacity and it is one of our autoscaling group.
+We can attach a running EC2 instance to an autoscaling group by using AWS console or CLI.
+COndition should be - instance should be running.
+AMI used to launch the EC2 still exist.
+Instance is not part of another autoscalig group.
+Instance is in the same AZ of the same group.
+If the existing EC2 instance under the autoscaling group plus the one to be needed exceeds the max capacity of the autoscaling groupthe request will fail,
+EC2 instance would not be added.
 
 
 
