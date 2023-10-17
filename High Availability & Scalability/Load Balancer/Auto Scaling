@@ -206,6 +206,9 @@ Instance is not part of another autoscalig group.
 Instance is in the same AZ of the same group.
 If the existing EC2 instance under the autoscaling group plus the one to be needed exceeds the max capacity of the autoscaling groupthe request will fail,
 EC2 instance would not be added.
+We can manually remobe the ec2 instance from autoscaling groupusingASW console or CLI.
+Than the detached ec2 can be attached to another ASG.
+
 
 
 
