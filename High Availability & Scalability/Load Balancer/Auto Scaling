@@ -205,6 +205,7 @@ COndition should be - instance should be running.
 AMI used to launch the EC2 still exist.
 Instance is not part of another autoscalig group.
 Instance is in the same AZ of the same group.
+If the Auto Scaling group has an attached load balancer target group or Classic Load Balancer, the instance and the load balancer must both be in the same VPC.
 If the existing EC2 instance under the autoscaling group plus the one to be needed exceeds the max capacity of the autoscaling groupthe request will fail,
 EC2 instance would not be added.
 We can manually remobe the ec2 instance from autoscaling groupusingASW console or CLI.
