@@ -226,13 +226,20 @@ Group name, group size, VPC, subnet, health check period (default 300sec - 5 min
 Scaling Plociy:
 
 Types of auto scaling:
-1. Manual Scaling
-2. Dynamic - Target tracking scaling—Increase and decrease the current capacity of the group based on a Amazon CloudWatch metric and a target value. 
-It works similar to the way that your thermostat maintains the temperature of your home—you select a temperature and the thermostat does the rest.
+What are the types of auto-scaling in AWS?
+Autoscaling in Amazon Web Services (AWS)?
+There are four main types of AWS autoscaling: manual scaling, scheduled scaling, dynamic scaling, and predictive scaling.
 
-Step scaling—Increase and decrease the current capacity of the group based on a set of scaling adjustments, known as step adjustments, that vary based on the size of the alarm breach.
 
-Simple scaling—Increase and decrease the current capacity of the group based on a single scaling adjustment, with a cooldown period between each scaling activity.
+1. Manual Scaling.
+
+2. Dynamic - 
+> Target tracking scaling—Increase and decrease the current capacity of the group based on a Amazon CloudWatch metric and a target value. 
+   It works similar to the way that your thermostat maintains the temperature of your home—you select a temperature and the thermostat does the rest.
+
+> Step scaling—Increase and decrease the current capacity of the group based on a set of scaling adjustments, known as step adjustments, that vary based on the size of the alarm breach.
+
+> Simple scaling—Increase and decrease the current capacity of the group based on a single scaling adjustment, with a cooldown period between each scaling activity.
 
 
 3. Predictive scaling ploicy - Scheduled scaling.
@@ -242,6 +249,11 @@ Note
 If you are detaching instances that are in the Standby state, exercise caution. 
 Attempting to detach instances after putting them into the Standby state may cause other instances to terminate unexpectedly.
 
+
+In warm up period it waits for the EC2 instances to get started and services to get distributed.
+ 
+In cooldown period it waits for 300sec and ignores any alarms triggered.
+ 
 
         
           
