@@ -253,7 +253,17 @@ Attempting to detach instances after putting them into the Standby state may cau
 In warm up period it waits for the EC2 instances to get started and services to get distributed.
  
 In cooldown period it waits for 300sec and ignores any alarms triggered.
- 
+
+
+
+
+EXAM POINT OF VIEW:
+==================================================================
+Scale Group Size has following metrics:
+> Application Load balancer Request Count per target.
+> Average CPU Utilization.
+> Average Network in (Bytes)
+> Average Network out (Bytes)
 
         
           
