@@ -239,3 +239,20 @@ The number of consecutive failed health check that should occur before the insta
 The number of consecutive successful health check that should occur before the instance is considered healthy the range is 2-10 but default is 10 consecutive successful
 health checks.
 
+
+Cross Region Balancing:
+With cross-zone load balancing, each load balancer node for your Classic Load Balancer distributes requests evenly across the registered instances in all enabled Availability Zones. 
+If cross-zone load balancing is disabled, each load balancer node distributes requests evenly across the registered instances in its Availability Zone only. For more information, 
+see Cross-zone load balancing in the Elastic Load Balancing User Guide.
+
+Cross-zone load balancing reduces the need to maintain equivalent numbers of instances in each enabled Availability Zone, 
+and improves your application's ability to handle the loss of one or more instances. However, we still recommend that you maintain approximately equivalent numbers of instances in
+each enabled Availability Zone for higher fault tolerance.
+
+For environments where clients cache DNS lookups, incoming requests might favor one of the Availability Zones. Using cross-zone load balancing, 
+this imbalance in the request load is spread across all available instances in the Region, reducing the impact of misbehaving clients.
+
+When you create a Classic Load Balancer, the default for cross-zone load balancing depends on how you create the load balancer. With the API or CLI, 
+cross-zone load balancing is disabled by default. With the AWS Management Console, the option to enable cross-zone load balancing is selected by default. 
+After you create a Classic Load Balancer, you can enable or disable cross-zone load balancing at any time.
+
