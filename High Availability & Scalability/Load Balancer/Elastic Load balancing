@@ -97,6 +97,10 @@ Application Load balancer:
  Network Load Balancer:
     In network load balancer, cross-zones is disabled by default.
     Charges are applicable ($) for inter AZ if enabled.
+
+
+Getway Load balancer:
+
     
     
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------    
