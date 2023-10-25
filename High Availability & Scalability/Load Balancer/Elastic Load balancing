@@ -197,5 +197,41 @@ Elastic Load Balancer - SSL Certificate:
 Ec2 is connected with load balancer but it does not mean that all in-bound and outbound traffic with go/come through load balancer.
 
 Load balancer has three important points:
-> 
+> A listener is a process that checks for connection requests. It is configured with a protocol and a port for front-end (client to load balancer) connections, 
+   and a protocol and a port for back-end (load balancer to back-end instance) connections. 
+   Elastic Load Balancing supports the following protocols: HTTP.
+> Target group is a logical grouping of EC2 instances that sits behind a load balancer where traffic is forward to, based on protocols and ports defined in a listener rule.
+  When target type is IP, we can only use following CIDR: 10.0.0.0/8, 100.64.0.0/10, 172.160.0/12, 192.168.0.0/16.
+
+We cannot specify publicly IP address as a target IP.
+
+Important Points:
+An internet facing load balancer has a publicly resolvable DNS name.
+Domain name for content on the EC2 instances served by the ELB is resolved by the internet DNS servers to the ELB DNS name(hence the IP).
+Classic load balancer service support HTTP, HTTPS, TCP & SSL.
+Protocols ports supported are 1-65535 and it also supports IPv4 and IPv6 and dual stack.
+ALB distributes incoming traffic across multiple availability zone which in trun increases the availability of our application.
+Network load balancer has the ability to handle the volatile workload and scale to millions for requests per sec.
+It may take sometime for the registration of the EC2 instances under the ELB to complete. Registered EC2 instances are those that are defined under the ELB.
+ELB has nothing to do with the outbond traffic that is initiated or generated from the registered EC2 istance defined to the inyernet or to any other instances withing the VPC.
+ELB only has to do with the inbound traffic destined to the EC2 registered instances and the respective return traffic.
+Charges for ELB are on hourly basis.
+Before deleting the the ELB, it is recomended to we point the route 53 to somewhere else other than the ELB.
+Deleting ELB does not affects the Ec2 instances.
+The ELB forwards the traffic to ethernet 0 of our registered instances.
+In case the EC2 registered instances has multiple addresses to eth 0, ELB will route the incoming traffic to it's primary IP address.
+To ensure that the ELB service can scale ELB nodes in each AZ ensure that the subnet drfined for the load balancer is at least /27 in size and has at least 8 available
+IP address the ELB nodes can use to scale.
+For fault tolerence it is recomended that we distribute our registered EC2 instances acress multiple AX within the VPC region.
+By default AWS console uses ping HTTP (port 80) for health check.
+Register intances must respond with a HTTP "200 OK" message within the time out period or else it is considered as unhealthy.
+AWS API uses ping TCP(port 80) for health check.
+Default response tim out is 5sec (range is 5-300 sec) for health check.
+Unhealthy default time-out is 30 sec (range is 5-300 sec).
+
+
+The number of consecutive failed health check that should occur before the instance is considered unhealthy the range is 2-10 but default is 2 consecutive fails.
+
+The number of consecutive successful health check that should occur before the instance is considered healthy the range is 2-10 but default is 10 consecutive successful
+health checks.
 
