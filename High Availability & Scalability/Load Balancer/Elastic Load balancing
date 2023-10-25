@@ -255,4 +255,7 @@ this imbalance in the request load is spread across all available instances in t
 When you create a Classic Load Balancer, the default for cross-zone load balancing depends on how you create the load balancer. With the API or CLI, 
 cross-zone load balancing is disabled by default. With the AWS Management Console, the option to enable cross-zone load balancing is selected by default. 
 After you create a Classic Load Balancer, you can enable or disable cross-zone load balancing at any time.
+We can have 200 targets in one target group.
+Traget group can be associated with autoscaling group.
+We must assign a sercurity group to oue ELB, this will contral the traffic that can reach our ELB front end listeners.
 
