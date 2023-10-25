@@ -157,4 +157,17 @@ NLB has one static IP per AZ, and supports assigning elastic IP (helpful for whi
    
    
    
-   
+  Steps to create Application Load balancer:
+A load balancer takes requests from clients and distributes them across targets in a target group.
+
+Before you begin, ensure that you have a virtual private cloud (VPC) with at least one public subnet in each of the zones used by your targets. For more information, see Subnets for your load balancer.
+
+To create a load balancer using the AWS CLI, see Tutorial: Create an Application Load Balancer using the AWS CLI.
+
+To create a load balancer using the AWS Management Console, complete the following tasks.
+
+Tasks
+Step 1: Configure a target group
+Step 2: Register targets
+Step 3: Configure a load balancer and a listener
+Step 4: Test the load balancer
