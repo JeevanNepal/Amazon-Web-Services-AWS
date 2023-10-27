@@ -259,3 +259,15 @@ We can have 200 targets in one target group.
 Traget group can be associated with autoscaling group.
 We must assign a sercurity group to oue ELB, this will contral the traffic that can reach our ELB front end listeners.
 
+
+Steps tp ceate Load balancer:
+Create instances.
+Create a target group
+Configure health checks
+Register targets
+Choose a load balancer type
+Update availability zones
+Verify your load balancer
+Zonal shift
+Test the load balancer
+
