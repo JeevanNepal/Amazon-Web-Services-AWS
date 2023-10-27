@@ -271,3 +271,19 @@ Verify your load balancer
 Zonal shift
 Test the load balancer
 
+In case of windows server need to insall web server iis in the servers.
+
+
+To set up an Application Load Balancer on Linux, you can install IPVS or KTCPVS. IPVS provides layer 4 load balancing, while KTCPVS provides layer 7 load balancing. 
+To create an Application Load Balancer, you need to: 
+Set up an SSL certificate resource
+Create a managed instance group
+Add a named port to the instance group
+Configure a firewall rule
+Reserve an external IP address
+Provide basic configuration information for your load balancer, such as a name, scheme, and IP address type
+Provide information about your network, and one or more listeners
+Decide which two Availability Zones you will use for your EC2 instances
+Configure your virtual private cloud (VPC) with at least one public subnet in each of
+You can also configure load balancing using Nginx. Nginx is a popular web server software that can be configured as a load balancer.
+
