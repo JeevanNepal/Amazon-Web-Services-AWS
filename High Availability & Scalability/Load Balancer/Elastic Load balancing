@@ -278,6 +278,7 @@ To set up an Application Load Balancer on Linux, you can install IPVS or KTCPVS.
 To create an Application Load Balancer, you need to: 
 Set up an SSL certificate resource
 Create a managed instance group
+we need to install apache server in case of linux server/virtual machine/instance.
 Add a named port to the instance group
 Configure a firewall rule
 Reserve an external IP address
