@@ -288,3 +288,16 @@ Decide which two Availability Zones you will use for your EC2 instances
 Configure your virtual private cloud (VPC) with at least one public subnet in each of
 You can also configure load balancing using Nginx. Nginx is a popular web server software that can be configured as a load balancer.
 
+
+Steps to establish a load balancer between 2 VPCs.
+++++++++++++++++++++++++++++++++++++++++++++++++++
+Create 2 vcps, vpc1 & vpc2
+create two subnets in vpc1 & vpc2
+create internet getway for vpc1 & vpc2.
+edite route table and add 0.0.0.0/0
+create peering connection and update route table.
+create 3 ec2 instances one in each subnet, install webiis in each ec2 instances after RDPand create web page.
+create application load balancer, target type IP
+register private Ips of ec2 instances in target group.
+test DNS of load balancer in the web browser.
+
