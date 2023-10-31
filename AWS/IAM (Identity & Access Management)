@@ -51,7 +51,7 @@ XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 The following table lists the resources for which quota increases area can be automatically approved..
 
 Adjustable quotas for IAM resources
-Resource	Default quota	Maximum quota                       Default Quota                        Maximum Quota
+Resource	Default quota	Maximum quota                   Default Quota                           Maximum Quota
 Customer managed policies per account	                        1500	                                 5000
 Groups per account	                                        300	                                 500
 Instance profiles per account	                                1000	                                5000
