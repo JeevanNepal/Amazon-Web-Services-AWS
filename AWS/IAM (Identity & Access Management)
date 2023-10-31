@@ -71,3 +71,93 @@ We are limited to 1000 IAM roles under AWS account.
 Default limits of managed policies attached to an IAM role and IAM user is 10.
 IAM user can be member of 10 groups.
 We can assign two access keys (max) to an IAM user.
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+IAM Terms:
+1> Principal.
+
+2> Request.
+
+3> Authentication.
+
+4> Authorization.
+
+5> Action/operation.
+
+6> Resources
+
+
+----------------------------------------------------------------------------------------------------------------------------
+1 Principal: A principla is a person or application that can make a request for an action or operation on an AWS resources.
+
+Our administrative IAM user is our first principal.
+
+IAM users, roles and federated users and applications are all AWS principals.
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
