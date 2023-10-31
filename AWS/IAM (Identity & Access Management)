@@ -64,3 +64,10 @@ Cross Account AMI Copy.
 IAM Definition:
 AWS identity and access mnagement is aweb service that helps you securely control access to AWS resources. We should use IAM control who is authenticated(sign-in)
 and authozised (has permission) to use resources.
+
+Limitations of IAM:
+IAM users limit is 5000 per aws account. We can add upto 10 users at a time. We are also limited to 3000 groups in AWS account.
+We are limited to 1000 IAM roles under AWS account.
+Default limits of managed policies attached to an IAM role and IAM user is 10.
+IAM user can be member of 10 groups.
+We can assign two access keys (max) to an IAM user.
