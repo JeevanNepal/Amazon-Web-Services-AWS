@@ -52,12 +52,12 @@ The following table lists the resources for which quota increases area can be au
 
 Adjustable quotas for IAM resources
 Resource	Default quota	Maximum quota                       Default Quota                        Maximum Quota
-Customer managed policies per account	                      1500	                                5000
+Customer managed policies per account	                        1500	                                5000
 Groups per account	                                        300	                                 500
-Instance profiles per account	                              1000	                                5000
+Instance profiles per account	                                1000	                                5000
 Managed policies per role	                                 10	                                  20
 Managed policies per user	                                 10	                                  20
-Role trust policy length	                                  2048 characters	                     4096 characters
+Role trust policy length	                                2048 characters	                     4096 characters
 Roles per account	                                         1000	                                5000
 Server certificates per account	                            20	                                  1000
 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
