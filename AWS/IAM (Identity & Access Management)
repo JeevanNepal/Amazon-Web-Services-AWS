@@ -111,6 +111,9 @@ To authenticate from the API to CLI, we must provide our access key and secret k
 
 
   
+Identity Federation:
+If our users already have a way to be authenticated such as authentication through our corporate network. This is just logging internet identity provider as usch as 
+with gmail or facebook ID rather than user name and password.
 
 
 
