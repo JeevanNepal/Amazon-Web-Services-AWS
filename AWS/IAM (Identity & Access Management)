@@ -59,3 +59,8 @@ Create an image of the esixting instance:
  
 
 Cross Account AMI Copy.
+
+
+IAM Definition:
+AWS identity and access mnagement is aweb service that helps you securely control access to AWS resources. We should use IAM control who is authenticated(sign-in)
+and authozised (has permission) to use resources.
