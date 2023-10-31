@@ -32,6 +32,39 @@ It's always best to give the minimal permission to users to do their jobs(least 
 IAM is a private account and credentials should not be shared at any cost.
 
 
+IAM Users:
+---------
+An IAM user is an entity that we create in AWS. It represents the person or service who uses an IAM user to interact with AWS.
+We can create 5 users at a time, AM IAM user user can represent an actual person or an application that requests AWS access to perform actions on AWS resources.
+THe newly created user has no credentilas we need to give themm after the user creation.
+Each IAM user is associated with once and only one AWS account.
+
+
+IAM Group:
+---------
+Group of users with same permissions under the same group.
+Group can't be nested. Group is not truly an idenity in IAM because it cannot be idetified as a principal as a principal in a permission policy.
+We have a limit of 300 groups in an AWS account.
+
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+The following table lists the resources for which quota increases area can be automatically approved..
+
+Adjustable quotas for IAM resources
+Resource	Default quota	Maximum quota                       Default Quota                        Maximum Quota
+Customer managed policies per account	                     1500	                                5000
+Groups per account	                                        300	                                 500
+Instance profiles per account	                             1000	                                5000
+Managed policies per role	                                 10	                                  20
+Managed policies per user	                                 10	                                  20
+Role trust policy length	                                  2048 characters	                     4096 characters
+Roles per account	                                         1000	                                5000
+Server certificates per account	                           20	                                  1000
+
+
+
+
+
 AMI?
     As we show, AWS comes with base images such as:
         Ubuntu
