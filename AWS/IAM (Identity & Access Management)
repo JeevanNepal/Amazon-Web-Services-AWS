@@ -60,10 +60,12 @@ Managed policies per user	                                 10	                  
 Role trust policy length	                                  2048 characters	                     4096 characters
 Roles per account	                                         1000	                                5000
 Server certificates per account	                           20	                                  1000
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
 
-
-
+IAM Role:
+--------
+A role in AWS is a set of permissions that grant access to actions and resources. Roles are similar to AWS users, but they are not associated with a specific person.
 
 AMI?
     As we show, AWS comes with base images such as:
