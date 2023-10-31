@@ -97,6 +97,19 @@ Our administrative IAM user is our first principal.
 IAM users, roles and federated users and applications are all AWS principals.
 
 
+2. Request: WHen a principal tries to use the AWS management console, the AWS API or the AWS CLI that principal sends a request to AWS. The request includes the 
+following:
+           Action, resources, principal, environment data, resources data.
+
+
+3. Authentication: Validates the user to sing in.
+To authenticate from the API to CLI, we must provide our access key and secret key.
+
+4. Authorization: To authorize request, IAM user value from the request context to check for matching policies and determine wheteher to allow or deny the request.
+
+
+
+
   
 
 
