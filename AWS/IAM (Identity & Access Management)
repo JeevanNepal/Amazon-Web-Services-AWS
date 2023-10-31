@@ -59,7 +59,7 @@ Managed policies per role	                                 10	                  
 Managed policies per user	                                 10	                                  20
 Role trust policy length	                                2048 characters	                   4096 characters
 Roles per account	                                         1000	                                5000
-Server certificates per account	                              20	                                  1000
+Server certificates per account	                                 20	                                1000
 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
 
