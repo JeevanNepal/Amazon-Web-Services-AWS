@@ -1,4 +1,4 @@
-IAM Introduction:
+an IAM Introduction:
 IAM (Identity & Access Management)
 
 Whole AWS Security will be in IAM.
@@ -108,7 +108,13 @@ To authenticate from the API to CLI, we must provide our access key and secret k
 4. Authorization: To authorize request, IAM user value from the request context to check for matching policies and determine wheteher to allow or deny the request.
 
 
+We can create the IAM policy in the aws management console using one of the following ways:
 
+1. JSON -> We can create our own jason syntax.
+
+2. Visual Editor: We can construct a new policy from scratch in the visual editor. IF we use the VI Editor, we do not have to understand the JSON syntax.
+
+3. Import: We can import a managed policy within our account and then edit the policy to customize it to our specific requirement.
 
   
 
