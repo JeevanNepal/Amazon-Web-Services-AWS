@@ -344,9 +344,39 @@ the third statement in this policy does not apply and the user does not have acc
 
 
 
+||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+
+
+IAM Role Deligation: It is between trusted account and trusting account.
+-------------------
+Deligation is the granting of permission to someone to allow access to resources that you control.
+
+Deligation involves seting up a trust between the account that owns the resources(a trustung account) and the account that contains the users that need to access the resource (the trusted account).
+
+The trusted and trustung accounts can be any of the following:
+The same account, the accounts that are both under your organisation's control.
+Two account owned by different organisation.
+
+THe trust ploicy and the permission ploicy are the 2 policies to deligate permission to access a resource to given to IAM role.
+
+When we create a trust policy, we cannot specify a wildcard(*) as a principal.
 
 
 
+
+Cross Account Permission:
+You can allow a principal in one account to access resources in a second account. This is called cross-account access. When you allow cross-account access, the account where the principal exists is called the trusted account.
+The account where the resource exists is the trusting account.
+
+
+Resource base policies are supported only for the following:
+1. Amazon S3
+2. Amazon Simple Notification Service (SNS)
+3. Amazon simple queue service (SQS)
+4. Amazon Glacier Vault.
+5. OpsWorks stacks.
+6. Lambda functions.
+7. API Gateway.
 
 
 
