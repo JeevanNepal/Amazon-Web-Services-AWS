@@ -379,6 +379,9 @@ Resource base policies are supported only for the following:
 7. API Gateway.
 
 
+To give user specific policy, we need to use inline policy for that.
+
+
 
 
 
