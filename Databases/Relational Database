@@ -25,5 +25,19 @@ ___________________________
 4. Horizontal scaling is possible.
 5. Never provide table with flat fixed cloumns records. It means schema-free.
 6. Best suited for online analytical processing.
-7. Eg of no-sql dttadbses - MongoDB, Cassandra, DynamoDB Postgres, redis, rasen, mariaDB
+7. Eg of no-sql dttadbses - MongoDB, Cassandra, DynamoDB Postgres, redis, raven, mariaDB
 8. Auto scaling is possible.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
