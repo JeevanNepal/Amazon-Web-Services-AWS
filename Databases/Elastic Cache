@@ -1,0 +1,131 @@
+AWS ElastiCache Overview:
+------------------------
+
+    . The same way RDS is to get managed relational database.
+    . ElastiCache is to get managed Redis or Memcached.
+    . Caches are in-memory with really high in performance & low latency. 
+    . Helps reduce loads off of database for read intensive work load.
+    . Helps make your application state less.
+    . Writes scaling using sharding. (SHARDING: Sharding is a database architecture pattern related to horizontal partitioning — the practice of separating one table’s rows 
+       into multiple different tables,known as partitions.)
+    . Read scaling using read replicas.
+    . Multi AZ with failover capability.
+    . AWS takes care of OS maintenance / patching, optmization,setup, configuration, minitoring, failover and recovery.
+    
+    
+       
+REDIS:
+-----
+    Redis, which stands for Remote Dictionary Server, is a fast, open-source, in-memory key-value data store for use as a database, cache, message broker, and queue.
+
+
+MEMCACHED:
+---------
+    Memcached is a general-purpose distributed memory-caching system. It is often used to speed up dynamic database-driven websites by caching data and objects in RAM to 
+    reduce the number of times an external data source must be read. Memcached is free and open-source software, licensed under the Revised BSD license.
+    
+    
+ REDIS vs MEMCACHED:
+ ++++++++++++++++++
+ 
+                        REDIS                                            |                     Memcached.
+   1. Multi-AZ with failover.                                            |             1. Multi-node for partitioning of data (sharding).
+   2. Read replicas to scale reads and have high availability.           |             2. Non-persistance.
+   3. Data durabilty using AOF(Append Only Files) persistance.           |             3. No backou and restore. 
+   4. Backup and restore.                                                |             4. Multi-threaded architecture.
+                                                                         |
+                                                                         
+
+
+
+ElastiCache Solution Architecture - DB Cache:
++++++++++++++++++++++++++++++++++++++++++++++                 
+                 
+                                           
+    |---------------------- |  <-------------->  Cache Hit     |---------------------|
+    |                       |                                  | Amazon ElastiCache  |
+    |                       | --------------> Cache Miss       |                     |
+    |         Application   |                                  |                     |
+    |                       |                                  |                     |
+    |                       |  ----------------------------------------------------------------> Amazon RDS
+    |                       |                                  |                     |
+    |                       |                                  |                     |
+    |                       |  --------------> Write to Cache  |                     |
+    |                       |                                  |                     |
+    |---------------------- |                                  |---------------------|
+    
+    
+ > Application queries ElastiCache, if not  available, get from RDS and store in ElastiCache.
+ > Helps relieve load in RDS.
+ > Cache must have an invalidation strategy to make sure only the most recent data is used on there.
+    
+    
+    
+ 
+ElastiCache Solution Architecture - User Session:
++++++++++++++++++++++++++++++++++++++++++++++++++
+
+    > Users logs into any of the applications.
+    > The application writes the session data into ElastiCache.
+    > The user hits another instance of our application.
+    > The instance retrives the data and the user is already logged in.
+    
+                                  
+    
+                                      
+ 
+ElastiCache - Cache Security:
++++++++++++++++++++++++++++++
+
+    > All caches in elasticache:
+        . Support SSL in flight encryption.
+        . Do not support IAM authentication.
+        . IAM policies on elasticahce are only used for AWS API -level security.
+        
+        
+    > Redis AUTH(authentication).
+        . You cna set a password / token when we create a redis cluster.
+        . This is extra level of security for our cache(on top of security group).
+        
+        
+    > Memcached:
+        . Supports SASL-base authentication(advanced).
+    
+    
+    
+ ElastiCache for Solution Architects:
+ ++++++++++++++++++++++++++++++++++++
+                                           
+                                           
+                                           
+    |---------------------- |  <-------------->  Cache Hit---->|---------------------|
+    |                       |                                  | Amazon ElastiCache  |
+    |                       |                                  |                     |
+    |         Application   |                                  |                     |
+    |                       |  -------------- Cache Miss------>|                     |
+    |                       |  ----------------------------------------------------------------> Amazon RDS
+    |                       |       Read from DB               |                     |
+    |                       |                                  |                     |
+    |                       |  ----------> Write to Cache----->|                     |
+    |                       |                                  |                     |
+    |---------------------- |                                  |---------------------|
+    
+    
+                                 Lazy Loading Illustrated
+                                 
+                                 
+     > Patterns for ElastiCache:
+        . Lazy Loading: All the read data is cached, data can become stale in cache.
+        . Write Through: Add or update data in the cache when written to DB (not stlae data).
+        . Session Sotre: Store temporary daat in cache (using TTL features).
+  
+  
+
+    
+    
+    
+    
+    
+    
+    
+    
