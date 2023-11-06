@@ -383,8 +383,21 @@ To give user specific policy, we need to use inline policy for that.
 
 
 
-
-
+How to connect WIndows AD Server in AWS:
+======================================
+1. Create a server in AWS.
+2. Change it's password and then install AD DS in add role & features.
+3. Now, create one forest i.e, jeevan.in.
+4. Now, go to server manager -> tools -> DNS -> Reserve lookup zone.
+5. Now, ->DNS->Forward Lookup Zone-> |__| update associated pointer -> Apply.
+6. Now in ethernet setting -> Enter pointer IP of the server in preferred DNS server.
+7. Click on server manager-> Tools-> AD user and computerd. Create two users "Madan @ Viki" and a password XXXXX.
+8. Now got ot AWS management console, search directory services-> AD connector.
+9. Directory DNS name - jeevan.in. DNS IP Address = provate Ip of AD server. Password - same as AD server.
+10. Go to IAM ->role->directory services->EC2full access ->create role.
+11. Create once more role for billing.
+12. Add user madan 7 Viki to above role.
+13. Copy the URL and paste in incognito tab.
 
 
 
