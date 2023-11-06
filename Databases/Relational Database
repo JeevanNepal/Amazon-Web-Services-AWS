@@ -30,6 +30,17 @@ ___________________________
 
 
 
+NoSQL databases are categorized into four types: 
+-----------------------------------------------
+Key-value pair: A schema-less data model organized into a dictionary of key-value pairs
+Column-oriented: Data is organized into columns rather than rows
+Graph-based
+Document-oriented: Consists of sets of key-value pairs stored into a document
+NoSQL databases have advantages such as improved scalability, availability, and performance over traditional SQL databases. 
+However, each category has its unique attributes and limitations. 
+Users should select the database based on their product needs. 
+
+
 
 
 
