@@ -1,5 +1,27 @@
+
+What are the 4 types of database?
+How Many Types of Databases Are There?
+Hierarchical Databases. Developed in the 1960s, the hierarchical database looks similar to a family tree. ...
+Relational Databases. Relational databases are a system designed in the 1970s. ...
+Non-Relational Databases. ...
+Object oriented databases.
+
+
+
 A relational database is a type of database that stores and provides access to data points that are related to one another. Relational databases are based on the relational model, an intuitive, straightforward way of representing data in tables.
 
 RD cannot scale-out horizontally that means we cannot add another server to handle the load but we can increase it's memory vertically such as from 64GB to 128GB in size.
 
 Virtually all relational database uses SQL.
+
+
+Non-Relational DB/No-SQL DB:
+___________________________
+
+1. non relational database store data without a structured mechanism to link data from different tables to one another.
+2. Require low cost hardware.
+3. Much faster performance(Read/wite) compared to relational database.
+4. Horizontal scaling is possible.
+5. Never provide table with flat fixed cloumns records. It means schema-free.
+6. Best suited for online analytical processing.
+7. Eg of no-sql dttadbses - MongoDB, Cassandra, DynamoDB Postgres, redis, rasen, mariaDB
