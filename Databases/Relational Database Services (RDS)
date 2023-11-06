@@ -45,7 +45,7 @@ RDS Read Replicas for Read Scalability:
               reads|                        writes|     |reads                                 |reads
                    |                              |     |                                      |
      RDS DB instance Read replica <--------------RDS DB Instance  <-------------------RDS DB instance read replicas
-                                     ASYNC                         ASYNC Replidation
+                                     ASYNC                         ASYNC Replication
                                    Replication 
                                    
                                    
@@ -55,6 +55,10 @@ RDS Read Replicas for Read Scalability:
 > Replication is ASYNC, so reads are eventually consistents.
 > Replicas can be pormoted to their own DB.
 > Application must update the connection strings to leverge the read replicas.
+> We can create upto 40 DB instances/servers per account.
+> In database EBS is used and not any other storage.
+> General purpose - use for DB workloads with moderate I/O requirement has a limit - min - 20 GB and max - 16384 GB
+> Provision IOPS RDS storage use for high performance OLTP workloads. Limit -min - 100GB, max - 16384 GB
 
 
 
