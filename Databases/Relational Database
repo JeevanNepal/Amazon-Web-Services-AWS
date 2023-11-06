@@ -42,8 +42,19 @@ Users should select the database based on their product needs.
 
 
 
+COLUMNAR DATABASE:
+-----------------
+A columnar database is a database management system (DBMS) that stores data in columns instead of rows. 
+The purpose of a columnar database is to efficiently write and read data to and from hard disk storage in order to speed up the time it takes to return a query.
 
 
+
+
+DOCUMENT DATABASE:
+-----------------
+A document database is a type of NoSQL database that stores data as JSON documents instead of columns and rows. JSON is a native language used to both store and query data. 
+Each document consists of a number of key-value pairs. NoSQL databases offer a high level of scalability as well as flexibility in terms of data structure. 
+They usually do not use Structured Query Language (SQL), which relational databases typically employ to manage and query data.
 
 
 
