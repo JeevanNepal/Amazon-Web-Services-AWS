@@ -59,7 +59,22 @@ They usually do not use Structured Query Language (SQL), which relational databa
 
 
 
+KEY- VALUE DATABASE:
+-------------------
+A key-value database, also known as a key-value store, is a type of non-relational database that uses a simple key-value method to store data. 
+In a key-value database, data is stored as a collection of key-value pairs in which a key serves as a unique identifier. 
+The data is fetched by a unique key or a number of unique keys to retrieve the associated value with each key. 
+Key-value databases are fast and reliable, and are easy to design and implement. However, a lack of standardization and other issues limited key–value systems to niche uses for many years. 
+The rapid move to cloud computing after 2010 has led to a renaissance as part of the broader NoSQL movement.
 
 
+
+
+GRAPH DATABASE:
+--------------
+A graph database (GDB) is a database that uses graph structures to store data. It uses nodes, edges, and properties instead of tables or documents to represent and store data. 
+The edges represent relationships between the nodes. A graph database is a specialized, single-purpose platform for creating and manipulating graphs. Graphs contain nodes, edges, 
+and properties, all of which are used to represent and store data in a way that relational databases are not equipped to do. 
+A graph database is designed so that connections between the data are considered as important as the data itself. It also stores the data flexibly in such a way that it is not restricted to a rigid existing model.
 
 
