@@ -1,1 +1,173 @@
+Amazon Aurora Overview:
+  
+Amazon Aurora is a MySQL and PostgreSQL-compatible relational database built for the cloud, that combines the performance and availability of traditional 
+enterprise databases with the simplicity and cost-effectiveness of open source databases.
 
+Amazon Aurora is up to five times faster than standard MySQL databases and three times faster than standard PostgreSQL databases. It provides the security, 
+availability, and reliability of commercial databases at 1/10th the cost. Amazon Aurora is fully managed by Amazon Relational Database Service (RDS), which 
+automates time-consuming administration tasks like hardware provisioning, database setup, patching, and backups.
+
+Amazon Aurora features a distributed, fault-tolerant, self-healing storage system that auto-scales up to 128TB per database instance. It delivers high performance 
+and availability with up to 15 low-latency read replicas, point-in-time recovery, continuous backup to Amazon S3, and replication across three Availability Zones (AZs).
+
+Visit the Amazon RDS Management Console to create your first Aurora database instance and start migrating your MySQL and PostgreSQL databases.
+
+
+
+Amazon aurura is a propietary technilogy from AWS (not an open source).
+
+
+
+Benefits
+--------
+
+High Performance and Scalability:
+  Get 5X the throughput of standard MySQL and 3X the throughput of standard PostgreSQL. This performance is on par with commercial databases, at 1/10th the cost. 
+You can easily scale your database deployment up and down from smaller to larger instance types as your needs change, or let Aurora Serverless handle scaling 
+automatically for you. 
+To scale read capacity and performance, you can add up to 15 low latency read replicas across three Availability Zones. Amazon Aurora automatically grows storage 
+as needed, up to 128TB per database instance.
+
+
+
+High Availability and Durability:
+  Amazon Aurora is designed to offer greater than 99.99% availability, replicating 6 copies of your data across 3 Availability Zones and backing up your data continuously 
+to Amazon S3. It transparently recovers from physical storage failures; instance failover typically takes less than 30 seconds. You can also backtrack within seconds to a
+previous point in time, to recover from user errors. With Global Database, a single Aurora database can span multiple AWS regions to enable fast local reads and quick disaster 
+recovery.
+
+
+
+Highly Secure:
+  Amazon Aurora provides multiple levels of security for your database. These include network isolation using Amazon VPC, encryption at rest using keys you create and control 
+through AWS Key Management Service (KMS) and encryption of data in transit using SSL. On an encrypted Amazon Aurora instance, data in the underlying storage is encrypted, as 
+are the automated backups, snapshots, and replicas in the same cluster.
+
+
+
+MySQL and PostgreSQL Compatible:
+  The Amazon Aurora database engine is fully compatible with existing MySQL and PostgreSQL open source databases, and adds compatibility for new releases regularly.
+This means you can easily migrate MySQL or PostgreSQL databases to Aurora using standard MySQL or PostgreSQL import/export tools or snapshots. It also means the code, 
+applications, drivers, and tools you already use with your existing databases can be used with Amazon Aurora with little or no change.
+
+
+
+Fully Managed:
+  Amazon Aurora is fully managed by Amazon Relational Database Service (RDS). You no longer need to worry about database management tasks such as hardware provisioning,
+software patching, setup, configuration, or backups. Aurora automatically and continuously monitors and backs up your database to Amazon S3, enabling regular
+point-in-time recovery. You can monitor database performance using Amazon CloudWatch, Enhanced Monitoring, or Performance Insights, an easy-to-use tool that 
+helps you quickly detect performance problems.
+
+
+
+Migration Support:
+  MySQL and PostgreSQL compatibility make Amazon Aurora a compelling target for database migrations to the cloud. If you're migrating from MySQL or PostgreSQL, 
+see our migration documentation for a list of tools and options. To migrate from commercial database engines, you can use the AWS Database Migration Service for 
+a secure migration with minimal downtime.
+
+
+
+Amazon Aurora DB clusters:
+
+An Amazon Aurora DB cluster consists of one or more DB instances and a cluster volume that manages the data for those DB instances. 
+An Aurora cluster volume is a virtual database storage volume that spans multiple Availability Zones, with each Availability Zone having a copy of the DB cluster data. 
+Two types of DB instances make up an Aurora DB cluster:
+
+Primary DB instance – Supports read and write operations, and performs all of the data modifications to the cluster volume. Each Aurora DB cluster has one primary DB instance.
+
+Aurora Replica – Connects to the same storage volume as the primary DB instance and supports only read operations. 
+Each Aurora DB cluster can have up to 15 Aurora Replicas in addition to the primary DB instance. Maintain high availability by locating Aurora Replicas in separate 
+Availability Zones. Aurora automatically fails over to an Aurora Replica in case the primary DB instance becomes unavailable. You can specify the failover priority 
+for Aurora Replicas. Aurora Replicas can also offload read workloads from the primary DB instance.
+
+For Aurora multi-master clusters, all DB instances have read/write capability. In this case, the distinction between primary instance and Aurora Replica doesn't apply. 
+For discussing replication topology where the clusters can use either single-master or multi-master replication, we call these writer and reader DB instances.
+
+The following diagram illustrates the relationship between the cluster volume, the primary DB instance, and Aurora Replicas in an Aurora DB cluster.
+  https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/images/AuroraArch001.png
+      
+
+Features of Aurora:
+  > Automatic Failover
+  > Backup & Recovery
+  > Isolation & Security
+  > Industry Compliance
+  > Push-button scaling by auto scaling
+  > Automated patching by Zero downtime
+  > Advance Monitoring
+  > Routine Maintenence.
+  > Backtrack: restore data at any point of time without using backups.
+  
+  
+
+Aurora Serverless:
+                                                    Client
+                                                      |
+                                                      |
+                ---------------------------------------------------------------------------------------                
+                                                  Proxy FLeet
+                                               Managed by Aurura
+                ----------------------------------------------------------------------------------------                               
+                    /                /               |              \                     \
+                   /               /                 |                \                     \
+                 /               /                   |                  \                    \
+    Amazon Aurora       Amazon Aurora        Amazon Aurora         Amazon Aurora        Amazon Aurora
+    
+    
+    
+    <----------------------------------------------------------------------------------------------->
+    <                       Shared Storage Volume                                                   >
+    <----------------------------------------------------------------------------------------------->
+    
+    
+    > Automated database instantiation and auto scalling base on actual usage.
+    > Good for infrequent, intermittent or unpredictable workloads.
+    > No capacity planning needed.
+    > Pay per sec can be more cost effective.
+
+
+
+
+Global Aurora:
+-------------
+  . Aurora Cross Region Read Replicas:
+    > Useful for disaster recovery.
+    > Simple to put in place.
+   
+  . Aurora Global Database(Recommended):
+    > In primary region(read/write)
+    > Us upto 5 secondary (read only), regions, replications lag is less then 1 second.
+    > Up to 16 read replicas per secondary region.
+    > Helps for decreasing latency.
+    > Promoting another region (for disaster recovery) has an RTO(recovery time objective) of < 1 minute
+    
+    
+                                                    us-east-1 Primary Region
+                                                    ------------------------
+                                                                              
+                                                                              
+                                                         __________
+                                                         |         | <-------------> Amazon Aurora
+                                                      ---|---------|-----|
+                                                      |  |_________|     |
+                                                      |                  |
+                                                      |------------------|                  
+                                                      Application Read/write
+
+
+                    
+                                                        us-east-1 Secondary Region
+                                                        --------------------------
+                                                        
+                                                         __________
+                                                         |         | <-------------> Amazon Aurora
+                                                      ---|---------|-----|
+                                                      |  |_________|     |
+                                                      |                  |
+                                                      |------------------|                  
+                                                      Application Read Only
+
+
+
+Hands On Aurora:
+https://www.udemy.com/course/aws-certified-solutions-architect-associate-saa-c02/learn/lecture/13528162#overview
