@@ -381,7 +381,17 @@ All the snapshots, backups which resides in S3, data on EBS volume and read repl
 
 
 
-
+RDS Billing Related points:
+==========================
+No upfront cost.
+We have to pay only for: 1. DB instance hours(partial hours charged as full hours).
+                         2. Storage GB/month
+                         3. Internet data transfer.
+                         4. Backup storage(s3)
+                         5. Multi Az DB hours.
+                         6. Provisioned storage.
+                         7. Double write I/O
+                         8. We are not charged for the DB data replication form primary to standby DB.
 
 
 
