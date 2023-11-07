@@ -321,6 +321,9 @@ Multi-Az RDS Failover COnsequences.:
 1. During failover, he CNAME(DNS name/applicationURL) of the RDS DB instance is updated to map to the standby IP address.
 2. It is recommended to use the endpoint to reference your DB instances amd not the IP address.
 3. The CNAME does not change because the RDS endpoint does not change.
+4. The RDS endpoint does not change by selecting multi-AZ option. However, the primary and standby instances will ahve different IP address as they are in different AZ.
+5. It is recommended that we use the IP address to point RDS instances, always use endpoint by using endpoint, there will be no change whenever a failover happens.
+6. Manual failover is done in case if we need to reboot the DB instance.
 
 
 
