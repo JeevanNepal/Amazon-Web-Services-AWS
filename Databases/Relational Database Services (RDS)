@@ -23,7 +23,7 @@ a. Auto
 b. Manual
 c. Cross-region Snap
 
-Backups are automatically enablec in RDS.
+Backups are automatically enabled in RDS.
 & days retension(can be scaled upto 35 days).
 
 Security :
@@ -365,7 +365,13 @@ Automated backups by AWS, backup our data to multiple AZ to provide for data dur
    You can initiate a point-in-time restore and specify any second during your retention period, up to the Latest Restorable Time. Backup retention fron CLI and API is only 1 day.
 
 
+Manual backup/snapshot:
 
+
+
+
+
+DB encryption:
 
 
 
