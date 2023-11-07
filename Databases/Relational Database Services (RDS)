@@ -372,6 +372,10 @@ Manual backup/snapshot:
 
 
 DB encryption:
+We cannot encrypt an esixting unencrypted DB instance, to do that we need to create a new DB instance which is encrypted and migrate the data from unencrypted to encrypted.
+
+We can restore from a backup/snapshot into a vew encrypted RDS instance. RDS supports encruption as rest for all DB engines using KMS.
+All the snapshots, backups which resides in S3, data on EBS volume and read replica created from the snapshot are encrypted when the data is at rest.
 
 
 
