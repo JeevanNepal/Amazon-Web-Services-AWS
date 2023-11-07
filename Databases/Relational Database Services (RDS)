@@ -303,9 +303,24 @@ You can choose the option of selecting a multi-AZ deployment when creating a DB 
 Amazon recomends the use of provisioned IOPS instances for multi-AZ RD instances
 
 
+When Multi-AZ RDS failover Triggers.:
+=====================================
+1. In case of failure of primary DB instance failure.
+2. In case of AZ failure.
+3. Loss if network connectivity to primary DB.
+4. Loss of primary EC2 instance failure.
+5. EBS failure of primary DB instance.
+6. The primary DB instance is changed.
+7. patching the OS of the DB instance.
+8. Manual failover(incase of rebooting).
 
 
 
+Multi-Az RDS Failover COnsequences.:
+==================================
+1. During failover, he CNAME(DNS name/applicationURL) of the RDS DB instance is updated to map to the standby IP address.
+2. It is recommended to use the endpoint to reference your DB instances amd not the IP address.
+3. The CNAME does not change because the RDS endpoint does not change.
 
 
 
