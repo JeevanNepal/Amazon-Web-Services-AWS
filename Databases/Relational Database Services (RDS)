@@ -329,11 +329,40 @@ Multi-Az RDS Failover COnsequences.:
 
 
 
+SNS Notification by AWS:
+=======================
+WHen fsilover occurs, AWS RDS sends SNS notification, we can call API calls to find out the RDS events occured in the last 14 days and even we can use CLI to view the last 
+14 days events.
+
+Using AWS console, we can view only last one day events.
 
 
 
+In case of OS patching, system update or DB scaling, the things happens first on standby then on primary DB to avoid the outage.
+In multi AZ, snapshots and automated backups ae done on standby instance to avoid I/O suspension on primary.
+
+WHen there is a maintenance, both the servers of DB are upgraded and there will be application downtime but it will be done under maintenance window.
 
 
+There are two methods to take backup:
+
+1. AWS RDS automated backup &
+2. User initiated manual backup.
+
+- Either we can take backup of entire DB instance or just the DB.
+
+- We can create a storage volume snapshots of our entire DB instances.
+
+Automated backups by AWS, backup our data to multiple AZ to provide for data durability.
+- Select-Automatrd backup in AWS console.
+- Stored in Amazon S3(EBS storage).
+- Multi AZ automated backups will be taken from the standby instance.
+- The DB instance must be in "ACTIVE" state for automated backup.
+- RDS automatically backsup the DB instances daily by creating a storage volume snapshot of our DB instance(fully daily snapshot) including the DB transcation logs.
+- We can decide when we would like to take backup.
+- No additional charges is applied for taking backup by AWS but it charges for the storage.
+- Amazon RDS retains backups of a DB Instance for a limited, user-specified period of time called the retention period, which by default is 7 days but can be set to up to 35 days. 
+   You can initiate a point-in-time restore and specify any second during your retention period, up to the Latest Restorable Time. Backup retention fron CLI and API is only 1 day.
 
 
 
