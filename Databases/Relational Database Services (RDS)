@@ -397,9 +397,15 @@ We have to pay only for: 1. DB instance hours(partial hours charged as full hour
 
 
 
+How to access MYSQL from windows Server?
 
-
-
+To access MySQL from Windows Server, you can do the following: 
+Open the Command Line application
+Enter mysql.exe -uroot -p
+MySQL will launch using the root user
+Enter the password from the user account you specified with the –u tag
+You'll connect to the MySQL server
+You can also access a MySQL database by going to Site Tools > Site > MySQL > phpMyAdmin and clicking the Access phpMyAdmin button
 
 
 
