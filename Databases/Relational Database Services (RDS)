@@ -412,14 +412,27 @@ You can also access a MySQL database by going to Site Tools > Site > MySQL > php
 
 
 
+DATABASE TYPES:
+==============
+1. Unstructured Data: 
+Unstructured data (or unstructured information) is information that either does not have a pre-defined data model or is not organized in a pre-defined manner.
+Unstructured information is typically text-heavy, but may contain data such as dates, numbers, and facts as well.
+
+
+2. Semi-structured Data:
+Semi-structured data is a form of structured data that does not obey the tabular structure of data models associated with relational databases or other forms of data tables, 
+but nonetheless contains tags or other markers to separate semantic elements and enforce hierarchies of records and fields within the data.
+
+
+3. Structured Data: 
+Structured data is data that has a standardized format for efficient access by software and humans alike. 
+It is typically tabular with rows and columns that clearly define data attributes.
+Computers can effectively process structured data for insights due to its quantitative nature.
 
 
 
-
-
-
-
-
+DYNAMO DB: 3-4 questions from dynamo DB. unstructured data.
+==========================================================
 
 
 
