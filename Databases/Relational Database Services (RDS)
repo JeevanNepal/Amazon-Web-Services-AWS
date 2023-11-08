@@ -458,11 +458,13 @@ DynamoDB pricing for provisioned throughput type is $0.00016 per RCU
 
 DynamoDB read requests can be either strongly consistent, eventually consistent, or transactional.
 
-A strongly consistent read request of an item up to 4 KB requires one read request unit.
+-- A strongly consistent read request of an item up to 4 KB requires one read request unit.
 
-An eventually consistent read request of an item up to 4 KB requires one-half read request unit.
+-- An eventually consistent read request of an item up to 4 KB requires one-half read request unit.
 
-A transactional read request of an item up to 4 KB requires two read request units.
+-- A transactional read request of an item up to 4 KB requires two read request units.
+
+-- 3 copies of the DynamoDB are created for high availability in different AZ and it can be kept in 2 different region with global table.
 
 If you need to read an item that is larger than 4 KB, DynamoDB needs additional read request units. The total number of read request units required depends on the item size, and whether you want an eventually consistent or strongly consistent read. 
 For example, if your item size is 8 KB, you require 2 read request units to sustain one strongly consistent read, 1 read request unit if you choose eventually consistent reads, or 4 read request units for a transactional read request.
