@@ -449,15 +449,77 @@ What is the maximum size of item in DynamoDB?
 The maximum item size in DynamoDB is 400 KB, which includes both attribute name binary length (UTF-8 length) and attribute value lengths (again binary length).
 
 
+Important as per exam view:
+Dynamo DB Read capacity Unit:
+
+A read capacity unit (RCU) in DynamoDB represents one strongly consistent read per second, or two eventually consistent reads per second, for an item up to 4 KB in size. 
+2 RCUs = 1 transactional read request (one read per second) for items up to 4 KB. For reads on items greater than 4 KB, the total number of reads required = (total item size / 4 KB) rounded up. 
+DynamoDB pricing for provisioned throughput type is $0.00016 per RCU
+
+DynamoDB read requests can be either strongly consistent, eventually consistent, or transactional.
+
+A strongly consistent read request of an item up to 4 KB requires one read request unit.
+
+An eventually consistent read request of an item up to 4 KB requires one-half read request unit.
+
+A transactional read request of an item up to 4 KB requires two read request units.
+
+If you need to read an item that is larger than 4 KB, DynamoDB needs additional read request units. The total number of read request units required depends on the item size, and whether you want an eventually consistent or strongly consistent read. 
+For example, if your item size is 8 KB, you require 2 read request units to sustain one strongly consistent read, 1 read request unit if you choose eventually consistent reads, or 4 read request units for a transactional read request.
+
+
+
+One write request unit represents one write for an item up to 1 KB in size. If you need to write an item that is larger than 1 KB, DynamoDB needs to consume additional write request units. 
+Transactional write requests require 2 write request units to perform one write for items up to 1 KB. The total number of write request units required depends on the item size. For example, 
+if your item size is 2 KB, you require 2 write request units to sustain one write request or 4 write request units for a transactional write request.
 
 
 
 
+Amazon DynamoDB pricing
+
+DynamoDB charges for reading, writing, and storing data in your DynamoDB tables, along with any optional features you choose to enable. DynamoDB has two capacity modes, which come with specific billing options for processing reads and writes on your tables: on-demand and provisioned.
+
+Pricing options
+There are two pricing options available for Amazon DynamoDB: on-demand capacity mode and provisioned capacity mode. With two pricing models, DynamoDB allows you to choose the best pricing option for your workload.
+
+>> Pricing for on-demand capacity mode
+    With on-demand capacity mode, DynamoDB charges you for the data reads and writes your application performs on your tables. You can get started without specifying read or write capacity as DynamoDB will instantly adjust based on your workloads’ requirements.
+    
+    On-demand capacity mode might be best if you:
+    
+    Create new tables with unknown workloads
+    Have unpredictable application traffic
+    Prefer the ease of paying for only what you use
+
+
+>> Pricing for provisioned capacity mode
+   With provisioned capacity mode, you specify the number of reads and writes per second that you expect your application to require. You can use auto scaling to automatically adjust your table’s capacity based on the specified utilization rate to ensure application performance while reducing costs.
+
+  Provisioned capacity mode might be best if you:
+
+  Have predictable application traffic
+  Run applications whose traffic is consistent or ramps gradually
+  Can forecast capacity requirements to control costs
 
 
 
+DynamoDB can do 10000 write capacity units/sec per table.
+
+256 tables per account per region and no limits on size of any table.
+
+The initial quota for the number of DynamoDB tables you can create and manage per AWS account and AWS Region is 2,500 tables. If you need more than 2,500 tables for a single account, 
+you can reach out to your AWS account team to explore an increase up to a maximum of 10,000 tables. 
+Table sizes have no limits, but accounts have a 256 table limit unless you request a higher cap. 
 
 
+Other DynamoDB limits include: 
+Secondary Indexes Per Table: Five local and five global are permitted
+Projected Secondary Index Attributes Per Table: DynamoDB allows 20 attributes
+On-Demand capacity mode: You can have up to 256 tables per region
+Provisioned capacity mode: You can have up to 256 tables per region
+Maximum throughput: There are limits on the maximum throughput you can consume on a per-second basis for an individual partition
+GSIs (Global Secondary Index): Limited to 20 per table
 
 
 
