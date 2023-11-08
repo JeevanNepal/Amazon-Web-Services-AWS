@@ -434,8 +434,19 @@ Computers can effectively process structured data for insights due to its quanti
 DYNAMO DB: 3-4 questions from dynamo DB. unstructured data.
 ==========================================================
 
+- A table is a collection of data items.
+- Like all other DB, dynamo DB stores data is tables.
 
+Items:
+-----
+Each table contains multiple items. na item is a group of attributes that is uniquely identifiable among all of the other items. An item consists of a promary orcomposit ket and 
+a flexible number of attributes. Items in dynamoDB are similar to rows, records in other DB.
 
+Note: Aggregate size of an item cannot exceed 400kb including key and all attributes.
+
+What is the maximum size of item in DynamoDB?
+400 KB
+The maximum item size in DynamoDB is 400 KB, which includes both attribute name binary length (UTF-8 length) and attribute value lengths (again binary length).
 
 
 
