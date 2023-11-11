@@ -46,4 +46,33 @@ You can also create a delegation set, which is a group of four name servers that
 Route 53 is an authoritative DNS system that can be used for domain registration, DNS routing, and health checking.
 
 
+Recursive DNS VS Authoritative DNS
 
+Recursive servers temporarily store information they've previously retrieved, but when that information isn't available in cache, they have to get it from another server. 
+Authoritative nameservers always hold the most up-to-date information and can provide a final answer for new user queries.
+
+
+
+Root DNS VS Name Server:
+
+A root name server is a name server for the root zone of the Domain Name System (DNS) of the Internet. Root name servers are responsible for the functionality of the DNS as well as the entire Internet. 
+They are the first step in the name resolution of any domain name, meaning they translate domain names into IP addresses. 
+Name servers are a role in the DNS system, holding the DNS records that connect a domain name to an IP address. 
+A root name server directly answers requests for records in the root zone and answers other requests by returning a list of the authoritative name servers for the appropriate top-level domain (TLD). 
+The root nameserver extracts the Top Level Domain (TLD) from the user's query and responds by directing the recursive resolver to a TLD nameserver, based on the extension of that domain (.com, .net, .org, etc.)
+
+
+
+
+Route 53 Hosted Zone:
+-=------------------
+
+A Route 53 hosted zone is a container for managing the DNS records on a domain that uses Route 53 as its DNS provider. A hosted zone is analogous to a traditional DNS zone file. 
+A hosted zone has the same name as the corresponding domain. For example, a hosted zone for example.com would include information about how to route traffic for 
+example.com and all of its subdomains, such as www.example.com, retail.example.com, and seattle.accounting.example.com. 
+A hosted zone can be either a public or private hosted zone. Public hosted zones are accessible within your private networks, such as internal web service or databases. 
+Route 53 provides some features that other DNS providers may not have, such as: 
+The ability to use Alias records for AWS resources
+Configuring a private hosted zone for use with Amazon VPC
+
+For each publichosted zone thar we create, amazon route 53 automatically crrates a name server resord and a start of authority (SOA) record.
