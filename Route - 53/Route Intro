@@ -34,6 +34,16 @@ The core group of generic top-level domains consists of the following: com, net,
  
 NOTE: Each amazon route 53 account is limited to a maximum of 500 hosted zones and 10000 resources record sets per hosted zone. We can increase this limit by requesting to AWS.
 
-Hands on tutorial on Route 53: https://www.udemy.com/course/aws-certified-solutions-architect-associate-saa-c02/learn/lecture/13528184#overview
+Deligate to Route 53:
+------------------
+COnnect the domain name to route 53 hosted zone - This is called deligation.
 
-Route 53 EC2 Setup:  https://www.udemy.com/course/aws-certified-solutions-architect-associate-saa-c02/learn/lecture/13528186#overview
+To delegate a subdomain to Amazon Route 53, you can: 
+Create a hosted zone for the subdomain
+Add records to the hosted zone for the subdomain
+Create an NS record for the subdomain in the hosted zone for the domain
+You can also create a delegation set, which is a group of four name servers that can be reused by multiple hosted zones. 
+Route 53 is an authoritative DNS system that can be used for domain registration, DNS routing, and health checking.
+
+
+
