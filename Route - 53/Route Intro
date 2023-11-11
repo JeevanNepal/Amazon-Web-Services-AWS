@@ -1,10 +1,11 @@
 AWS Route 53 - Overview:
 ++++++++++++++++++++++++
 
-  Amazon route 53 is a highly available and scalable domain name system(DNS) web service.
+Amazon route 53 is a highly available and scalable domain name system(DNS) web service. We can use it to reg  ister new domains, transfers existing domains, 
+route traffic for our domains to our AWS and external resources and monitor the health of our resources
   
   Route 53 is a managed DNS(domain name system).
-  DNS is a collection of rules and records which helps client understand how to reach a srver through it's domain name.
+  DNS is a collection of rules and records which helps client understand how to reach a server through it's domain name.
   
   In, AWS most common records are:
     . A: hostname to IPv4.
@@ -22,12 +23,16 @@ Route 53 has advanced features such as:
  . Load balancing(through DNS - also called as client balancing).
  . Health checks(although limited...)
  . Routing policy: simple, geolocation, failover, latency, weighted, multi value.
+ . Traffic maintaining
  
  
  We have to pay $0.5 per month per hosted zone.
- 
- 
 
+A generic top-level domain (gTLD) is a global extension that is used and recognized around the world. Generic top-level domains cover a thematic field, like .org for non-profit organizations and .biz for commercial businesses. 
+The core group of generic top-level domains consists of the following: com, net, org, biz, info.
+ 
+ 
+NOTE: Each amazon route 53 account is limited to a maximum of 500 hosted zones and 10000 resources record sets per hosted zone. We can increase this limit by requesting to AWS.
 
 Hands on tutorial on Route 53: https://www.udemy.com/course/aws-certified-solutions-architect-associate-saa-c02/learn/lecture/13528184#overview
 
