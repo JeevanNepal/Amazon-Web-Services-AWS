@@ -76,3 +76,24 @@ The ability to use Alias records for AWS resources
 Configuring a private hosted zone for use with Amazon VPC
 
 For each publichosted zone thar we create, amazon route 53 automatically crrates a name server resord and a start of authority (SOA) record.
+
+WHen we create a hosted zone, amazon route 53 automatically crreates a name server records and a start of uthority (SOA) for the zone.
+
+
+
+ROute 53 as Authorative DNS:
+--------------------------
+Once we update the route 53 DNS settings with our domin register to onclude the route 53 name servers, it will be responsible to respond to DNS queries for the hosted zone.
+
+IMP:
+We can create more than one hosted zone with the same name and different records to each hosted zone.
+
+
+
+Route 53 Hosted ZOne Default Entries:
+-----------------------------------
+Inside the hosted zone by default we have 2 entries.
+
+- NS (Name Servers) - Contains the unique sets of name servers for this hosted zone.ex. 2345-awsdns-34-.com, org, .net, .co.uk
+
+- SOA(Start of Authority) - Contains the information about the hosted zone.
