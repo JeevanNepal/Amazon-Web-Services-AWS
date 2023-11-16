@@ -1,0 +1,20 @@
+Amazon CloudFront is a content delivery network (CDN) service offered by Amazon Web Services (AWS). 
+ It retrieves data stored in the Amazon S3 bucket and distributes it to edge locations across the world. 
+ CloudFront is optimized for performance and scalability. It has built-in security features that can be configured for optimal service. 
+
+CloudFront can be used to: 
+Securely transfer content such as software, SDKs, videos, etc., to clients
+Deliver data, videos, applications, and APIs to customers globally with low latency, high transfer speeds
+Accelerate static website content delivery
+Serve video on demand or live streaming video
+Encrypt specific fields throughout system processing
+Customize at the edge
+Serve private content by using Lambda@Edge customizations
+CloudFront has over 450 globally dispersed points of presence (POPs) with automated network mapping and intelligent routing. 
+
+
+
+
+How many edge locations are there in AWS now?
+The global edge network currently consists of over 410 PoPs, including more than 400 Edge Locations, and 13 regional mid-tier caches in over 90 cities across 48 countries
+(current status can be found here: Amazon CloudFront Key Features ).
