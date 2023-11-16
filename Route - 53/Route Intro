@@ -135,9 +135,8 @@ You can create an alias record for services hosted in AWS. Route 53 monitors the
 
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-Supported DNS record types
-PDF
-RSS
+Supported DNS record types which are under Hosted Zone:
+
 Amazon Route 53 supports the DNS record types that are listed in this section. Each record type also includes an example of how to format the Value element when you are accessing Route 53 using the API.
 
 Note
