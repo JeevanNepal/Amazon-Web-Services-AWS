@@ -1,0 +1,10 @@
+SQS stands for Simple Queue Service. 
+
+It is a web service that provides access to a message queue. It was the first service available in AWS. 
+Amazon SQS is a fully managed message queuing service that allows users to: 
+Send: Messages between various software components
+Store: Messages while waiting for a computer to process them
+Retrieve: Multiple messages of various sizes asynchronously
+Decouple: Microservices, distributed systems, and serverless applications
+Scale: Microservices, distributed systems, and serverless applications
+A single Amazon SQS message queue can contain an unlimited number of messages. However, there is a quota of 120,000 for the number of inflight messages for a standard queue and 20,000 for a FIFO queue.
