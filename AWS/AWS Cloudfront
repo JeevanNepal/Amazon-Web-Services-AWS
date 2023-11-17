@@ -18,3 +18,23 @@ CloudFront has over 450 globally dispersed points of presence (POPs) with automa
 How many edge locations are there in AWS now?
 The global edge network currently consists of over 410 PoPs, including more than 400 Edge Locations, and 13 regional mid-tier caches in over 90 cities across 48 countries
 (current status can be found here: Amazon CloudFront Key Features ).
+
+
+
+
+AWS edge locations are data centers that are designed to provide services with the lowest possible latency. They are closer to users than AWS Regions or Availability Zones, often in major cities. 
+The primary purpose of an AWS Edge Location is to store massive data files closer to the point where end users access AWS services. For example, 
+if you have your data stored in an S3 bucket that is in India, but some percentage of your traffic is also coming from USA. 
+AWS edge locations are a network of data centers distributed globally that are used to accelerate the delivery of content and services to users. 
+AWS edge locations are strategically positioned points in the AWS network optimized for low-latency content delivery. In contrast, AWS regions are larger geographic areas with multiple Availability Zones. 
+
+
+Some AWS services for edge computing include: 
+Amazon CloudFront
+FreeRTOS
+AWS IoT Greengrass
+AWS Storage Gateway
+AWS Outposts
+AWS Wavelength
+Amazon API Gateway
+AWS Certificate Manager
