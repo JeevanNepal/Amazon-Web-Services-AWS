@@ -8,3 +8,4 @@ Retrieve: Multiple messages of various sizes asynchronously
 Decouple: Microservices, distributed systems, and serverless applications
 Scale: Microservices, distributed systems, and serverless applications
 A single Amazon SQS message queue can contain an unlimited number of messages. However, there is a quota of 120,000 for the number of inflight messages for a standard queue and 20,000 for a FIFO queue.
+
