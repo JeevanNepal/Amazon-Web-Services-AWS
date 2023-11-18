@@ -40,4 +40,18 @@ Over 200 Billion Requests/Month	                         $0.24	                 
 
 
 
+How are Amazon SQS charges metered?
+---------------------------------- 	 
+1. API Actions:	Every Amazon SQS action counts as a request.
+
+2. FIFO Requests:	API actions for sending, receiving, deleting, and changing visibility of messages from FIFO queues are charged at FIFO rates.  All other API requests are charged at standard rates.
+
+3. Contents of Requests:	A single request can have from 1 to 10 messages, up to a maximum total payload of 256 KB.
+
+4. Size of Payloads: Each 64 KB chunk of a payload is billed as 1 request (for example, an API action with a 256 KB payload is billed as 4 requests).
+
+5. Interaction with Amazon S3:	When using the Amazon SQS Extended Client Library to send payloads using Amazon S3, you incur Amazon S3 charges for any Amazon S3 storage you use to send message payloads.
+
+6. Interaction with AWS KMS: When using the AWS Key Management Service to manage keys for SQS server-side encryption, you incur charges for calls from Amazon SQS to AWS KMS. 
+   For more information see KMS pricing and How Do I Estimate My AWS KMS Usage Costs? in the Amazon SQS Developer Guide. 
 
