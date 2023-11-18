@@ -29,5 +29,15 @@ Standard Queue:                                                                 
                                                                                  |4. Strict ordering - first in first out. 
 
 
+SQS Pricing:
+
+
+                                                    Standard Queues (per Million requests)	                                          FIFO Queues (per Million requests)
+First 1 Million Requests/Month	                         Free	                                                                                Free
+From 1 Million to 100 Billion Requests/Month	           $0.40	                                                                               $0.50
+From 100 Billion to 200 Billion Requests/Month           $0.30	                                                                               $0.40
+Over 200 Billion Requests/Month	                         $0.24	                                                                               $0.35
+
+
 
 
