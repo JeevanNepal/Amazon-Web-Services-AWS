@@ -8,7 +8,7 @@ Retrieve: Multiple messages of various sizes asynchronously
 Decouple: Microservices, distributed systems, and serverless applications
 Scale: Microservices, distributed systems, and serverless applications
 A single Amazon SQS message queue can contain an unlimited number of messages. However, there is a quota of 120,000 for the number of inflight messages for a standard queue and 20,000 for a FIFO queue.
-
+SQS allows the decoupling of application components such that a failure in one components does not cause a bigger problen to application functionality.
 
 
 In Amazon Simple Queue Service (SQS), visibility timeout is a time interval during which other consumers are prevented from receiving and processing a message. The purpose of visibility timeout is to prevent multiple consumers from consuming the same item repeatedly. 
@@ -18,3 +18,16 @@ SQS hands over a message to the consumer.
 The consumer processes the message.
 The consumer deletes the message from the kit.
 If a message must be received only once, the consumer should delete it within the visibility timeout duration. Otherwise, it will be available for another consumer.
+
+
+Types of Queue in SQS:
+---------------------
+Standard Queue:                                                                  | FIFO Queue
+1. High (unlimited) throughput.                                                  |1. Limited throughput 300 tps but has all the capabilities of standard queue.
+2. At least one delivery.                                                        |2. Exactly one processing
+3. Best effort ordering.                                                         |3. Duplicacy not possible
+                                                                                 |4. Strict ordering - first in first out. 
+
+
+
+
