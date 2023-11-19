@@ -1,0 +1,11 @@
+Amazon Simple Notification Service (SNS):
+----------------------------------------
+It is a web service that automates the process of sending notifications to subscribers. It is a fully managed messaging service for both applications-to-application (A2A) and application-to-person (A2P) communication. 
+SNS provides developers with the following capabilities: 
+Scalable
+Cost-effective
+Flexible
+Publish messages from an application
+Deliver messages to subscribers or other applications
+SNS enables decoupling of microservices, distributed systems, and serverless applications by providing publish-subscribe (pub-sub) and point-to-point communication patterns. 
+SNS is designed to make web-scale computing easier for developers.
