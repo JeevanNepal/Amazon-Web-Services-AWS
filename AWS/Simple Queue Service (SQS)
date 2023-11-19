@@ -11,7 +11,8 @@ A single Amazon SQS message queue can contain an unlimited number of messages. H
 SQS allows the decoupling of application components such that a failure in one components does not cause a bigger problen to application functionality.
 
 
-In Amazon Simple Queue Service (SQS), visibility timeout is a time interval during which other consumers are prevented from receiving and processing a message. The purpose of visibility timeout is to prevent multiple consumers from consuming the same item repeatedly. 
+In Amazon Simple Queue Service (SQS), visibility timeout is a time interval during which other consumers are prevented from receiving and processing a message. 
+The purpose of visibility timeout is to prevent multiple consumers from consuming the same item repeatedly. 
 The default visibility timeout for a message is 30 seconds. The minimum is 0 seconds and the maximum is 12 hours. If a task takes longer than 30 seconds, the visibility timeout can be increased. 
 Visibility timeout works as follows: 
 SQS hands over a message to the consumer.
@@ -54,4 +55,76 @@ How are Amazon SQS charges metered?
 
 6. Interaction with AWS KMS: When using the AWS Key Management Service to manage keys for SQS server-side encryption, you incur charges for calls from Amazon SQS to AWS KMS. 
    For more information see KMS pricing and How Do I Estimate My AWS KMS Usage Costs? in the Amazon SQS Developer Guide. 
+
+
+
+-------------------------------------------------------------------------------------------------------------------------
+Amazon SQS provides short polling and long polling to receive messages from a queue. By default, queues use short polling.
+
+With short polling, the ReceiveMessage request queries only a subset of the servers (based on a weighted random distribution) to find messages that are available to include in the response. 
+Amazon SQS sends the response right away, even if the query found no messages.
+
+With long polling, the ReceiveMessage request queries all of the servers for messages. Amazon SQS sends a response after it collects at least one available message, 
+up to the maximum number of messages specified in the request. Amazon SQS sends an empty response only if the polling wait time expires.
+
+
+SQS Retention Period:
+--------------------
+The Amazon Simple Queue Service (SQS) message retention period can be configured to a value between 60 seconds and 14 days. The default retention period is 4 days. 
+Once the message retention quota is reached, messages are automatically deleted. The retention period specifies how long a message can stay on a queue before it is automatically deleted, regardless of its processing status. 
+The message retention period can be configured using the SetQueueAttributes action. 
+Amazon SQS is a message queuing service used for asynchronous messaging between distributed software components. It does not perform data processing operations on the messages it handles.
+
+
+
+
+The Amazon Simple Queue Service (SQS) message retention period can be configured to a value between 60 seconds and 14 days. The default retention period is 4 days. 
+Once the message retention quota is reached, messages are automatically deleted. The retention period specifies how long a message can stay on a queue before it is automatically deleted, regardless of its processing status. 
+The message retention period can be configured using the SetQueueAttributes action. 
+
+
+
+Delivery Delay:
+--------------
+Delay queues let you postpone the delivery of new messages to consumers for a number of seconds, for example, when your consumer application needs additional time to process messages.
+If you create a delay queue, any messages that you send to the queue remain invisible to consumers for the duration of the delay period. The default (minimum) delay for a queue is 0 seconds. 
+The maximum is 15 minutes.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
