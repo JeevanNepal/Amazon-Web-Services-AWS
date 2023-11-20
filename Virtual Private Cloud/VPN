@@ -1,3 +1,50 @@
 AWS Virtual Private Network (AWS VPN) establishes a secure and private tunnel from your network or device to the AWS Cloud. You can extend your existing on-premises network into a VPC, 
 or connect to other AWS resources from a client. 
 AWS VPN offers two types of private connectivity that feature the high availability and robust security necessary for your data.
+
+
+
+
+
+What is AWS Site-to-Site VPN?
+By default, instances that you launch into an Amazon VPC can't communicate with your own (remote) network. You can enable access to your remote network from your VPC by creating an AWS Site-to-Site VPN (Site-to-Site VPN) connection, 
+and configuring routing to pass traffic through the connection.
+
+Although the term VPN connection is a general term, in this documentation, a VPN connection refers to the connection between your VPC and your own on-premises network.
+Site-to-Site VPN supports Internet Protocol security (IPsec) VPN connections.
+
+
+
+
+AWS Site to Site VPN Demo:
+==========================
+By default, instances that we launch into amazon VPC can't communicate with our own network. To establish the communication we have to establish site to site VPN connection.
+
+VPN Connection: A secure connection between your on-prem equipment and your VPC's.
+
+VPN Tunnel: An encrypted link where data can pass from the customer network to or from AWS each VPN connection includes two VPN tunnels which we can simultanelusly use for high availability.
+
+Customer Gateway: AN AWS resource which provides information to AWS about your customer gateway device.
+
+Customer Getway Device: A physical device or software app on customer side.
+
+
+Concepts
+
+The following are the key concepts for Site-to-Site VPN:
+
+VPN connection: A secure connection between your on-premises equipment and your VPCs.
+
+VPN tunnel: An encrypted link where data can pass from the customer network to or from AWS.
+
+Each VPN connection includes two VPN tunnels which you can simultaneously use for high availability.
+
+Customer gateway: An AWS resource which provides information to AWS about your customer gateway device.
+
+Customer gateway device: A physical device or software application on your side of the Site-to-Site VPN connection.
+
+Target gateway: A generic term for the VPN endpoint on the Amazon side of the Site-to-Site VPN connection.
+
+Virtual private gateway: A virtual private gateway is the VPN endpoint on the Amazon side of your Site-to-Site VPN connection that can be attached to a single VPC.
+
+Transit gateway: A transit hub that can be used to interconnect multiple VPCs and on-premises networks, and as a VPN endpoint for the Amazon side of the Site-to-Site VPN connection.
