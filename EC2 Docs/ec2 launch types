@@ -117,3 +117,19 @@ T2/T3 Umlimited:
 
    Overall, it is a new offer and have to be cautious as if we do not do helath check of an application than it can 
    cost huge amount.
+
+
+
+
+
+
+
+
+
+NAT instance basics:
+
+The following figure illustrates the NAT instance basics. The route table associated with the private subnet sends internet traffic from the instances in the private subnet to the NAT instance in the public subnet.
+The NAT instance then sends the traffic to the internet gateway. The traffic is attributed to the public IP address of the NAT instance.
+The NAT instance specifies a high port number for the response; if a response comes back, the NAT instance sends it to an instance in the private subnet based on the port number for the response.
+
+The NAT instance must have internet access, so it must be in a public subnet (a subnet that has a route table with a route to the internet gateway), and it must have a public IP address or an Elastic IP address.
