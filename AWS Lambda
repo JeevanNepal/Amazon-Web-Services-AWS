@@ -1,2 +1,11 @@
 AWS Lambda
 AWS Lambda is a compute service that allows users to run their own code without having to worry about servers.
+
+
+The minimum memory that can be allocated to an AWS Lambda function is 128 MB. The maximum is 10,240 MB. The default setting for new functions is 128 MB. 
+Memory can be configured for new or existing functions using the following tools: 
+AWS Management Console
+AWS Command Line Interface (CLI)
+AWS SDK
+AWS Serverless Application Model (SAM)
+Memory allocation affects the performance of a Lambda function. Lambda allocates CPU power in proportion to the amount of memory configured. More CPU resources may decrease the duration of a Lambda function.
