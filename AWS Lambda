@@ -1,6 +1,23 @@
 AWS Lambda
 AWS Lambda is a compute service that allows users to run their own code without having to worry about servers.
 
+With lambda we can run code for virtually any type of application or backend service- all with zero administration.
+AWS lambda manages all the administration it manages - provisioning and capacity of the compute fleet that offers a balance of memory, CPU, network and other resources.
+- server and OS maintenance.
+- High availability and automation scaling.
+- Monioring fleet health
+- Applying security [atches.
+- Deploying our code.
+- Monitoring and logging our lambda functions.
+- AWS lambda runs our code on a high-availibility compute infrastructure.
+- It executes our code only when needed and scales automatically from a few requests per day to thousands requests per sec.
+- We pay only for the compute time we consume - No charge when our code is not running.
+- All we need to do is supply our code in the form of one or more lambda functions to AWS lambda, in one of the language aws lambda supports(Java, Go, PowerShell, Node. js, C#, Python, and Ruby code), 
+  and provides a Runtime API which allows you to use any additional programming languages to author your functions. Please read our documentation on using Node.
+- 
+
+
+
 
 The minimum memory that can be allocated to an AWS Lambda function is 128 MB. The maximum is 10,240 MB. The default setting for new functions is 128 MB. 
 Memory can be configured for new or existing functions using the following tools: 
