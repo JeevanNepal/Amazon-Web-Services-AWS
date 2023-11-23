@@ -63,3 +63,9 @@ All rules are evaluated before deciding to permit trffic.	      |               
 It start with instance launch configuration.	                                   In which we assigned to subnet for all instance.
 It applies when someone specifies security group                                 They do not depend on user it automatically apply all instances with subnet.
 when launching the instance and it associates with security group.	
+
+
+AWS Shield Features:
+AWS Shield is a managed distributed denial of service (DDoS) protection service that safeguards applications running on AWS. It provides dynamic detection and automatic
+inline mitigations that minimize application downtime and latency, so there is no need to engage AWS Support to benefit from DDoS protection. 
+There are two tiers of AWS Shield: Standard and Advanced.
