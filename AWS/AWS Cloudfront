@@ -38,3 +38,23 @@ AWS Outposts
 AWS Wavelength
 Amazon API Gateway
 AWS Certificate Manager
+
+
+
+AWS Cloudtrail:
+
+Amazon Web Services (AWS) CloudTrail is a tool for auditing, compliance monitoring, and governance. It records user activity and API usage for your AWS account. This includes actions taken through the Amazon Management Console, Amazon SDKs, command line tools, and other AWS services. 
+CloudTrail can help with: 
+Security analysis, Resource change tracking, Troubleshooting, Account activity, Compliance monitoring, Governance. 
+CloudTrail records information about each action, including: 
+Who made the request
+The services used
+The actions performed
+Parameters for the actions
+The response elements returned by the AWS service
+You can use CloudTrail to: 
+View, Search, Download, Archive, Analyze, Respond to account activity. 
+To configure CloudTrail logs, you can: 
+Log in to the AWS console
+Choose CloudTrail from the Services drop down
+Click on Trail, and choose Create Trail
