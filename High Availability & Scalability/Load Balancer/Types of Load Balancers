@@ -171,3 +171,23 @@ Step 1: Configure a target group
 Step 2: Register targets
 Step 3: Configure a load balancer and a listener
 Step 4: Test the load balancer
+
+
+
+GATEWAY LOAD BALANCER:
+=====================
+A gateway load balancer (GWLB) is a service that operates at the network layer of the Open Systems Interconnection (OSI) model. 
+It listens for IP packets across all ports and forwards traffic to the target group specified in the listener rule.
+
+
+Here are some things a GWLB can do: 
+Set target utilization levels
+Create additional instances
+Insert third-party virtual appliances
+Implement intrusion detection and prevention systems
+Perform deep packet inspection
+GWLB is an Elastic Load Balancing (ELB) service. It works with AWS Auto Scaling groups and can be used in high performance and high availability scenarios. 
+When buying a load balancer, you can consider things like: 
+Hardware, virtual, or cloud
+Migrating from hardware to a virtual appliance
+Number of applications to load balance
