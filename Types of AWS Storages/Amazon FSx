@@ -3,3 +3,27 @@ It supports a wide range of workloads with its reliability, security, scalabilit
 Amazon FSx is built on the latest AWS compute, networking, and disk technologies to provide high performance and lower TCO. 
 And as a fully managed service, it handles hardware provisioning, patching, and backups -- freeing you up to focus on your applications, your end users, and your business.
 
+
+
+Amazon FSx file systems:
+-----------------------
+
+1. Amazon FSx for NetApp ONTAP
+Amazon FSx for NetApp ONTAP
+Fully managed shared storage built on NetApp’s popular ONTAP file system.
+
+
+2. Amazon FSx for OpenZFS
+Amazon FSx for OpenZFS
+Fully managed shared storage built on the popular OpenZFS file system.
+
+
+3. Amazon FSx for Windows File Server
+Amazon FSx for Windows File Server
+Fully managed shared storage built on Windows Server.
+
+
+4. Amazon FSx for Lustre
+Amazon FSx for Lustre
+Fully managed shared storage built on the world’s most popular high-performance file system.
+
